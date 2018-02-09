@@ -4,30 +4,31 @@ import UIKit
 import Styles
 
 let h1 = TextStyle(
-      .font(.preferredFont(forTextStyle: .largeTitle))
-    , .foregroundColor(.black)
-    , .backgroundColor(.yellow)
-    , .paragraphStyle([
+      .font(.preferredFont(forTextStyle: .largeTitle)),
+      .foregroundColor(.black),
+      .backgroundColor(.yellow),
+      .paragraphStyle([
           .alignment(.center)
         ])
 )
 
 let body = TextStyle(
-      .font(.preferredFont(forTextStyle: .body))
-    , .foregroundColor(.yellow)
-    , .backgroundColor(.black)
-    , .letterSpacing(1.5)
-    , .paragraphStyle([
-          .alignment(.natural)
-        , .lineSpacing(2.5)
+      .font(.preferredFont(forTextStyle: .body)),
+      .foregroundColor(.yellow),
+      .backgroundColor(.black),
+      .letterSpacing(1.5),
+      .paragraphStyle([
+          .alignment(.natural),
+          .lineHeight(2.5)
         ])
 )
 
 let rounded = LayerStyle(
         .cornerRadius(10),
         .borderWidth(3),
-        .borderColor(.red)
-)
+        .borderColor(.red),
+        .opacity(0.8)
+    )
 
 let appColor = ColorStyle(
     .backgroundColor(.gray),
@@ -39,12 +40,12 @@ let textFieldColorStyle = ColorStyle(
     .tintColor(.blue)
 )
 
-let editingTextFieldStyle = LayerStyle(
+let red = LayerStyle(
     .borderColor(.red),
     .borderWidth(0.5)
 )
 
-let idleTextFieldStyle = LayerStyle (
+let blue = LayerStyle (
     .borderColor(.blue),
     .borderWidth(0.5)
 )
@@ -61,8 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIView.appearance(whenContainedInInstancesOf: [ViewController.self]).colorStyle = appColor
         UIButton.appearance().setTextStyle(h1, for: .normal);
         UIButton.appearance().setTextStyle(body, for: .highlighted);
-        UITextField.appearance().setLayerStyle(editingTextFieldStyle, for: .editing)
-        UITextField.appearance().setLayerStyle(idleTextFieldStyle, for: .inactive)
+        UITextField.appearance().setLayerStyle(red, for: .editing)
+        UITextField.appearance().setLayerStyle(blue, for: .inactive)
         UINavigationBar.appearance().textStyle = h1
         UINavigationBar.appearance().tintColor = .yellow
         UINavigationBar.appearance().barTintColor = .black
