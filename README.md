@@ -1,12 +1,36 @@
-# Styles
+<h1 align="center">Styles</h1>
 
-[![Version](https://img.shields.io/cocoapods/v/Styles.svg?style=flat)](http://cocoapods.org/pods/Styles)
-[![License](https://img.shields.io/cocoapods/l/Styles.svg?style=flat)](http://cocoapods.org/pods/Styles)
-[![Platform](https://img.shields.io/cocoapods/p/Styles.svg?style=flat)](http://cocoapods.org/pods/Styles)
+<div align="center">
+  <strong>Styling framework that works</strong>
+</div>
+<div align="center">
+  A declarative and type-safe framework for beautiful applications
+</div>
 
-## Example
+<br />
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<div align="center">
+  <!-- Version -->
+  <a href="http://cocoapods.org/pods/Styles">
+    <img src="https://img.shields.io/cocoapods/v/Styles.svg?style=flat"
+      alt="Version" />
+  </a>
+  <!-- License -->
+  <a href="http://cocoapods.org/pods/Styles">
+    <img src="https://img.shields.io/cocoapods/l/Styles.svg?style=flat"
+      alt="License" />
+  </a>
+  <!-- Platform -->
+  <a href="http://cocoapods.org/pods/Styles">
+    <img src="https://img.shields.io/cocoapods/p/Styles.svg?style=flat"
+      alt="Platform" />
+  </a>
+  <!-- Swift version -->
+  <a href="http://cocoapods.org/pods/Styles">
+    <img src="https://img.shields.io/badge/swift-4-orange.svg"
+      alt="Swift version" />
+  </a>
+</div>
 
 ## Installation
 
