@@ -34,7 +34,8 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Example](#example)
+- [Requirements](#requirements)
+- [Examples](#examples)
   - [TextStyle](#textstyle)
   - [LayerStyle](#layerstyle)
   - [ColorStyle](#colorstyle)
@@ -51,7 +52,12 @@
 
 <sub><sub><a name="soso">1</a>: In some cases.</sub></sub>
 
-## Example
+## Requirements
+- iOS 8.0+
+- Xcode 9.2+
+- Swift 4.1+
+
+## Examples
 
 ### TextStyle
 ```swift
