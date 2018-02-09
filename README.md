@@ -130,7 +130,7 @@ ARE WELCOME! 🖖
 |<div align="center"><img src="https://avatars2.githubusercontent.com/u/14109333?s=400&v=4" width="40px;"/><br />[Radim Halfar](https://github.com/radimhalfar)</div>|<div align="center"><img src="https://avatars1.githubusercontent.com/u/560958?s=400&v=4" width="40px;"><br />[Jakub Petrik](https://github.com/jakubpetrik)</div>|
 | :---: | :---: |
 
-<sub>Built with ❤︎ at [Inloop](http://www.inloop.eu)</sub>
+<sub>Built with ❤︎ at [Inloop](http://www.inloopx.com)</sub>
 
 ## License
 
