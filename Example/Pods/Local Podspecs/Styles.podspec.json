@@ -1,0 +1,23 @@
+{
+  "name": "Styles",
+  "version": "0.1.0",
+  "summary": "UI Elements rapid styling",
+  "description": "UIElements styling made easy, declarative and rapid.",
+  "homepage": "https://github.com/inloop/Styles",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "radimhalfar": "radim.halfar@inloop.eu",
+    "jakubpetrik": "petrik@inloop.eu"
+  },
+  "source": {
+    "git": "https://github.com/inloop/Styles.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Styles/Classes/**/*"
+}

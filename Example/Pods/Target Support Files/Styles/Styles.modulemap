@@ -1,0 +1,6 @@
+framework module Styles {
+  umbrella header "Styles-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Styles (0.1.0)
+
+DEPENDENCIES:
+  - Styles (from `../`)
+
+EXTERNAL SOURCES:
+  Styles:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Styles: d38790b4f92f6e5a6156c3c86be0deda9ed054aa
+
+PODFILE CHECKSUM: d955debdf2315159e98d47d1c3d294214ae453cf
+
+COCOAPODS: 1.4.0
