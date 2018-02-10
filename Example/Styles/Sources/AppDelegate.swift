@@ -45,6 +45,28 @@ let body = TextStyle(
       ))
 )
 
+let bigRed = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.red)
+)
+
+let bigGreen = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.green)
+)
+
+let bigRedFirstWord = TextEffect(style: bigRed, matching: .firstWord)
+let bigGreenLastWord = TextEffect(style: bigGreen, matching: .lastWord)
+
+let styleWithEffects = TextStyle(
+    .font(.preferredFont(forTextStyle: .body)),
+    .backgroundColor(.yellow),
+    effects: [
+        bigRedFirstWord,
+        bigGreenLastWord
+    ]
+)
+
 let rounded = LayerStyle(
         .roundCorners([.topLeft, .bottomRight], radius: 10),
         .borderWidth(3),
@@ -97,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(magentaFootnote.attributes)
         print(blueFootnote.attributes)
         // Override point for customization after application launch.
-        ExLabel.appearance().textStyle = body
+        ExLabel.appearance().textStyle = styleWithEffects
         ExLabel.appearance().layerStyle = rounded
         UIButton.appearance().setTextStyle(h1, for: .normal)
         UIButton.appearance().setTextStyle(body, for: .highlighted)

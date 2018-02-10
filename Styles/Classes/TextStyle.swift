@@ -63,21 +63,40 @@ public final class TextStyle: NSObject {
     }
 
     @objc public let attributes: [NSAttributedStringKey: Any]
+    var effects: [TextEffect]
 
-    public init(_ properties: Property...) {
+    public init(_ properties: Property..., effects: [TextEffect] = []) {
         attributes = properties.attributes
+        self.effects = effects
     }
 
-    private init(attributes: [NSAttributedStringKey: Any]) {
+    private init(attributes: [NSAttributedStringKey: Any], effects: [TextEffect]) {
         self.attributes = attributes
+        self.effects = effects
     }
 
     @objc public func apply(to text: String) -> NSAttributedString {
-        return NSAttributedString(string: text, attributes: attributes)
+        let result = NSMutableAttributedString(string: text, attributes: attributes)
+        for effect in effects {
+            let effectAttributes = effect.attributes
+            for range in effect.ranges(in: text) {
+                result.addAttributes(effectAttributes, range: range)
+            }
+        }
+        return result
+    }
+
+    public func add(_ effect: TextEffect) {
+        effects.append(effect)
+    }
+
+    public func remove(_ effect: TextEffect) {
+        guard let index = effects.index(of: effect) else { return }
+        effects.remove(at: index)
     }
 
     public func updating(_ properties: Property ...) -> TextStyle {
         let newAttributes = attributes.merging(properties.attributes, uniquingKeysWith: { $1 })
-        return TextStyle(attributes: newAttributes)
+        return TextStyle(attributes: newAttributes, effects: effects)
     }
 }
