@@ -25,21 +25,33 @@ public final class TextStyle: NSObject {
         case backgroundColor(UIColor)
         case paragraphStyle([ParagraphStyle])
         case letterSpacing(CGFloat)
+        case strikethrought(TextDecoration)
+        case underline(TextDecoration)
 
-        var attribute: (NSAttributedStringKey, Any) {
+        var attribute: [(NSAttributedStringKey, Any)] {
             switch self {
             case let .font(font):
-                return (.font, font)
+                return [(.font, font)]
             case let .foregroundColor(color):
-                return (.foregroundColor, color)
+                return [(.foregroundColor, color)]
             case let .backgroundColor(color):
-                return (.backgroundColor, color)
+                return [(.backgroundColor, color)]
             case let .paragraphStyle(styles):
                 let paragraphStyle = NSMutableParagraphStyle()
                 styles.forEach(paragraphStyle.apply)
-                return (.paragraphStyle, paragraphStyle)
+                return [(.paragraphStyle, paragraphStyle)]
             case let .letterSpacing(spacing):
-                return (.kern, spacing)
+                return [(.kern, spacing)]
+            case let .strikethrought(decoration):
+                return  decoration.attributes(
+                    styleKey: .strikethroughStyle,
+                    colorKey: .strikethroughColor
+                )
+            case let .underline(decoration):
+                return decoration.attributes(
+                    styleKey: .underlineStyle,
+                    colorKey: .underlineColor
+                )
             }
         }
     }
@@ -47,7 +59,7 @@ public final class TextStyle: NSObject {
     let properties: [Property]
     
     @objc public var attributes: [NSAttributedStringKey: Any] {
-        return Dictionary(uniqueKeysWithValues: properties.map { $0.attribute })
+        return Dictionary(uniqueKeysWithValues: properties.flatMap { $0.attribute })
     }
 
     public init(_ properties: Property...) {

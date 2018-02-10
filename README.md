@@ -46,6 +46,8 @@
   - [ColorStyle](#colorstyle)
 - [Installation](#installation)
 - [Contributions](#contributions)
+- [License](#license)
+- [Authors](#authors)
 
 ## Features
 - __declarative__: You describe the style, framework will do the rest
@@ -67,13 +69,24 @@
 ### TextStyle
 ```swift
 let h1 = TextStyle(
-     .font(.preferredFont(forTextStyle: .largeTitle)),
-     .foregroundColor(.black),
-     .backgroundColor(.yellow),
-     .paragraphStyle([
-          .alignment(.center),
-          .lineHeight(2.5)
-     ])
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.black),
+    .backgroundColor(.yellow),
+    .letterSpacing(1.5),
+    .paragraphStyle([
+        .alignment(.natural),
+        .lineHeight(2.5)
+    ]),
+    .strikethrought(TextDecoration(
+        style: .thick,
+        pattern: .dash
+    )),
+    .underline(TextDecoration(
+        style: .single,
+        pattern: .dashDotDot,
+        byWord: true,
+        color: .red
+    ))
 )
 
 UILabel.appearance().textStyle = h1
@@ -130,13 +143,15 @@ pod 'Styles', :git => 'https://github.com/inloop/Styles.git'
 
 ARE WELCOME! 🖖
 
+## License
+
+Styles is available under the MIT license. See the LICENSE file for more info.
+
 ## Authors
 
 |<div align="center"><img src="https://avatars2.githubusercontent.com/u/14109333?s=400&v=4" width="40px;"/><br />[Radim Halfar](https://github.com/radimhalfar)</div>|<div align="center"><img src="https://avatars1.githubusercontent.com/u/560958?s=400&v=4" width="40px;"><br />[Jakub Petrik](https://github.com/jakubpetrik)</div>|
 | :---: | :---: |
 
-<sub>Built with ❤︎ at [Inloop](http://www.inloopx.com)</sub>
-
-## License
-
-Styles is available under the MIT license. See the LICENSE file for more info.
+<div align="center">
+<sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="Inloop">Inloop</a></sub>
+</div>
