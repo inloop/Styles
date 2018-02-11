@@ -19,5 +19,6 @@ UIElements styling made easy, declarative and rapid.
   s.author           = { 'radimhalfar' => 'radim.halfar@inloop.eu', 'jakubpetrik' => 'petrik@inloop.eu' }
   s.source           = { :git => 'https://github.com/inloop/Styles.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
+  s.swift_version    = '4.1'
   s.source_files = 'Styles/Classes/**/*'
 end
