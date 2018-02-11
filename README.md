@@ -10,6 +10,11 @@
 <br />
 
 <div align="center">
+    <!-- Travis-CI -->
+    <a href="https://travis-ci.org/inloop/Styles">
+        <img src="https://travis-ci.org/inloop/Styles.svg?branch=master"
+          alt="Travis-CI" />
+    </a>
   <!-- Version -->
   <a href="http://cocoapods.org/pods/Styles">
     <img src="https://img.shields.io/cocoapods/v/Styles.svg?style=flat"
