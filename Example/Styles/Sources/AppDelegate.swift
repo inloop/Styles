@@ -3,6 +3,16 @@
 import UIKit
 import Styles
 
+extension NSShadow {
+    static let magenta: NSShadow = {
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.magenta
+        shadow.shadowOffset = CGSize(width: 1, height: 1)
+        shadow.shadowBlurRadius = 4
+        return shadow
+    }()
+}
+
 let h1 = TextStyle(
       .font(.preferredFont(forTextStyle: .largeTitle)),
       .foregroundColor(.black),
@@ -10,7 +20,8 @@ let h1 = TextStyle(
       .paragraphStyle([
           .alignment(.center)
         ]),
-      .obliqueness(0.3)
+      .obliqueness(0.3),
+      .shadow(.magenta)
 )
 
 let body = TextStyle(
