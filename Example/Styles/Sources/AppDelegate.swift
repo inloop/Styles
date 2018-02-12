@@ -14,13 +14,23 @@ let h1 = TextStyle(
 
 let body = TextStyle(
       .font(.preferredFont(forTextStyle: .body)),
-      .foregroundColor(.yellow),
-      .backgroundColor(.black),
+      .foregroundColor(.black),
+      .backgroundColor(.yellow),
       .letterSpacing(1.5),
       .paragraphStyle([
           .alignment(.natural),
           .lineHeight(2.5)
-        ])
+        ]),
+      .strikethrought(TextDecoration(
+        style: .thick,
+        pattern: .dash
+      )),
+      .underline(TextDecoration(
+        style: .single,
+        pattern: .dashDotDot,
+        byWord: true,
+        color: .red
+      ))
 )
 
 let rounded = LayerStyle(

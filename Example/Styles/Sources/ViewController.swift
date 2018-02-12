@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "ajajaajaj"
+        label.text = "Styles is awesome!"
 //        button.setTitle("Default", for: .normal)
 //        button.setTitle("Highlighted", for: .highlighted)
     }
