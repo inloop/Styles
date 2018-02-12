@@ -45,6 +45,7 @@
         Class class = [self class];
         swizzle_instance_method(class, @selector(becomeFirstResponder), @selector(swizzle_becomeFirstResponder));
         swizzle_instance_method(class, @selector(resignFirstResponder), @selector(swizzle_resignFirstResponder));
+        swizzle_instance_method(class, @selector(awakeFromNib), @selector(swizzle_awakeFromNib));
     });
 }
 
@@ -56,6 +57,13 @@
 - (BOOL)swizzle_resignFirstResponder {
     [self updateStylesForState:kInactive];
     return [super resignFirstResponder];
+}
+
+- (void)swizzle_awakeFromNib {
+    [self swizzle_awakeFromNib];
+    [self addTarget:self
+             action:@selector(applyStyle)
+   forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)setTextStyle:(TextStyle *)style forState:(UITextFieldState)state {
