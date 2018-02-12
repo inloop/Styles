@@ -27,6 +27,7 @@ public final class TextStyle: NSObject {
         case letterSpacing(CGFloat)
         case strikethrought(TextDecoration)
         case underline(TextDecoration)
+        case obliqueness(Double)
 
         var attribute: [(NSAttributedStringKey, Any)] {
             switch self {
@@ -52,6 +53,8 @@ public final class TextStyle: NSObject {
                     styleKey: .underlineStyle,
                     colorKey: .underlineColor
                 )
+            case .obliqueness(let skew):
+                return [(.obliqueness, skew)]
             }
         }
     }
