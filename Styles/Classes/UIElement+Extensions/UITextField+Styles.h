@@ -13,4 +13,5 @@ typedef NS_ENUM(NSInteger, UITextFieldState) {
 @interface UITextField (Styles)
 - (void)setTextStyle:(TextStyle *)style forState:(UITextFieldState)state UI_APPEARANCE_SELECTOR;
 - (void)setLayerStyle:(LayerStyle *)style forState:(UITextFieldState)state UI_APPEARANCE_SELECTOR;
+- (void)setPlaceholderStyle:(TextStyle *)style forState:(UITextFieldState)state UI_APPEARANCE_SELECTOR;
 @end
