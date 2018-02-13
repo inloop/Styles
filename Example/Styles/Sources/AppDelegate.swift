@@ -9,7 +9,8 @@ let h1 = TextStyle(
       .backgroundColor(.yellow),
       .paragraphStyle([
           .alignment(.center)
-        ])
+        ]),
+      .obliqueness(0.3)
 )
 
 let body = TextStyle(
