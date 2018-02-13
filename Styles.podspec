@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Styles'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'UI Elements rapid styling'
   s.description      = <<-DESC
 UIElements styling made easy, declarative and rapid.
@@ -16,7 +16,7 @@ UIElements styling made easy, declarative and rapid.
 
   s.homepage         = 'https://github.com/inloop/Styles'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'radimhalfar' => 'radim.halfar@inloop.eu', 'jakubpetrik' => 'petrik@inloop.eu' }
+  s.author           = { 'Radim Halfar' => 'radim.halfar@inloop.eu', 'Jakub Petrik' => 'petrik@inloop.eu' }
   s.source           = { :git => 'https://github.com/inloop/Styles.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.swift_version    = '4.1'
