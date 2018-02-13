@@ -9,6 +9,7 @@
 @interface UITextField ()
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *textStyles;
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, LayerStyle *> *layerStyles;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *placeholderStyles;
 @end
 
 @implementation UITextField (Styles)
@@ -31,12 +32,25 @@
     return stored;
 }
 
+- (NSMutableDictionary *)placeholderStyles {
+    NSMutableDictionary *stored = objc_getAssociatedObject(self, @selector(placeholderStyles));
+    if (!stored) {
+        stored = [NSMutableDictionary new];
+        [self setPlaceholderStyles:stored];
+    }
+    return stored;
+}
+
 - (void)setLayerStyles:(NSMutableDictionary *)layerStyles {
     objc_setAssociatedObject(self, @selector(layerStyles), layerStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setTextStyles:(NSMutableDictionary *)textStyles {
     objc_setAssociatedObject(self, @selector(textStyles), textStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void)setPlaceholderStyles:(NSMutableDictionary *)placeholderStyles {
+    objc_setAssociatedObject(self, @selector(placeholderStyles), placeholderStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (void)load {
@@ -76,12 +90,20 @@
     [self applyStyle];
 }
 
+- (void)setPlaceholderStyle:(TextStyle *)style forState:(UITextFieldState)state {
+    self.placeholderStyles[@(state)] = style;
+    [self applyStyle];
+}
+
 - (void)updateStylesForState:(UITextFieldState)state {
     LayerStyle *layerStyle = self.layerStyles[@(state)];
     TextStyle *textStyle = self.textStyles[@(state)];
+    TextStyle *placeholderStyle = self.placeholderStyles[@(state)];
 
     [self updateTextFieldUsingTextStyle:textStyle];
     [self updateTextFieldUsingLayerStyle:layerStyle];
+    [self updatePlaceholderStyle:placeholderStyle];
+
 }
 
 - (void)applyStyle {
@@ -95,6 +117,14 @@
         return;
     }
     [self setAttributedText:[style applyTo:text]];
+}
+
+- (void)updatePlaceholderStyle:(TextStyle *)style {
+    NSString *placeholder = self.placeholder;
+    if (!placeholder || !style) {
+        return;
+    }
+    self.attributedPlaceholder = [style applyTo:placeholder];
 }
 
 - (void)updateTextFieldUsingLayerStyle:(LayerStyle *)style {

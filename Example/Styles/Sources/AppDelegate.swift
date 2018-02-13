@@ -60,6 +60,16 @@ let blue = LayerStyle (
     .borderWidth(0.5)
 )
 
+let greenHeadline = TextStyle(
+    .font(.preferredFont(forTextStyle: .headline)),
+    .foregroundColor(.green)
+)
+
+let magentaFootnote = TextStyle(
+    .font(.preferredFont(forTextStyle: .footnote)),
+    .foregroundColor(.magenta)
+)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -69,16 +79,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ExLabel.appearance().textStyle = body
         ExLabel.appearance().layerStyle = rounded
-        UIView.appearance(whenContainedInInstancesOf: [ViewController.self]).colorStyle = appColor
-        UIButton.appearance().setTextStyle(h1, for: .normal);
-        UIButton.appearance().setTextStyle(body, for: .highlighted);
+        UIButton.appearance().setTextStyle(h1, for: .normal)
+        UIButton.appearance().setTextStyle(body, for: .highlighted)
         UITextField.appearance().setLayerStyle(red, for: .editing)
         UITextField.appearance().setLayerStyle(blue, for: .inactive)
+        UITextField.appearance().setPlaceholderStyle(greenHeadline, for: .inactive)
+        UITextField.appearance().setPlaceholderStyle(magentaFootnote, for: .editing)
         UINavigationBar.appearance().textStyle = h1
         UINavigationBar.appearance().tintColor = .yellow
         UINavigationBar.appearance().barTintColor = .black
         UINavigationBar.appearance().barStyle = .black
-
         return true
     }
 }
