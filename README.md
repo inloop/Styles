@@ -53,6 +53,7 @@
 - __declarative__: You describe the style, framework will do the rest
 - __type-safe__: Type system will help you describe your style
 - __plays nice with UIAppearance__: In fact its designed for it.
+- __usable as settable property__:  Not only works as UIAppearance proxy, but also as settable property
 - __supports UIControl states and UITextField editing__: You're gonna ❤︎ it.
 - __saves you from the `NSAttributedString`<sup><sup>[1](#soso)</sup></sup>__: Just work with `String`s.
 - __text, color and layer properties__: Custom line height, letter spacing, corners? Me gusta.
@@ -92,6 +93,24 @@ let h1 = TextStyle(
 UILabel.appearance().textStyle = h1
 UIButton.appearance().setTextStyle(h1, for: .normal)
 ```
+```swift
+import UIKit
+
+final class StylesViewController: UIViewController {
+    @IBOutlet weak var stylesLabel: UILabel!
+
+    let h1 = TextStyle(
+        .font(.preferredFont(forTextStyle: .largeTitle)),
+        .foregroundColor(.black),
+        .backgroundColor(.yellow)
+    )
+
+    func viewDidLoad() {
+        super.viewDidLoad()
+        stylesLabel.textStyle = h1
+    }
+}
+```
 
 ### LayerStyle
 ```swift
@@ -118,6 +137,24 @@ let blue = LayerStyle (
 UITextField.appearance().setLayerStyle(red, for: .editing)
 UITextField.appearance().setLayerStyle(blue, for: .inactive)
 ```
+```swift
+import UIKit
+
+final class StylesViewController: UIViewController {
+    @IBOutlet weak var stylesButton: UIButton!
+
+    let blue = LayerStyle (
+        .borderColor(.blue),
+        .borderWidth(0.5),
+        .cornerRadius(10)
+    )
+
+    func viewDidLoad() {
+        super.viewDidLoad()
+        stylesButton.layerStyle = blue
+    }
+}
+```
 
 ### ColorStyle
 
@@ -128,6 +165,22 @@ let themeColors = ColorStyle(
 )
 
 UIView.appearance().colorStyle = themeColors
+```
+```swift
+import UIKit
+
+final class StylesViewController: UIViewController {
+    @IBOutlet weak var containerView: UIView!
+
+    let containerTheme = ColorStyle(
+        .backgroundColor(.black)
+    )
+
+    func viewDidLoad() {
+        super.viewDidLoad()
+        containerView.colorStyle = containerTheme
+    }
+}
 ```
 
 ## Installation
