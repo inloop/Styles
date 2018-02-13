@@ -107,6 +107,7 @@
 }
 
 - (void)applyStyle {
+    [super applyStyle];
     UITextFieldState state = [self isEditing] ? kEditing : kInactive;
     [self updateStylesForState:state];
 }
