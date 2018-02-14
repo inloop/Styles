@@ -1,3 +1,4 @@
+![alt text](https://imgur.com/LhZv3AA "Styles - A declarative and type-safe framework for beautiful applications")
 <h1 align="center">Styles</h1>
 
 <div align="center">
