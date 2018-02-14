@@ -2,23 +2,68 @@
 
 import UIKit
 
+extension UIRectCorner {
+    @available(iOS 11.0, *)
+    var maskedCorners: CACornerMask {
+        var mask: CACornerMask = []
+        if contains(.topLeft) {
+            mask.formUnion(CACornerMask.layerMinXMinYCorner)
+        }
+        if contains(.topRight) {
+            mask.formUnion(CACornerMask.layerMaxXMinYCorner)
+        }
+        if contains(.bottomLeft) {
+            mask.formUnion(CACornerMask.layerMinXMaxYCorner)
+        }
+        if contains(.bottomRight) {
+            mask.formUnion(CACornerMask.layerMaxXMaxYCorner)
+        }
+        if contains(.allCorners) {
+            mask = [
+                .layerMinXMinYCorner,
+                .layerMaxXMinYCorner,
+                .layerMinXMaxYCorner,
+                .layerMaxXMaxYCorner
+            ]
+        }
+        return mask
+    }
+}
+
 public final class LayerStyle: NSObject {
     public enum Property {
         case borderColor(UIColor)
         case borderWidth(CGFloat)
-        case cornerRadius(CGFloat)
+        case roundCorners(UIRectCorner, radius: CGFloat)
         case opacity(Float)
 
-        var attribute: (WritableKeyPathApplicator<CALayer>, Any) {
+        func apply(to view: UIView) {
             switch self {
             case .borderColor(let color):
-                return (WritableKeyPathApplicator(\CALayer.borderColor), color.cgColor)
+                view.layer.borderColor = color.cgColor
             case .borderWidth(let width):
-                return (WritableKeyPathApplicator(\CALayer.borderWidth), width)
-            case .cornerRadius(let radius):
-                return (WritableKeyPathApplicator(\CALayer.cornerRadius), radius)
+                view.layer.borderWidth = width
+            case .roundCorners(let corners, let radius):
+                applyRoundCorners(corners, radius: radius, toView: view)
             case .opacity(let opacity):
-                return (WritableKeyPathApplicator(\CALayer.opacity), opacity)
+                view.layer.opacity = opacity
+            }
+        }
+
+        private func applyRoundCorners(_ corners: UIRectCorner, radius: CGFloat, toView view: UIView) {
+            if #available(iOS 11.0, *) {
+                view.clipsToBounds = true
+                view.layer.cornerRadius = radius
+                view.layer.maskedCorners = corners.maskedCorners
+            } else {
+                let path = UIBezierPath(
+                    roundedRect: view.bounds,
+                    byRoundingCorners: corners,
+                    cornerRadii: CGSize(width: radius, height: radius)
+                )
+                let mask = CAShapeLayer()
+                mask.path = path.cgPath
+                view.layer.mask = mask
             }
         }
     }
@@ -29,9 +74,9 @@ public final class LayerStyle: NSObject {
         self.properties = properties
     }
 
-    @objc public func apply(to layer: CALayer) {
-        properties.map { $0.attribute }.forEach { key, value in
-            key.apply(value: value, to: layer)
+    @objc public func apply(to view: UIView) {
+        for property in properties {
+            property.apply(to: view)
         }
     }
 }
