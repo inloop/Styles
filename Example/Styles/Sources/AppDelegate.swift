@@ -46,7 +46,7 @@ let body = TextStyle(
 )
 
 let rounded = LayerStyle(
-        .cornerRadius(10),
+        .roundCorners([.topLeft, .bottomRight], radius: 10),
         .borderWidth(3),
         .borderColor(.red),
         .opacity(0.8)

@@ -7,12 +7,12 @@ public final class ColorStyle: NSObject {
         case backgroundColor(UIColor)
         case tintColor(UIColor)
 
-        var attribute: (WritableKeyPathApplicator<UIView>, Any) {
+        func apply(to view: UIView) {
             switch self {
             case .backgroundColor(let color):
-                return (WritableKeyPathApplicator(\UIView.backgroundColor), color)
+                view.backgroundColor = color
             case .tintColor(let color):
-                return (WritableKeyPathApplicator(\UIView.tintColor), color)
+                view.tintColor = color
             }
         }
     }
@@ -24,8 +24,8 @@ public final class ColorStyle: NSObject {
     }
 
     @objc public func apply(to view: UIView) {
-        properties.map { $0.attribute }.forEach { key, value in
-            key.apply(value: value, to: view)
+        for property in properties {
+            property.apply(to: view)
         }
     }
 }

@@ -11,7 +11,7 @@ SYNTHESIZE_PROPERTY_OBJ(LayerStyle, layerStyle, LayerStyle);
 SYNTHESIZE_PROPERTY_OBJ(ColorStyle, colorStyle, ColorStyle);
 
 - (void)applyStyle {
-    [self.layerStyle applyTo:self.layer];
+    [self.layerStyle applyTo:self];
     [self.colorStyle applyTo:self];
 }
 

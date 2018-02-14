@@ -132,7 +132,7 @@
     if (!style) {
         return;
     }
-    [style applyTo:self.layer];
+    [style applyTo:self];
 }
 
 @end

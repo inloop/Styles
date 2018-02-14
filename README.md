@@ -94,28 +94,19 @@ UILabel.appearance().textStyle = h1
 UIButton.appearance().setTextStyle(h1, for: .normal)
 ```
 ```swift
-import UIKit
+let h1 = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.black),
+    .backgroundColor(.yellow)
+)
 
-final class StylesViewController: UIViewController {
-    @IBOutlet weak var stylesLabel: UILabel!
-
-    let h1 = TextStyle(
-        .font(.preferredFont(forTextStyle: .largeTitle)),
-        .foregroundColor(.black),
-        .backgroundColor(.yellow)
-    )
-
-    func viewDidLoad() {
-        super.viewDidLoad()
-        stylesLabel.textStyle = h1
-    }
-}
+myLabel.textStyle = h1
 ```
 
 ### LayerStyle
 ```swift
 let pill = LayerStyle(
-     .cornerRadius(10),
+     .roundCorners(.allCorners, radius: 10),
      .borderWidth(3),
      .borderColor(.red),
      .opacity(0.8)
@@ -138,22 +129,13 @@ UITextField.appearance().setLayerStyle(red, for: .editing)
 UITextField.appearance().setLayerStyle(blue, for: .inactive)
 ```
 ```swift
-import UIKit
+let blue = LayerStyle (
+    .borderColor(.blue),
+    .borderWidth(0.5),
+    .cornerRadius(10)
+)
 
-final class StylesViewController: UIViewController {
-    @IBOutlet weak var stylesButton: UIButton!
-
-    let blue = LayerStyle (
-        .borderColor(.blue),
-        .borderWidth(0.5),
-        .cornerRadius(10)
-    )
-
-    func viewDidLoad() {
-        super.viewDidLoad()
-        stylesButton.layerStyle = blue
-    }
-}
+myButton.layerStyle = blue
 ```
 
 ### ColorStyle
@@ -167,20 +149,11 @@ let themeColors = ColorStyle(
 UIView.appearance().colorStyle = themeColors
 ```
 ```swift
-import UIKit
+let container = ColorStyle(
+    .backgroundColor(.black)
+)
 
-final class StylesViewController: UIViewController {
-    @IBOutlet weak var containerView: UIView!
-
-    let containerTheme = ColorStyle(
-        .backgroundColor(.black)
-    )
-
-    func viewDidLoad() {
-        super.viewDidLoad()
-        containerView.colorStyle = containerTheme
-    }
-}
+myContainerView.colorStyle = container
 ```
 
 ## Installation
