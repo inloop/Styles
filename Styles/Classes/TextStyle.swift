@@ -13,12 +13,6 @@ public extension NSMutableParagraphStyle {
     }
 }
 
-private extension Array where Element == TextStyle.Property {
-    var attributes: [NSAttributedStringKey: Any] {
-        return Dictionary(uniqueKeysWithValues: flatMap { $0.attribute })
-    }
-}
-
 public final class TextStyle: NSObject {
     public enum ParagraphStyle {
         case alignment(NSTextAlignment)
