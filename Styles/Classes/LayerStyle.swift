@@ -82,10 +82,10 @@ public final class LayerStyle: NSObject {
 
         static var defaultValues: [Property] {
             return [
-                borderColor(.black),
-                borderWidth(0),
-                roundCorners(.allCorners, radius: 0),
-                opacity(1)
+                Property.borderColor(.black),
+                Property.borderWidth(0),
+                Property.roundCorners(.allCorners, radius: 0),
+                Property.opacity(1)
             ]
         }
     }
