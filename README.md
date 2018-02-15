@@ -104,6 +104,28 @@ let h1 = TextStyle(
 
 myLabel.textStyle = h1
 ```
+#### Updating TextStyle
+
+```swift
+let footnote = TextStyle(
+    .font(.preferredFont(forTextStyle: .footnote))
+)
+
+let blueFootnote = footnote.updating(.foregroundColor(.blue))
+
+myLabel.textStyle = blueFootnote
+```
+
+```swift
+let blueFootnote = TextStyle(
+    .font(.preferredFont(forTextStyle: .footnote))
+    .foregroundColor(.blue)
+)
+
+let redFootnote = blueFootnote.updating(.foregroundColor(.red))
+
+myLabel.textStyle = redFootnote
+```
 
 ### LayerStyle
 ```swift

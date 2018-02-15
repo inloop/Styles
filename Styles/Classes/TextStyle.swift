@@ -13,6 +13,12 @@ public extension NSMutableParagraphStyle {
     }
 }
 
+private extension Array where Element == TextStyle.Property {
+    var attributes: [NSAttributedStringKey: Any] {
+        return Dictionary(uniqueKeysWithValues: flatMap { $0.attribute })
+    }
+}
+
 public final class TextStyle: NSObject {
     public enum ParagraphStyle {
         case alignment(NSTextAlignment)
@@ -62,17 +68,22 @@ public final class TextStyle: NSObject {
         }
     }
 
-    let properties: [Property]
-    
-    @objc public var attributes: [NSAttributedStringKey: Any] {
-        return Dictionary(uniqueKeysWithValues: properties.flatMap { $0.attribute })
-    }
+    @objc public let attributes: [NSAttributedStringKey: Any]
 
     public init(_ properties: Property...) {
-        self.properties = properties
+        attributes = properties.attributes
+    }
+
+    private init(attributes: [NSAttributedStringKey: Any]) {
+        self.attributes = attributes
     }
 
     @objc public func apply(to text: String) -> NSAttributedString {
         return NSAttributedString(string: text, attributes: attributes)
+    }
+
+    public func updating(_ properties: Property ...) -> TextStyle {
+        let newAttributes = attributes.merging(properties.attributes, uniquingKeysWith: { $1 })
+        return TextStyle(attributes: newAttributes)
     }
 }

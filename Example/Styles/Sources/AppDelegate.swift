@@ -82,12 +82,16 @@ let magentaFootnote = TextStyle(
     .foregroundColor(.magenta)
 )
 
+let blueFootnote = magentaFootnote.updating(.foregroundColor(.blue))
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        print(magentaFootnote.attributes)
+        print(blueFootnote.attributes)
         // Override point for customization after application launch.
         ExLabel.appearance().textStyle = body
         ExLabel.appearance().layerStyle = rounded
