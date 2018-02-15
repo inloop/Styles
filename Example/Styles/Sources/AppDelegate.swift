@@ -67,9 +67,9 @@ let red = LayerStyle(
     .borderWidth(0.5)
 )
 
-let blue = LayerStyle (
+let blue = red.updating(
     .borderColor(.blue),
-    .borderWidth(0.5)
+    .roundCorners(.allCorners, radius: 10)
 )
 
 let greenHeadline = TextStyle(
@@ -108,4 +108,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

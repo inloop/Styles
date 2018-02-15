@@ -2,6 +2,30 @@
 
 import UIKit
 
+private extension Array where Element == LayerStyle.Property {
+    func updating(_ other: [Element]) -> [Element] {
+        var new = self
+        for element in other {
+            if let index = new.index(of: element) {
+                new[index] = element
+            } else {
+                new.append(element)
+            }
+        }
+        return new
+    }
+
+    func diff(_ other: [Element]) -> [Element] {
+        var new = self
+        for element in other {
+            if let index = new.index(of: element) {
+                new.remove(at: index)
+            }
+        }
+        return new
+    }
+}
+
 extension UIRectCorner {
     @available(iOS 11.0, *)
     var maskedCorners: CACornerMask {
@@ -29,9 +53,8 @@ extension UIRectCorner {
         return mask
     }
 }
-
 public final class LayerStyle: NSObject {
-    public enum Property {
+    public enum Property: Equatable {
         case borderColor(UIColor)
         case borderWidth(CGFloat)
         case roundCorners(UIRectCorner, radius: CGFloat)
@@ -66,17 +89,49 @@ public final class LayerStyle: NSObject {
                 view.layer.mask = mask
             }
         }
+
+        public static func ==(lhs: Property, rhs: Property) -> Bool {
+            switch (lhs, rhs) {
+            case (.borderColor, .borderColor):
+                return true
+            case (.borderWidth, .borderWidth):
+                return true
+            case (.roundCorners, .roundCorners):
+                return true
+            case (.opacity, .opacity):
+                return true
+            default: return false
+            }
+        }
+
+        static var defaultValues: [Property] {
+            return [
+                Property.borderColor(.black),
+                Property.borderWidth(0),
+                Property.roundCorners(.allCorners, radius: 0),
+                Property.opacity(1)
+            ]
+        }
     }
 
     let properties: [Property]
 
-    public init(_ properties: Property...) {
-        self.properties = properties
+    public convenience init(_ properties: Property...) {
+        self.init(properties)
+    }
+
+    private init(_ properties: [Property]) {
+        let defaultValues = Property.defaultValues.diff(properties)
+        self.properties = properties + defaultValues
     }
 
     @objc public func apply(to view: UIView) {
         for property in properties {
             property.apply(to: view)
         }
+    }
+
+    public func updating(_ other: Property...) -> LayerStyle {
+        return LayerStyle(properties.updating(other))
     }
 }
