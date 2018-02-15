@@ -3,7 +3,7 @@
 import Foundation
 
 public final class ColorStyle: NSObject {
-    public enum Property {
+    public enum Property: Equatable {
         case backgroundColor(UIColor)
         case tintColor(UIColor)
 
@@ -15,11 +15,26 @@ public final class ColorStyle: NSObject {
                 view.tintColor = color
             }
         }
+
+        public static func ==(lhs: Property, rhs: Property) -> Bool {
+            switch (lhs, rhs) {
+            case (.backgroundColor, .backgroundColor):
+                return true
+            case (.tintColor, .tintColor):
+                return true
+            default:
+                return false
+            }
+        }
     }
 
     let properties: [Property]
 
-    public init(_ properties: Property...) {
+    public convenience init(_ properties: Property...) {
+        self.init(properties)
+    }
+
+    private init(_ properties: [Property]) {
         self.properties = properties
     }
 
@@ -27,5 +42,9 @@ public final class ColorStyle: NSObject {
         for property in properties {
             property.apply(to: view)
         }
+    }
+
+    public func updating(_ other: Property...) -> ColorStyle {
+        return ColorStyle(properties.updating(other))
     }
 }

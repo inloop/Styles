@@ -59,6 +59,7 @@
 - __supports UIControl states and UITextField editing__: You're gonna ❤︎ it.
 - __saves you from the `NSAttributedString`<sup><sup>[1](#soso)</sup></sup>__: Just work with `String`s.
 - __text, color and layer properties__: Custom line height, letter spacing, corners? Me gusta.
+- __supports Styles updating__: Design base style for you app and update it on the fly as needed.
 
 <sub><sub><a name="soso">1</a>: In some cases.</sub></sub>
 
@@ -200,7 +201,24 @@ let container = ColorStyle(
 
 myContainerView.colorStyle = container
 ```
+#### Updating ColorStyle
+```swift
+let themeColors = ColorStyle(
+    .backgroundColor(.gray)
+)
+let themeColorsWithTint = themeColors.updating(.tintColor(.blue))
 
+UIView.appearance().colorStyle = themeColorsWithTint
+```
+```swift
+let themeColors = ColorStyle(
+    .backgroundColor(.gray),
+    .tintColor(.blue)
+)
+let themeColorsRed = themeColors.updating(.tintColor(.red))
+
+UIView.appearance().colorStyle = themeColorsRed
+```
 ## Installation
 
 Styles is available through [CocoaPods](http://cocoapods.org). To install
