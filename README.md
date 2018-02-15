@@ -144,7 +144,7 @@ let red = LayerStyle(
     .borderWidth(0.5)
 )
 
-let blue = LayerStyle (
+let blue = LayerStyle(
     .borderColor(.blue),
     .borderWidth(0.5)
 )
@@ -156,10 +156,31 @@ UITextField.appearance().setLayerStyle(blue, for: .inactive)
 let blue = LayerStyle (
     .borderColor(.blue),
     .borderWidth(0.5),
-    .cornerRadius(10)
+    .roundCorners(.allCorners, radius: 10)
 )
 
 myButton.layerStyle = blue
+```
+#### Updating LayerStyle
+```swift
+let app = LayerStyle(
+    .borderWidth(0.5),
+    .roundCorners(.allCorners, radius: 10)
+)
+
+let blue = app.updating(.borderColor(.blue))
+
+myButton.layerStyle = blue
+```
+```swift
+let app = LayerStyle(
+    .borderWidth(0.5),
+    .roundCorners(.allCorners, radius: 10)
+)
+
+let thick = app.updating(.borderWidth(3))
+
+myButton.layerStyle = thick
 ```
 
 ### ColorStyle
