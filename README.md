@@ -1,3 +1,5 @@
+![alt text](https://imgur.com/download/rvaWqH3 "Styles - A declarative and type-safe framework for beautiful applications")
+<sup>Artwork: <a href="https://www.webumenia.sk/dielo/SVK:SNG.K_8572">Josef Čapek - 7. Povídání o pejskovi a kočičce (7/43)</a></sup>
 <h1 align="center">Styles</h1>
 
 <div align="center">
