@@ -11,7 +11,23 @@ extension NSShadow {
         shadow.shadowBlurRadius = 4
         return shadow
     }()
+
+    static let blue: NSShadow = {
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.blue
+        shadow.shadowOffset = CGSize(width: 4, height: 4)
+        shadow.shadowBlurRadius = 4
+        return shadow
+    }()
 }
+
+let everyOtherTilda = TextEffect(
+    style: TextStyle(
+        .foregroundColor(.cyan),
+        .shadow(.blue)
+    ),
+    matching: Regex("~.*?(~)")
+)
 
 let h1 = TextStyle(
       .font(.preferredFont(forTextStyle: .largeTitle)),
@@ -21,7 +37,8 @@ let h1 = TextStyle(
           .alignment(.center)
         ]),
       .obliqueness(0.3),
-      .shadow(.magenta)
+      .shadow(.magenta),
+      effects: [ everyOtherTilda ]
 )
 
 let body = TextStyle(
@@ -55,8 +72,8 @@ let bigGreen = TextStyle(
     .foregroundColor(.green)
 )
 
-let bigRedFirstWord = TextEffect(style: bigRed, matching: .firstWord)
-let bigGreenLastWord = TextEffect(style: bigGreen, matching: .lastWord)
+let bigRedFirstWord = TextEffect(style: bigRed, matching: First(occurenceOf: "Styles"))
+let bigGreenLastWord = TextEffect(style: bigGreen, matching: Block { $0.range(of: "awesome") })
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),

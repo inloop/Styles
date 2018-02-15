@@ -10,7 +10,7 @@ FOUNDATION_EXPORT void swizzle_instance_method(Class class, SEL original, SEL sw
 #define SYNTHESIZE_PROPERTY_OBJ(TYPE, PROPERTY_NAME, PROPERTY_NAME_UPPER) \
 \
 - (void)set##PROPERTY_NAME_UPPER:(TYPE *)PROPERTY_NAME { \
-    objc_setAssociatedObject(self, @selector(PROPERTY_NAME), PROPERTY_NAME, OBJC_ASSOCIATION_COPY_NONATOMIC); \
+    objc_setAssociatedObject(self, @selector(PROPERTY_NAME), PROPERTY_NAME, OBJC_ASSOCIATION_RETAIN_NONATOMIC); \
     [self applyStyle]; \
 } \
 \

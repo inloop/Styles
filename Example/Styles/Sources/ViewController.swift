@@ -2,9 +2,7 @@
 
 import UIKit
 
-class ExLabel: UILabel {
-
-}
+class ExLabel: UILabel { }
 
 class ViewController: UIViewController {
     @IBOutlet var label: ExLabel!
@@ -16,8 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         containerView.colorStyle = redColor
         label.text = "Styles is awesome!"
-//        button.setTitle("Default", for: .normal)
-//        button.setTitle("Highlighted", for: .highlighted)
     }
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
