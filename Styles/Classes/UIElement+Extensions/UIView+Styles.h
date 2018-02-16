@@ -6,7 +6,7 @@
 @class ColorStyle;
 
 @interface UIView (Styles)
-@property (nonatomic, strong) LayerStyle *layerStyle UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong) ColorStyle *colorStyle UI_APPEARANCE_SELECTOR;
+@property (nonatomic, copy) LayerStyle *layerStyle UI_APPEARANCE_SELECTOR;
+@property (nonatomic, copy) ColorStyle *colorStyle UI_APPEARANCE_SELECTOR;
 - (void)applyStyle;
 @end

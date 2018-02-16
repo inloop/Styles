@@ -11,6 +11,14 @@ extension NSShadow {
         shadow.shadowBlurRadius = 4
         return shadow
     }()
+
+    static let blue: NSShadow = {
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.blue
+        shadow.shadowOffset = CGSize(width: 4, height: 4)
+        shadow.shadowBlurRadius = 4
+        return shadow
+    }()
 }
 
 let h1 = TextStyle(
@@ -21,7 +29,8 @@ let h1 = TextStyle(
           .alignment(.center)
         ]),
       .obliqueness(0.3),
-      .shadow(.magenta)
+      .shadow(.magenta),
+      effects: [ everyOtherTilda ]
 )
 
 let body = TextStyle(
@@ -43,6 +52,33 @@ let body = TextStyle(
         byWord: true,
         color: .red
       ))
+)
+
+let bigRed = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.red)
+)
+
+let bigGreen = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.green)
+)
+let cyanTextWithBlueShadow = TextStyle(
+    .foregroundColor(.cyan),
+    .shadow(.blue)
+)
+
+let bigRedFirstWord = TextEffect(style: bigRed, matching: First(occurenceOf: "Styles"))
+let bigGreenLastWord = TextEffect(style: bigGreen, matching: Block { $0.range(of: "awesome") })
+let everyOtherTilda = TextEffect(style: cyanTextWithBlueShadow, matching: Regex("~.*?(~)"))
+
+let styleWithEffects = TextStyle(
+    .font(.preferredFont(forTextStyle: .body)),
+    .backgroundColor(.yellow),
+    effects: [
+        bigRedFirstWord,
+        bigGreenLastWord
+    ]
 )
 
 let rounded = LayerStyle(
@@ -97,7 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(magentaFootnote.attributes)
         print(blueFootnote.attributes)
         // Override point for customization after application launch.
-        ExLabel.appearance().textStyle = body
+        ExLabel.appearance().textStyle = styleWithEffects
         ExLabel.appearance().layerStyle = rounded
         UIButton.appearance().setTextStyle(h1, for: .normal)
         UIButton.appearance().setTextStyle(body, for: .highlighted)

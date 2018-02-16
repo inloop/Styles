@@ -44,8 +44,12 @@
 - [Requirements](#requirements)
 - [Examples](#examples)
   - [TextStyle](#textstyle)
+    - [Updating TextStyle](#updating-textstyle)
+    - [TextEffects](#texteffects)
   - [LayerStyle](#layerstyle)
+    - [Updating LayerStyle](#updating-layerstyle)
   - [ColorStyle](#colorstyle)
+    - [Updating ColorStyle](#updating-colorstyle)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [License](#license)
@@ -127,6 +131,40 @@ let redFootnote = blueFootnote.updating(.foregroundColor(.red))
 
 myLabel.textStyle = redFootnote
 ```
+#### TextEffects
+
+```swift
+
+let bigRed: TextStyle = ...
+let bigGreen: TextStyle = ...
+let smallCyan: TextStyle = ...
+
+let bigRedFirstWord = TextEffect(
+    style: bigRed,
+    matching: First(occurenceOf: "Styles")
+)
+
+let bigGreenLastWord = TextEffect(
+    style: bigGreen,
+    matching: Block { $0.range(of: "awesome") }
+)
+
+let everyOtherTildaCyan = TextEffect(
+    style: smallCyan,
+    matching: Regex("~.*?(~)")
+)
+
+let styleWithEffects = TextStyle(
+    .font(.preferredFont(forTextStyle: .body)),
+    .backgroundColor(.yellow),
+    effects: [
+        bigRedFirstWord,
+        bigGreenLastWord,
+        everyOtherTildaCyan
+    ]
+)
+
+```
 
 ### LayerStyle
 ```swift
@@ -170,8 +208,6 @@ let app = LayerStyle(
 )
 
 let blue = app.updating(.borderColor(.blue))
-
-myButton.layerStyle = blue
 ```
 ```swift
 let app = LayerStyle(
@@ -180,8 +216,6 @@ let app = LayerStyle(
 )
 
 let thick = app.updating(.borderWidth(3))
-
-myButton.layerStyle = thick
 ```
 
 ### ColorStyle
@@ -206,18 +240,16 @@ myContainerView.colorStyle = container
 let themeColors = ColorStyle(
     .backgroundColor(.gray)
 )
-let themeColorsWithTint = themeColors.updating(.tintColor(.blue))
 
-UIView.appearance().colorStyle = themeColorsWithTint
+let themeColorsWithTint = themeColors.updating(.tintColor(.blue))
 ```
 ```swift
 let themeColors = ColorStyle(
     .backgroundColor(.gray),
     .tintColor(.blue)
 )
-let themeColorsRed = themeColors.updating(.tintColor(.red))
 
-UIView.appearance().colorStyle = themeColorsRed
+let themeColorsRed = themeColors.updating(.tintColor(.red))
 ```
 ## Installation
 
