@@ -80,14 +80,12 @@ public final class LayerStyle: NSObject {
             }
         }
 
-        static var defaultValues: [Property] {
-            return [
-                Property.borderColor(.black),
-                Property.borderWidth(0),
-                Property.roundCorners(.allCorners, radius: 0),
-                Property.opacity(1)
-            ]
-        }
+        static let defaults = [
+            Property.borderColor(.black),
+            Property.borderWidth(0),
+            Property.roundCorners(.allCorners, radius: 0),
+            Property.opacity(1)
+        ]
     }
 
     let properties: [Property]
@@ -97,8 +95,8 @@ public final class LayerStyle: NSObject {
     }
 
     private init(_ properties: [Property]) {
-        let defaultValues = Property.defaultValues.diff(properties)
-        self.properties = properties + defaultValues
+        let defaults = Property.defaults.not(in: properties)
+        self.properties = properties + defaults
     }
 
     @objc public func apply(to view: UIView) {

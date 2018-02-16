@@ -8,27 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0BEFB020D2A65C8C54FA8B9BAF5AF782 /* Pods-Styles_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE8BEDCA5DA425F7F7F50C5AF7E92E7F /* Pods-Styles_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F0CECDDDD32F5E23391D2F4E6550406 /* UIButton+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B1511C133A7EC9B80A64B067ABE3127 /* UIButton+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A12543336FD4483559752541682942D /* UITextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = DC636E6DD654E9C6FFF05D9E12371E88 /* UITextField+Styles.m */; };
-		259ED85A302FF75667554BBE87119661 /* UIButton+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5CCD974B5359895EEC691D9CDC7EB9 /* UIButton+Styles.m */; };
-		2D2C8D4B9532D1A7DA4B7795CADD5142 /* UILabel+TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4EC9F430C94A04AC9A9334CBB27D3 /* UILabel+TextStyle.m */; };
-		2DB6598BFC0A242CFA37914692FADC28 /* UINavigationBar+TextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 28BC79B8FD1BFAB1013B034838EBD07B /* UINavigationBar+TextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31E2062815007ECEEB57F2CE9F957E36 /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = AB27BA766772ADFF7E051C66DE73CCB5 /* Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31FECD984C36C09ACF35D921EF72899A /* UIView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A28AFE72ABA54C1D31E897AE1797DD /* UIView+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B6A34A12035C8450025EFED /* Array+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A34A02035C8450025EFED /* Array+Styles.swift */; };
-		5029C96B48E8ECE18512E682005C40F5 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F4DBC931FC5C9D218106CA9DC6AEE /* TextStyle.swift */; };
-		62F3BC3EE0A433FDC94729BF15DF7578 /* UITextField+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 74BBB79316B9A118730BA0D68D667249 /* UITextField+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B47A930D013108955C9B5AD0068A993 /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0FCAF372727793FE78AB41D7E35DD /* TextDecoration.swift */; };
-		6B4B31332FCD5581F05B9BFE3B06AE78 /* UILabel+TextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 526291CD1CD3B14F839083A2E7597FB0 /* UILabel+TextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F0CECDDDD32F5E23391D2F4E6550406 /* UIButton+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2324CA6441039859AAC64712A4248 /* UIButton+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21DBD9F1C8845B83F50267BC088A5A16 /* UIView+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 87680C033A61287207A2091C88116AE2 /* UIView+Styles.m */; };
+		2DB6598BFC0A242CFA37914692FADC28 /* UINavigationBar+TextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B761E9A22B69233B4D5C23081888D6 /* UINavigationBar+TextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		314A6B25FA1220D9DC2F0FD516F7F531 /* UITextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CAC160B8F7877040F03470D02C9220 /* UITextField+Styles.m */; };
+		31E2062815007ECEEB57F2CE9F957E36 /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E031C7A674C3FE60C18350C416999A0 /* Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31FECD984C36C09ACF35D921EF72899A /* UIView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = C447C7D8D0228CCFB673DD2F8AC3AF93 /* UIView+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D0C8AA054E2C41D4859871A89A6135C /* UIButton+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E0DEF1559B29C7BB69DCB872362D26 /* UIButton+Styles.m */; };
+		44BD83C6B9BAD8C2EF5C22FDF7180A2E /* LayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FAFEC373B7657D9EC8BD6BC230FDAB /* LayerStyle.swift */; };
+		595C71D389E2BE4FAEE459615A6A770A /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1F55B6CA1DF39A3EA39CF99400F9F2 /* ColorStyle.swift */; };
+		62F3BC3EE0A433FDC94729BF15DF7578 /* UITextField+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 11AE71EF3C859AC640452861BADC68D3 /* UITextField+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B4B31332FCD5581F05B9BFE3B06AE78 /* UILabel+TextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = FB690B56ACC60D06F38538F9F9EA4C3A /* UILabel+TextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C5491848003C85CEB424075D9E017E0 /* Pods-Styles_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25422082CBBE5892F1A7DA090D9750C5 /* Pods-Styles_Example-dummy.m */; };
-		76E544F7376E475F50EB939B3F5A3265 /* Styles-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC3E878BBBCD77EE8F054DB243662D /* Styles-dummy.m */; };
-		858B9FE7F8AB6CE872E52F1738A336DB /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9F3741823A7D4725E5ACD634A33E3 /* ColorStyle.swift */; };
-		AF20C99FEBF62EE8B32483B71D5F9360 /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA24EB52C605C28E4AAAE43CDD85EE3 /* Swizzle.m */; };
-		B8A04F3C13C4B3452939050D8E24BC33 /* UIView+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = DB86526C7F6702DC28A57505ECAD3BA6 /* UIView+Styles.m */; };
+		83B0D59747285B05854A13A3334BD656 /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 588E88A5A9CF7DBB6940D63B4256721F /* Swizzle.m */; };
+		9D6EF561647803ABA7CD1571FF1B2DEA /* Styles-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18176CCC6970728EB3C121661715648D /* Styles-dummy.m */; };
+		AE6E1DF30B26E4E3749F4365A9E6C02D /* UINavigationBar+TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4F16D74AB94CC49165FA14659E2A5 /* UINavigationBar+TextStyle.m */; };
+		C3D5A8AA30F5B7A62383B45F3F5FFC4C /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7234FA9963F22586E1B01C732007C395 /* TextDecoration.swift */; };
+		CBB943496E3895B757E33FEFB3A1E87F /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EB394BC5CF6271F1F4B0B5C75AC66 /* TextStyle.swift */; };
 		D53712326E89E058A8466DFE269E2C34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E3FBCDC486B73E01892937BA8CB01069 /* Styles-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7BCCAD8A7D78BAAC34E0E7DA173A38 /* Styles-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F956255F30066241EABDCD60A1257E6E /* UINavigationBar+TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE426C2DD6821A07F059BB1B2F922E4 /* UINavigationBar+TextStyle.m */; };
-		FE1F0C540FA8949AFF7351968F20745C /* LayerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1061B4DC2E45C118A737A15BAE9B71D7 /* LayerStyle.swift */; };
+		D7EC31680CC5B6928C01C18C57A74C5F /* UILabel+TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E75BB115527B720BDD379B9CB6DD1A /* UILabel+TextStyle.m */; };
+		E3FBCDC486B73E01892937BA8CB01069 /* Styles-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F0932E4E583E87A094D196DA972FF /* Styles-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDAD08FB9861C37090EA8AD45AA8EDF7 /* Array+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D859FB5C388FAF75D72280AFC35FE /* Array+Styles.swift */; };
 		FE70B759B47B48B49652E8D7F598F0D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,46 +43,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DCC3E878BBBCD77EE8F054DB243662D /* Styles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Styles-dummy.m"; sourceTree = "<group>"; };
-		1061B4DC2E45C118A737A15BAE9B71D7 /* LayerStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStyle.swift; path = Styles/Classes/LayerStyle.swift; sourceTree = "<group>"; };
-		1D7BCCAD8A7D78BAAC34E0E7DA173A38 /* Styles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-umbrella.h"; sourceTree = "<group>"; };
+		0360660280FA98D4A5965DCD2A6F321C /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
+		05E75BB115527B720BDD379B9CB6DD1A /* UILabel+TextStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextStyle.m"; sourceTree = "<group>"; };
+		095EB394BC5CF6271F1F4B0B5C75AC66 /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = Styles/Classes/TextStyle.swift; sourceTree = "<group>"; };
+		11AE71EF3C859AC640452861BADC68D3 /* UITextField+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Styles.h"; sourceTree = "<group>"; };
+		15A2324CA6441039859AAC64712A4248 /* UIButton+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Styles.h"; sourceTree = "<group>"; };
+		15FAFEC373B7657D9EC8BD6BC230FDAB /* LayerStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStyle.swift; path = Styles/Classes/LayerStyle.swift; sourceTree = "<group>"; };
+		18176CCC6970728EB3C121661715648D /* Styles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Styles-dummy.m"; sourceTree = "<group>"; };
 		1F600D5C8375D6976D8D33CBA59579AE /* Pods-Styles_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Styles_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		25422082CBBE5892F1A7DA090D9750C5 /* Pods-Styles_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Styles_Example-dummy.m"; sourceTree = "<group>"; };
-		28BC79B8FD1BFAB1013B034838EBD07B /* UINavigationBar+TextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TextStyle.h"; sourceTree = "<group>"; };
-		2F303F8C4E7C855A55FDE12DE857057C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		315F21A70799BD42362CA2FEFEB1F6BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B761E9A22B69233B4D5C23081888D6 /* UINavigationBar+TextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TextStyle.h"; sourceTree = "<group>"; };
 		32F51507323EA8324438A81D7A06608A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33F2B6C09E29D5E2CE32F7071AE3BC74 /* Styles.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Styles.modulemap; sourceTree = "<group>"; };
 		38998D66DDF5A96AF1E14C20D2426D70 /* Pods-Styles_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3B6A34A02035C8450025EFED /* Array+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Styles.swift"; sourceTree = "<group>"; };
-		3BE426C2DD6821A07F059BB1B2F922E4 /* UINavigationBar+TextStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TextStyle.m"; sourceTree = "<group>"; };
-		4DA24EB52C605C28E4AAAE43CDD85EE3 /* Swizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Swizzle.m; sourceTree = "<group>"; };
-		4FE4EC9F430C94A04AC9A9334CBB27D3 /* UILabel+TextStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextStyle.m"; sourceTree = "<group>"; };
-		526291CD1CD3B14F839083A2E7597FB0 /* UILabel+TextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextStyle.h"; sourceTree = "<group>"; };
+		3AD4F16D74AB94CC49165FA14659E2A5 /* UINavigationBar+TextStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TextStyle.m"; sourceTree = "<group>"; };
+		4E031C7A674C3FE60C18350C416999A0 /* Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Swizzle.h; sourceTree = "<group>"; };
+		527DF8C28799B44E84630C20EE9FFBE3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		588E88A5A9CF7DBB6940D63B4256721F /* Swizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Swizzle.m; sourceTree = "<group>"; };
+		5D1F55B6CA1DF39A3EA39CF99400F9F2 /* ColorStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorStyle.swift; path = Styles/Classes/ColorStyle.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7422BA36E7B45A8C878EDED96B7627AC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		74BBB79316B9A118730BA0D68D667249 /* UITextField+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Styles.h"; sourceTree = "<group>"; };
-		7A1584F7F6C7E7C8EF84CDE1C62327FE /* Styles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.xcconfig; sourceTree = "<group>"; };
+		7234FA9963F22586E1B01C732007C395 /* TextDecoration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDecoration.swift; path = Styles/Classes/TextDecoration.swift; sourceTree = "<group>"; };
 		7CD558B594129755460A3ADCE8FB3734 /* Pods-Styles_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Styles_Example.modulemap"; sourceTree = "<group>"; };
-		89FB340AA935FA7638328E5E26CF3900 /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B1511C133A7EC9B80A64B067ABE3127 /* UIButton+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Styles.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5E1B8101705C28B7EA3E2E0497C85F4 /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A78F83E63D83316384D0C72E45284772 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB27BA766772ADFF7E051C66DE73CCB5 /* Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Swizzle.h; sourceTree = "<group>"; };
-		AD1015297AC82B3E291B6CAD31EAD1C2 /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
+		86E0DEF1559B29C7BB69DCB872362D26 /* UIButton+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Styles.m"; sourceTree = "<group>"; };
+		87680C033A61287207A2091C88116AE2 /* UIView+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styles.m"; sourceTree = "<group>"; };
+		89FB340AA935FA7638328E5E26CF3900 /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Styles.framework; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98CAC160B8F7877040F03470D02C9220 /* UITextField+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Styles.m"; sourceTree = "<group>"; };
+		9EE662FF74493E97E5FAD399793E22EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A78F83E63D83316384D0C72E45284772 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Styles_Example.framework; path = "Pods-Styles_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD880FD1F52978F8BAA3A7EF87F39D2A /* Pods-Styles_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AEF0FCAF372727793FE78AB41D7E35DD /* TextDecoration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDecoration.swift; path = Styles/Classes/TextDecoration.swift; sourceTree = "<group>"; };
-		AF6F4DBC931FC5C9D218106CA9DC6AEE /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = Styles/Classes/TextStyle.swift; sourceTree = "<group>"; };
+		B9BD7ABAF5354CF1566BF3C77D4BE40E /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BFD3DB4BE740EC359FCAB1E28B738933 /* Pods-Styles_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Styles_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C447C7D8D0228CCFB673DD2F8AC3AF93 /* UIView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Styles.h"; sourceTree = "<group>"; };
 		C9E87D569DC8D811124881863946604D /* Pods-Styles_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D1A28AFE72ABA54C1D31E897AE1797DD /* UIView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Styles.h"; sourceTree = "<group>"; };
-		DB86526C7F6702DC28A57505ECAD3BA6 /* UIView+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styles.m"; sourceTree = "<group>"; };
-		DC636E6DD654E9C6FFF05D9E12371E88 /* UITextField+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Styles.m"; sourceTree = "<group>"; };
+		DB17D76F77D66BE9AE7ECD2114187F8F /* Styles.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Styles.modulemap; sourceTree = "<group>"; };
+		DE232C6159B7EF3FBA2EB208B207FAAD /* Styles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.xcconfig; sourceTree = "<group>"; };
 		DE8BEDCA5DA425F7F7F50C5AF7E92E7F /* Pods-Styles_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Styles_Example-umbrella.h"; sourceTree = "<group>"; };
-		E2D9F3741823A7D4725E5ACD634A33E3 /* ColorStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorStyle.swift; path = Styles/Classes/ColorStyle.swift; sourceTree = "<group>"; };
+		E06D859FB5C388FAF75D72280AFC35FE /* Array+Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Styles.swift"; sourceTree = "<group>"; };
 		F184598C5E742E7B8FFFD085639C746D /* Pods-Styles_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-resources.sh"; sourceTree = "<group>"; };
-		FD5CCD974B5359895EEC691D9CDC7EB9 /* UIButton+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Styles.m"; sourceTree = "<group>"; };
+		F55F0932E4E583E87A094D196DA972FF /* Styles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-umbrella.h"; sourceTree = "<group>"; };
+		FB690B56ACC60D06F38538F9F9EA4C3A /* UILabel+TextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextStyle.h"; sourceTree = "<group>"; };
+		FC60699B0ACC14609062791DC5AF7ADE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,37 +114,56 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F8D08A4D081F6F4569FCEB4E3D5F14A /* Styles */ = {
+		081028D551AEDD947E61F245A6B7EE6F /* UIElement+Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3B6A349F2035C8450025EFED /* Extensions */,
-				E2D9F3741823A7D4725E5ACD634A33E3 /* ColorStyle.swift */,
-				1061B4DC2E45C118A737A15BAE9B71D7 /* LayerStyle.swift */,
-				AEF0FCAF372727793FE78AB41D7E35DD /* TextDecoration.swift */,
-				AF6F4DBC931FC5C9D218106CA9DC6AEE /* TextStyle.swift */,
-				BB8537DA15EFDA1864EE6083FA21D9E9 /* UIElement+Extensions */,
-				95BC2694F7B73A7FECF71372348D223C /* Pod */,
-				A0C0EFC012E89085A8A01817FD00707F /* Support Files */,
+				4E031C7A674C3FE60C18350C416999A0 /* Swizzle.h */,
+				588E88A5A9CF7DBB6940D63B4256721F /* Swizzle.m */,
+				15A2324CA6441039859AAC64712A4248 /* UIButton+Styles.h */,
+				86E0DEF1559B29C7BB69DCB872362D26 /* UIButton+Styles.m */,
+				FB690B56ACC60D06F38538F9F9EA4C3A /* UILabel+TextStyle.h */,
+				05E75BB115527B720BDD379B9CB6DD1A /* UILabel+TextStyle.m */,
+				32B761E9A22B69233B4D5C23081888D6 /* UINavigationBar+TextStyle.h */,
+				3AD4F16D74AB94CC49165FA14659E2A5 /* UINavigationBar+TextStyle.m */,
+				11AE71EF3C859AC640452861BADC68D3 /* UITextField+Styles.h */,
+				98CAC160B8F7877040F03470D02C9220 /* UITextField+Styles.m */,
+				C447C7D8D0228CCFB673DD2F8AC3AF93 /* UIView+Styles.h */,
+				87680C033A61287207A2091C88116AE2 /* UIView+Styles.m */,
 			);
-			name = Styles;
-			path = ../..;
+			name = "UIElement+Extensions";
+			path = "Styles/Classes/UIElement+Extensions";
 			sourceTree = "<group>";
 		};
-		3B6A349F2035C8450025EFED /* Extensions */ = {
+		34BB8F1F9B45094CFD1320793B714C66 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B6A34A02035C8450025EFED /* Array+Styles.swift */,
-			);
-			name = Extensions;
-			path = Styles/Classes/Extensions;
-			sourceTree = "<group>";
-		};
-		3CBE5036DAE9D6CAF7BE5B925851E08D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0F8D08A4D081F6F4569FCEB4E3D5F14A /* Styles */,
+				95595EB9423A46748C19E7C3E3AEA0F3 /* Styles */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		514E67E6CD5EDE4158A106F37B79B232 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				527DF8C28799B44E84630C20EE9FFBE3 /* LICENSE */,
+				9EE662FF74493E97E5FAD399793E22EC /* README.md */,
+				B9BD7ABAF5354CF1566BF3C77D4BE40E /* Styles.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		56916CEBD078BF8D102F8A8E97B6593A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC60699B0ACC14609062791DC5AF7ADE /* Info.plist */,
+				DB17D76F77D66BE9AE7ECD2114187F8F /* Styles.modulemap */,
+				DE232C6159B7EF3FBA2EB208B207FAAD /* Styles.xcconfig */,
+				18176CCC6970728EB3C121661715648D /* Styles-dummy.m */,
+				0360660280FA98D4A5965DCD2A6F321C /* Styles-prefix.pch */,
+				F55F0932E4E583E87A094D196DA972FF /* Styles-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Styles";
 			sourceTree = "<group>";
 		};
 		7A4697F41EF2557231FD836AD2434A8B /* Pods-Styles_Example */ = {
@@ -169,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3CBE5036DAE9D6CAF7BE5B925851E08D /* Development Pods */,
+				34BB8F1F9B45094CFD1320793B714C66 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				04A7B1FBDA3F8050E798547DD531D6B1 /* Products */,
 				862FFF787256FDD163904A5540D6370B /* Targets Support Files */,
@@ -184,48 +203,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		95BC2694F7B73A7FECF71372348D223C /* Pod */ = {
+		95595EB9423A46748C19E7C3E3AEA0F3 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				7422BA36E7B45A8C878EDED96B7627AC /* LICENSE */,
-				2F303F8C4E7C855A55FDE12DE857057C /* README.md */,
-				A5E1B8101705C28B7EA3E2E0497C85F4 /* Styles.podspec */,
+				5D1F55B6CA1DF39A3EA39CF99400F9F2 /* ColorStyle.swift */,
+				15FAFEC373B7657D9EC8BD6BC230FDAB /* LayerStyle.swift */,
+				7234FA9963F22586E1B01C732007C395 /* TextDecoration.swift */,
+				095EB394BC5CF6271F1F4B0B5C75AC66 /* TextStyle.swift */,
+				FBB198283E461FE0822358FBD60057D6 /* Extensions */,
+				514E67E6CD5EDE4158A106F37B79B232 /* Pod */,
+				56916CEBD078BF8D102F8A8E97B6593A /* Support Files */,
+				081028D551AEDD947E61F245A6B7EE6F /* UIElement+Extensions */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		A0C0EFC012E89085A8A01817FD00707F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				315F21A70799BD42362CA2FEFEB1F6BE /* Info.plist */,
-				33F2B6C09E29D5E2CE32F7071AE3BC74 /* Styles.modulemap */,
-				7A1584F7F6C7E7C8EF84CDE1C62327FE /* Styles.xcconfig */,
-				0DCC3E878BBBCD77EE8F054DB243662D /* Styles-dummy.m */,
-				AD1015297AC82B3E291B6CAD31EAD1C2 /* Styles-prefix.pch */,
-				1D7BCCAD8A7D78BAAC34E0E7DA173A38 /* Styles-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Styles";
-			sourceTree = "<group>";
-		};
-		BB8537DA15EFDA1864EE6083FA21D9E9 /* UIElement+Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				AB27BA766772ADFF7E051C66DE73CCB5 /* Swizzle.h */,
-				4DA24EB52C605C28E4AAAE43CDD85EE3 /* Swizzle.m */,
-				8B1511C133A7EC9B80A64B067ABE3127 /* UIButton+Styles.h */,
-				FD5CCD974B5359895EEC691D9CDC7EB9 /* UIButton+Styles.m */,
-				526291CD1CD3B14F839083A2E7597FB0 /* UILabel+TextStyle.h */,
-				4FE4EC9F430C94A04AC9A9334CBB27D3 /* UILabel+TextStyle.m */,
-				28BC79B8FD1BFAB1013B034838EBD07B /* UINavigationBar+TextStyle.h */,
-				3BE426C2DD6821A07F059BB1B2F922E4 /* UINavigationBar+TextStyle.m */,
-				74BBB79316B9A118730BA0D68D667249 /* UITextField+Styles.h */,
-				DC636E6DD654E9C6FFF05D9E12371E88 /* UITextField+Styles.m */,
-				D1A28AFE72ABA54C1D31E897AE1797DD /* UIView+Styles.h */,
-				DB86526C7F6702DC28A57505ECAD3BA6 /* UIView+Styles.m */,
-			);
-			name = "UIElement+Extensions";
-			path = "Styles/Classes/UIElement+Extensions";
+			name = Styles;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -242,6 +233,15 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FBB198283E461FE0822358FBD60057D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E06D859FB5C388FAF75D72280AFC35FE /* Array+Styles.swift */,
+			);
+			name = Extensions;
+			path = Styles/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4FED8998A31093E9EBCAA34EB58C808 /* Build configuration list for PBXNativeTarget "Styles" */;
 			buildPhases = (
-				763D5E6E0F670F5A026D37E3EF57D206 /* Sources */,
+				75F3E2E6A27AAC1FF1A975CD31FC53F9 /* Sources */,
 				6237471C6125722E0DE502F1566C9CFB /* Frameworks */,
 				B3DDE3E6ABBEFB7DEC00E588145A57FF /* Headers */,
 			);
@@ -335,22 +335,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		763D5E6E0F670F5A026D37E3EF57D206 /* Sources */ = {
+		75F3E2E6A27AAC1FF1A975CD31FC53F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858B9FE7F8AB6CE872E52F1738A336DB /* ColorStyle.swift in Sources */,
-				FE1F0C540FA8949AFF7351968F20745C /* LayerStyle.swift in Sources */,
-				76E544F7376E475F50EB939B3F5A3265 /* Styles-dummy.m in Sources */,
-				AF20C99FEBF62EE8B32483B71D5F9360 /* Swizzle.m in Sources */,
-				6B47A930D013108955C9B5AD0068A993 /* TextDecoration.swift in Sources */,
-				5029C96B48E8ECE18512E682005C40F5 /* TextStyle.swift in Sources */,
-				259ED85A302FF75667554BBE87119661 /* UIButton+Styles.m in Sources */,
-				2D2C8D4B9532D1A7DA4B7795CADD5142 /* UILabel+TextStyle.m in Sources */,
-				F956255F30066241EABDCD60A1257E6E /* UINavigationBar+TextStyle.m in Sources */,
-				1A12543336FD4483559752541682942D /* UITextField+Styles.m in Sources */,
-				B8A04F3C13C4B3452939050D8E24BC33 /* UIView+Styles.m in Sources */,
-				3B6A34A12035C8450025EFED /* Array+Styles.swift in Sources */,
+				FDAD08FB9861C37090EA8AD45AA8EDF7 /* Array+Styles.swift in Sources */,
+				595C71D389E2BE4FAEE459615A6A770A /* ColorStyle.swift in Sources */,
+				44BD83C6B9BAD8C2EF5C22FDF7180A2E /* LayerStyle.swift in Sources */,
+				9D6EF561647803ABA7CD1571FF1B2DEA /* Styles-dummy.m in Sources */,
+				83B0D59747285B05854A13A3334BD656 /* Swizzle.m in Sources */,
+				C3D5A8AA30F5B7A62383B45F3F5FFC4C /* TextDecoration.swift in Sources */,
+				CBB943496E3895B757E33FEFB3A1E87F /* TextStyle.swift in Sources */,
+				3D0C8AA054E2C41D4859871A89A6135C /* UIButton+Styles.m in Sources */,
+				D7EC31680CC5B6928C01C18C57A74C5F /* UILabel+TextStyle.m in Sources */,
+				AE6E1DF30B26E4E3749F4365A9E6C02D /* UINavigationBar+TextStyle.m in Sources */,
+				314A6B25FA1220D9DC2F0FD516F7F531 /* UITextField+Styles.m in Sources */,
+				21DBD9F1C8845B83F50267BC088A5A16 /* UIView+Styles.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +439,7 @@
 		};
 		77A1BA0C06DB38ECE8A69F65BD89AD19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A1584F7F6C7E7C8EF84CDE1C62327FE /* Styles.xcconfig */;
+			baseConfigurationReference = DE232C6159B7EF3FBA2EB208B207FAAD /* Styles.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -471,7 +471,7 @@
 		};
 		7C6168BB28C39A5AE4FC37DE06035661 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A1584F7F6C7E7C8EF84CDE1C62327FE /* Styles.xcconfig */;
+			baseConfigurationReference = DE232C6159B7EF3FBA2EB208B207FAAD /* Styles.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

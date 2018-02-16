@@ -6,7 +6,6 @@ extension Array where Element == TextStyle.Property {
     var attributes: [NSAttributedStringKey: Any] {
         return Dictionary(uniqueKeysWithValues: flatMap { $0.attribute })
     }
-
 }
 
 extension Array where Element: Equatable {
@@ -22,13 +21,7 @@ extension Array where Element: Equatable {
         return new
     }
 
-    func diff(_ other: [Element]) -> [Element] {
-        var new = self
-        for element in other {
-            if let index = new.index(of: element) {
-                new.remove(at: index)
-            }
-        }
-        return new
+    func not(in other: [Element]) -> [Element] {
+        return filter { !other.contains($0) }
     }
 }
