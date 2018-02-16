@@ -57,6 +57,10 @@ let appColor = ColorStyle(
     .tintColor(.blue)
 )
 
+let redColor = ColorStyle(
+    .backgroundColor(.red)
+)
+
 let textFieldColorStyle = ColorStyle(
     .backgroundColor(.white),
     .tintColor(.blue)

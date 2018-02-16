@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,6 +38,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-r7-wbm">
+                                <rect key="frame" x="101.5" y="308" width="171" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="06W-cx-4oc"/>
+                                    <constraint firstAttribute="width" secondItem="8Fg-r7-wbm" secondAttribute="height" multiplier="4:3" id="bCm-2R-skh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -49,7 +58,9 @@
                             <constraint firstItem="m2B-S7-xQn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vle-BB-dL4"/>
                             <constraint firstItem="Znq-3u-vth" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WDv-mB-qKA"/>
                             <constraint firstItem="m2B-S7-xQn" firstAttribute="top" secondItem="Znq-3u-vth" secondAttribute="bottom" constant="60" id="XZK-Ml-3RJ"/>
+                            <constraint firstItem="8Fg-r7-wbm" firstAttribute="centerX" secondItem="onp-1l-LkD" secondAttribute="centerX" id="apy-2A-oai"/>
                             <constraint firstItem="onp-1l-LkD" firstAttribute="top" secondItem="m2B-S7-xQn" secondAttribute="bottom" constant="43" id="cCT-7j-eQl"/>
+                            <constraint firstItem="8Fg-r7-wbm" firstAttribute="top" secondItem="onp-1l-LkD" secondAttribute="bottom" constant="20" id="uIP-US-guV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -59,6 +70,7 @@
                     <navigationItem key="navigationItem" title="Example" id="VGL-aw-Nxh"/>
                     <connections>
                         <outlet property="button" destination="m2B-S7-xQn" id="2bP-lx-akj"/>
+                        <outlet property="containerView" destination="8Fg-r7-wbm" id="gDj-kh-3xD"/>
                         <outlet property="label" destination="Znq-3u-vth" id="Iq1-2a-oB8"/>
                         <outlet property="textField" destination="onp-1l-LkD" id="seF-hU-AiP"/>
                     </connections>
