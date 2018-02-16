@@ -21,14 +21,6 @@ extension NSShadow {
     }()
 }
 
-let everyOtherTilda = TextEffect(
-    style: TextStyle(
-        .foregroundColor(.cyan),
-        .shadow(.blue)
-    ),
-    matching: Regex("~.*?(~)")
-)
-
 let h1 = TextStyle(
       .font(.preferredFont(forTextStyle: .largeTitle)),
       .foregroundColor(.black),
@@ -71,9 +63,14 @@ let bigGreen = TextStyle(
     .font(.preferredFont(forTextStyle: .largeTitle)),
     .foregroundColor(.green)
 )
+let cyanTextWithBlueShadow = TextStyle(
+    .foregroundColor(.cyan),
+    .shadow(.blue)
+)
 
 let bigRedFirstWord = TextEffect(style: bigRed, matching: First(occurenceOf: "Styles"))
 let bigGreenLastWord = TextEffect(style: bigGreen, matching: Block { $0.range(of: "awesome") })
+let everyOtherTilda = TextEffect(style: cyanTextWithBlueShadow, matching: Regex("~.*?(~)"))
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
