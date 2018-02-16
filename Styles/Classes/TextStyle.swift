@@ -63,7 +63,7 @@ public final class TextStyle: NSObject {
     }
 
     @objc public let attributes: [NSAttributedStringKey: Any]
-    var effects: [TextEffect]
+    let effects: [TextEffect]
 
     public init(_ properties: Property..., effects: [TextEffect] = []) {
         attributes = properties.attributes
@@ -84,15 +84,6 @@ public final class TextStyle: NSObject {
             }
         }
         return result
-    }
-
-    public func add(_ effect: TextEffect) {
-        effects.append(effect)
-    }
-
-    public func remove(_ effect: TextEffect) {
-        guard let index = effects.index(of: effect) else { return }
-        effects.remove(at: index)
     }
 
     public func updating(_ properties: Property ...) -> TextStyle {
