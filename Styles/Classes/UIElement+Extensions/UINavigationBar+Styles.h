@@ -4,6 +4,7 @@
 
 @class TextStyle;
 
-@interface UINavigationBar (Styles)
-@property (nonatomic, copy) TextStyle *textStyle UI_APPEARANCE_SELECTOR;
+@interface UINavigationBar (TextStyle)
+@property (nonatomic, copy) TextStyle *titleTextStyle UI_APPEARANCE_SELECTOR;
+@property (nonatomic, copy) TextStyle *largeTitleTextStyle UI_APPEARANCE_SELECTOR API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos);
 @end
