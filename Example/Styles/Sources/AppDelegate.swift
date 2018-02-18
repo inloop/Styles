@@ -44,7 +44,8 @@ let body = TextStyle(
         ]),
       .strikethrought(TextDecoration(
         style: .thick,
-        pattern: .dash
+        pattern: .dash,
+        color: .yellow
       )),
       .underline(TextDecoration(
         style: .single,
@@ -52,6 +53,12 @@ let body = TextStyle(
         byWord: true,
         color: .red
       ))
+)
+
+let highlight = body.updating(
+    .backgroundColor(.blue),
+    .foregroundColor(.green),
+    .font(.preferredFont(forTextStyle: .largeTitle))
 )
 
 let bigRed = TextStyle(
@@ -81,28 +88,28 @@ let styleWithEffects = TextStyle(
     ]
 )
 
-let rounded = LayerStyle(
+let rounded = ViewStyle(
         .roundCorners([.topLeft, .bottomRight], radius: 10),
         .borderWidth(3),
         .borderColor(.red),
         .opacity(0.8)
     )
 
-let appColor = ColorStyle(
+let appColor = ViewStyle(
     .backgroundColor(.gray),
     .tintColor(.blue)
 )
 
-let redColor = ColorStyle(
+let redColor = ViewStyle(
     .backgroundColor(.red)
 )
 
-let textFieldColorStyle = ColorStyle(
+let textFieldColorStyle = ViewStyle(
     .backgroundColor(.white),
     .tintColor(.blue)
 )
 
-let red = LayerStyle(
+let red = ViewStyle(
     .borderColor(.red),
     .borderWidth(0.5)
 )
@@ -134,11 +141,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(blueFootnote.attributes)
         // Override point for customization after application launch.
         ExLabel.appearance().textStyle = styleWithEffects
-        ExLabel.appearance().layerStyle = rounded
+        ExLabel.appearance().viewStyle = rounded
         UIButton.appearance().setTextStyle(h1, for: .normal)
-        UIButton.appearance().setTextStyle(body, for: .highlighted)
-        UITextField.appearance().setLayerStyle(red, for: .editing)
-        UITextField.appearance().setLayerStyle(blue, for: .inactive)
+        UIButton.appearance().setTextStyle(highlight, for: .highlighted)
+        UITextField.appearance().setViewStyle(red, for: .editing)
+        UITextField.appearance().setViewStyle(blue, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(greenHeadline, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(magentaFootnote, for: .editing)
         UINavigationBar.appearance().textStyle = h1

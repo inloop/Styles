@@ -46,10 +46,8 @@
   - [TextStyle](#textstyle)
     - [Updating TextStyle](#updating-textstyle)
     - [TextEffects](#texteffects)
-  - [LayerStyle](#layerstyle)
-    - [Updating LayerStyle](#updating-layerstyle)
-  - [ColorStyle](#colorstyle)
-    - [Updating ColorStyle](#updating-colorstyle)
+  - [ViewStyle](#viewstyle)
+    - [Updating ViewStyle](#updating-viewstyle)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [License](#license)
@@ -166,43 +164,45 @@ let styleWithEffects = TextStyle(
 
 ```
 
-### LayerStyle
+### ViewStyle
 ```swift
-let pill = LayerStyle(
+let pill = ViewStyle(
      .roundCorners(.allCorners, radius: 10),
      .borderWidth(3),
      .borderColor(.red),
      .opacity(0.8)
 )
 
-UILabel.appearance().layerStyle = pill  
+UILabel.appearance().viewStyle = pill
 ```
 ```swift
-let red = LayerStyle(
+let red = ViewStyle(
+    .backgroundColor(.red),
+    .tintColor(.red),
     .borderColor(.red),
     .borderWidth(0.5)
 )
 
-let blue = LayerStyle(
+let blue = ViewStyle(
     .borderColor(.blue),
     .borderWidth(0.5)
 )
 
-UITextField.appearance().setLayerStyle(red, for: .editing)
-UITextField.appearance().setLayerStyle(blue, for: .inactive)
+UITextField.appearance().setViewStyle(red, for: .editing)
+UITextField.appearance().setViewStyle(blue, for: .inactive)
 ```
 ```swift
-let blue = LayerStyle (
+let blue = ViewStyle(
     .borderColor(.blue),
     .borderWidth(0.5),
     .roundCorners(.allCorners, radius: 10)
 )
 
-myButton.layerStyle = blue
+myButton.viewStyle = blue
 ```
-#### Updating LayerStyle
+#### Updating ViewStyle
 ```swift
-let app = LayerStyle(
+let app = ViewStyle(
     .borderWidth(0.5),
     .roundCorners(.allCorners, radius: 10)
 )
@@ -210,7 +210,7 @@ let app = LayerStyle(
 let blue = app.updating(.borderColor(.blue))
 ```
 ```swift
-let app = LayerStyle(
+let app = ViewStyle(
     .borderWidth(0.5),
     .roundCorners(.allCorners, radius: 10)
 )
@@ -218,39 +218,6 @@ let app = LayerStyle(
 let thick = app.updating(.borderWidth(3))
 ```
 
-### ColorStyle
-
-```swift
-let themeColors = ColorStyle(
-    .backgroundColor(.gray),
-    .tintColor(.blue)
-)
-
-UIView.appearance().colorStyle = themeColors
-```
-```swift
-let container = ColorStyle(
-    .backgroundColor(.black)
-)
-
-myContainerView.colorStyle = container
-```
-#### Updating ColorStyle
-```swift
-let themeColors = ColorStyle(
-    .backgroundColor(.gray)
-)
-
-let themeColorsWithTint = themeColors.updating(.tintColor(.blue))
-```
-```swift
-let themeColors = ColorStyle(
-    .backgroundColor(.gray),
-    .tintColor(.blue)
-)
-
-let themeColorsRed = themeColors.updating(.tintColor(.red))
-```
 ## Installation
 
 Styles is available through [CocoaPods](http://cocoapods.org). To install

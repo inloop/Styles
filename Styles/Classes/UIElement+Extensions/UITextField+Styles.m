@@ -8,7 +8,7 @@
 
 @interface UITextField ()
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *textStyles;
-@property (nonatomic, strong) NSMutableDictionary<NSNumber *, LayerStyle *> *layerStyles;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, ViewStyle *> *viewStyles;
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *placeholderStyles;
 @end
 
@@ -23,11 +23,11 @@
     return stored;
 }
 
-- (NSMutableDictionary *)layerStyles {
-    NSMutableDictionary *stored = objc_getAssociatedObject(self, @selector(layerStyles));
+- (NSMutableDictionary *)viewStyles {
+    NSMutableDictionary *stored = objc_getAssociatedObject(self, @selector(viewStyles));
     if (!stored) {
         stored = [NSMutableDictionary new];
-        [self setLayerStyles:stored];
+        [self setViewStyles:stored];
     }
     return stored;
 }
@@ -41,8 +41,8 @@
     return stored;
 }
 
-- (void)setLayerStyles:(NSMutableDictionary *)layerStyles {
-    objc_setAssociatedObject(self, @selector(layerStyles), layerStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setViewStyles:(NSMutableDictionary *)viewStyles {
+    objc_setAssociatedObject(self, @selector(viewStyles), viewStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setTextStyles:(NSMutableDictionary *)textStyles {
@@ -85,8 +85,8 @@
     [self applyStyle];
 }
 
-- (void)setLayerStyle:(LayerStyle *)style forState:(UITextFieldState)state {
-    self.layerStyles[@(state)] = style;
+- (void)setViewStyle:(ViewStyle *)style forState:(UITextFieldState)state {
+    self.viewStyles[@(state)] = style;
     [self applyStyle];
 }
 
@@ -95,24 +95,23 @@
     [self applyStyle];
 }
 
-- (void)updateStylesForState:(UITextFieldState)state {
-    LayerStyle *layerStyle = self.layerStyles[@(state)];
-    TextStyle *textStyle = self.textStyles[@(state)];
-    TextStyle *placeholderStyle = self.placeholderStyles[@(state)];
-
-    [self updateTextFieldUsingTextStyle:textStyle];
-    [self updateTextFieldUsingLayerStyle:layerStyle];
-    [self updatePlaceholderStyle:placeholderStyle];
-
-}
-
 - (void)applyStyle {
     [super applyStyle];
     UITextFieldState state = [self isEditing] ? kEditing : kInactive;
     [self updateStylesForState:state];
 }
 
-- (void)updateTextFieldUsingTextStyle:(TextStyle *)style {
+- (void)updateStylesForState:(UITextFieldState)state {
+    ViewStyle *viewSyle = self.viewStyles[@(state)];
+    TextStyle *textStyle = self.textStyles[@(state)];
+    TextStyle *placeholderStyle = self.placeholderStyles[@(state)];
+
+    [self applyTextStyle:textStyle];
+    [self applyViewStyle:viewSyle];
+    [self applyPlaceholderStyle:placeholderStyle];
+}
+
+- (void)applyTextStyle:(TextStyle *)style {
     NSString *text = self.text;
     if (!text || !style) {
         return;
@@ -120,7 +119,14 @@
     [self setAttributedText:[style applyTo:text]];
 }
 
-- (void)updatePlaceholderStyle:(TextStyle *)style {
+- (void)applyViewStyle:(ViewStyle *)style {
+    if (!style) {
+        return;
+    }
+    [style applyTo:self];
+}
+
+- (void)applyPlaceholderStyle:(TextStyle *)style {
     NSString *placeholder = self.placeholder;
     if (!placeholder || !style) {
         return;
@@ -128,11 +134,5 @@
     self.attributedPlaceholder = [style applyTo:placeholder];
 }
 
-- (void)updateTextFieldUsingLayerStyle:(LayerStyle *)style {
-    if (!style) {
-        return;
-    }
-    [style applyTo:self];
-}
 
 @end

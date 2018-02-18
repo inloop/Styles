@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerView.colorStyle = redColor
+        containerView.viewStyle = redColor
         label.text = "Styles is awesome!"
     }
     

@@ -4,6 +4,6 @@
 
 @class TextStyle;
 
-@interface UINavigationBar (TextStyle)
+@interface UINavigationBar (Styles)
 @property (nonatomic, copy) TextStyle *textStyle UI_APPEARANCE_SELECTOR;
 @end

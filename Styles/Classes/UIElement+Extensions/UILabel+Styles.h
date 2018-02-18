@@ -4,6 +4,6 @@
 
 @class TextStyle;
 
-@interface UILabel (TextStyle)
+@interface UILabel (Styles)
 @property (nonatomic, copy) TextStyle *textStyle UI_APPEARANCE_SELECTOR;
 @end
