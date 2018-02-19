@@ -136,6 +136,7 @@ let largeTitle = TextStyle(
 )
 
 let blueFootnote = magentaFootnote.updating(.foregroundColor(.blue))
+let roundedApp = rounded + appColor
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -147,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(blueFootnote.attributes)
         // Override point for customization after application launch.
         ExLabel.appearance().textStyle = styleWithEffects
-        ExLabel.appearance().viewStyle = rounded
+        ExLabel.appearance().viewStyle = roundedApp
         UIButton.appearance().setTextStyle(h1, for: .normal)
         UIButton.appearance().setTextStyle(highlight, for: .highlighted)
         UITextField.appearance().setViewStyle(red, for: .editing)

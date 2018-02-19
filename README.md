@@ -73,6 +73,7 @@
 ## Examples
 
 ### TextStyle
+
 ```swift
 let h1 = TextStyle(
     .font(.preferredFont(forTextStyle: .largeTitle)),
@@ -129,6 +130,55 @@ let redFootnote = blueFootnote.updating(.foregroundColor(.red))
 
 myLabel.textStyle = redFootnote
 ```
+
+#### Combining TextStyle
+
+```swift
+let blueFootnote = TextStyle(
+    .font(.preferredFont(forTextStyle: .footnote))
+    .foregroundColor(.blue)
+)
+
+let yellowBackground = TextStyle(
+    .backgroundColor(.yellow)
+)
+
+myLabel.textStyle = blueFootnote + yellowBackground
+```
+
+```swift
+let h1 = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .letterSpacing(1.5),
+    .paragraphStyle([
+        .alignment(.natural),
+        .lineHeight(2.5)
+    ]),
+    .strikethrought(TextDecoration(
+        style: .thick,
+        pattern: .dash
+    )),
+    .underline(TextDecoration(
+        style: .single,
+        pattern: .dashDotDot,
+        byWord: true,
+        color: .red
+    ))
+)
+
+let blue = TextStyle(
+    .foregroundColor(.blue)
+)
+
+let yellowBackground = TextStyle(
+    .backgroundColor(.yellow)
+)
+
+let title = h1 + blue + yellowBackground
+
+myLabel.textStyle = title
+```
+
 #### TextEffects
 
 ```swift
@@ -165,6 +215,7 @@ let styleWithEffects = TextStyle(
 ```
 
 ### ViewStyle
+
 ```swift
 let pill = ViewStyle(
      .roundCorners(.allCorners, radius: 10),
@@ -200,7 +251,9 @@ let blue = ViewStyle(
 
 myButton.viewStyle = blue
 ```
+
 #### Updating ViewStyle
+
 ```swift
 let app = ViewStyle(
     .borderWidth(0.5),
@@ -216,6 +269,40 @@ let app = ViewStyle(
 )
 
 let thick = app.updating(.borderWidth(3))
+```
+
+#### Combining ViewStyle
+
+```swift
+let app = ViewStyle(
+    .borderWidth(0.5),
+    .roundCorners(.allCorners, radius: 10)
+)
+
+let semiVisible = ViewStyle(
+    .opacity(0.5)
+)
+
+myLabel.viewStyle = app + semiVisible
+```
+
+```swift
+let app = ViewStyle(
+    .borderWidth(0.5),
+    .roundCorners(.allCorners, radius: 10)
+)
+
+let semiVisible = ViewStyle(
+    .opacity(0.5)
+)
+
+let blue = ViewStyle(
+    .backgroundColor(.blue)
+)
+
+let labelStyle = app + semiVisible + blue
+
+myLabel.viewStyle = labelStyle
 ```
 
 ## Installation
