@@ -174,9 +174,16 @@ let yellowBackground = TextStyle(
     .backgroundColor(.yellow)
 )
 
+let secret = TextStyle(
+    .writingDirectionOverrides([
+        .rightToLeftOverride
+    ])
+)
+
 let title = h1 + blue + yellowBackground
 
 myLabel.textStyle = title
+secretMessageLabel.textStyle = h1 + secret
 ```
 
 #### TextEffects
