@@ -29,8 +29,9 @@ extension UIRectCorner {
         return mask
     }
 }
+
 public final class ViewStyle: NSObject {
-    public enum Property: Equatable {
+    public enum Property: Equatable, ValueComparable {
         case backgroundColor(UIColor?)
         case tintColor(UIColor?)
         case borderColor(UIColor)
@@ -86,6 +87,24 @@ public final class ViewStyle: NSObject {
             }
         }
 
+        internal static func ===(lhs: Property, rhs: Property) -> Bool {
+            switch (lhs, rhs) {
+            case (.backgroundColor(let l), .backgroundColor(let r)),
+                 (.tintColor(let l), .tintColor(let r)):
+                return l == r
+            case (.borderWidth(let l), .borderWidth(let r)):
+                return l == r
+            case (.opacity(let l), .opacity(let r)):
+                return l == r
+            case (.borderColor(let l), .borderColor(let r)):
+                return l == r
+            case (.roundCorners(let l1, let l2), .roundCorners(let r1, let r2)):
+                return l1 == r1 && l2 == r2
+            default:
+                return false
+            }
+        }
+
         static let defaults = [
             Property.backgroundColor(nil),
             Property.tintColor(nil),
@@ -115,5 +134,9 @@ public final class ViewStyle: NSObject {
 
     public func updating(_ other: Property...) -> ViewStyle {
         return ViewStyle(properties.updating(other))
+    }
+
+    public static func +(left: ViewStyle, right: ViewStyle) -> ViewStyle {
+        return ViewStyle(left.properties.updating(right.properties.removing(Property.defaults)))
     }
 }

@@ -2,6 +2,10 @@
 
 import Foundation
 
+protocol ValueComparable {
+    static func ===(lhs: Self, rhs: Self) -> Bool
+}
+
 extension Array where Element == TextStyle.Property {
     var attributes: [NSAttributedStringKey: Any] {
         return Dictionary(uniqueKeysWithValues: flatMap { $0.attribute })
@@ -24,4 +28,15 @@ extension Array where Element: Equatable {
     func not(in other: [Element]) -> [Element] {
         return filter { !other.contains($0) }
     }
+}
+
+extension Array where Element: ValueComparable {
+    func removing(_ other: [Element]) -> [Element] {
+        return filter { (element) -> Bool in
+            return !other.contains {
+                $0 === element
+            }
+        }
+    }
+
 }

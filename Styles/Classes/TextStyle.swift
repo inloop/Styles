@@ -90,4 +90,10 @@ public final class TextStyle: NSObject {
         let newAttributes = attributes.merging(properties.attributes, uniquingKeysWith: { $1 })
         return TextStyle(attributes: newAttributes, effects: effects)
     }
+
+    public static func +(left: TextStyle, right: TextStyle) -> TextStyle {
+        let newAttributes = left.attributes.merging(right.attributes, uniquingKeysWith: { $1 })
+        let newEffects = left.effects.updating(right.effects)
+        return TextStyle(attributes: newAttributes, effects: newEffects)
+    }
 }
