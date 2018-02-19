@@ -157,6 +157,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITextField.appearance().setViewStyle(blue, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(greenHeadline, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(magentaFootnote, for: .editing)
+        UITextView.appearance().setViewStyle(red, for: .editing)
+        UITextView.appearance().setViewStyle(blue, for: .inactive)
+        UITextView.appearance().setTextStyle(highlight, for: .editing)
         UINavigationBar.appearance().titleTextStyle = body
         UINavigationBar.appearance().largeTitleTextStyle = largeTitle
         UINavigationBar.appearance().tintColor = .yellow

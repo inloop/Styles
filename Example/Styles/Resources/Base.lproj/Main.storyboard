@@ -49,11 +49,22 @@
                                     <constraint firstAttribute="width" secondItem="8Fg-r7-wbm" secondAttribute="height" multiplier="4:3" id="bCm-2R-skh"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sgA-Ug-EMP">
+                                <rect key="frame" x="67" y="454" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YQh-Os-vVY"/>
+                                    <constraint firstAttribute="width" constant="240" id="yWY-Sn-XKq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="m2B-S7-xQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4B8-3H-JQ3"/>
+                            <constraint firstItem="sgA-Ug-EMP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82e-cd-yHn"/>
                             <constraint firstItem="Znq-3u-vth" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Iep-1Y-I1S"/>
                             <constraint firstItem="Znq-3u-vth" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IuQ-3P-euV"/>
                             <constraint firstItem="onp-1l-LkD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SCC-y2-hdy"/>
@@ -64,6 +75,7 @@
                             <constraint firstItem="8Fg-r7-wbm" firstAttribute="centerX" secondItem="onp-1l-LkD" secondAttribute="centerX" id="apy-2A-oai"/>
                             <constraint firstItem="onp-1l-LkD" firstAttribute="top" secondItem="m2B-S7-xQn" secondAttribute="bottom" constant="43" id="cCT-7j-eQl"/>
                             <constraint firstItem="8Fg-r7-wbm" firstAttribute="top" secondItem="onp-1l-LkD" secondAttribute="bottom" constant="20" id="uIP-US-guV"/>
+                            <constraint firstItem="sgA-Ug-EMP" firstAttribute="top" secondItem="8Fg-r7-wbm" secondAttribute="bottom" constant="18" id="wpN-49-7eo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -76,6 +88,7 @@
                         <outlet property="containerView" destination="8Fg-r7-wbm" id="gDj-kh-3xD"/>
                         <outlet property="label" destination="Znq-3u-vth" id="Iq1-2a-oB8"/>
                         <outlet property="textField" destination="onp-1l-LkD" id="seF-hU-AiP"/>
+                        <outlet property="textView" destination="sgA-Ug-EMP" id="B5w-fj-bcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

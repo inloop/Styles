@@ -6,8 +6,7 @@
 @class TextStyle;
 @class ViewStyle;
 
-@interface UITextField (Styles)
+@interface UITextView (Styles)
 - (void)setTextStyle:(TextStyle *)style forState:(TextInputState)state UI_APPEARANCE_SELECTOR;
 - (void)setViewStyle:(ViewStyle *)style forState:(TextInputState)state UI_APPEARANCE_SELECTOR;
-- (void)setPlaceholderStyle:(TextStyle *)style forState:(TextInputState)state UI_APPEARANCE_SELECTOR;
 @end
