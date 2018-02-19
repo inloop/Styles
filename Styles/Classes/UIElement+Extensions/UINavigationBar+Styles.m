@@ -8,11 +8,15 @@
 
 @implementation UINavigationBar (Styles)
 
-SYNTHESIZE_PROPERTY_OBJ(TextStyle, textStyle, TextStyle);
+SYNTHESIZE_PROPERTY_OBJ(TextStyle, titleTextStyle, TitleTextStyle);
+SYNTHESIZE_PROPERTY_OBJ(TextStyle, largeTitleTextStyle, LargeTitleTextStyle);
 
 - (void)applyStyle {
     [super applyStyle];
-    self.titleTextAttributes = [self.textStyle attributes];
+    self.titleTextAttributes = [self.titleTextStyle attributes];
+    if (@available(iOS 11.0, *)) {
+        self.largeTitleTextAttributes = [self.largeTitleTextStyle attributes];
+    }
 }
 
 @end

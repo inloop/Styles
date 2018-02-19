@@ -28,6 +28,9 @@
                                 <rect key="frame" x="139.5" y="195" width="96" height="30"/>
                                 <state key="normal" title="~~ Default ~~"/>
                                 <state key="highlighted" title="Highlighted"/>
+                                <connections>
+                                    <action selector="handleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EsY-LT-jCG"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Here, type you can." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onp-1l-LkD">
                                 <rect key="frame" x="122.5" y="268" width="130" height="20"/>

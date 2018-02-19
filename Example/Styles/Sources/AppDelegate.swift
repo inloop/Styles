@@ -129,6 +129,12 @@ let magentaFootnote = TextStyle(
     .foregroundColor(.magenta)
 )
 
+let largeTitle = TextStyle(
+    .font(.preferredFont(forTextStyle: .largeTitle)),
+    .foregroundColor(.white),
+    .backgroundColor(.magenta)
+)
+
 let blueFootnote = magentaFootnote.updating(.foregroundColor(.blue))
 
 @UIApplicationMain
@@ -148,7 +154,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITextField.appearance().setViewStyle(blue, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(greenHeadline, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(magentaFootnote, for: .editing)
-        UINavigationBar.appearance().textStyle = h1
+        UINavigationBar.appearance().titleTextStyle = body
+        UINavigationBar.appearance().largeTitleTextStyle = largeTitle
         UINavigationBar.appearance().tintColor = .yellow
         UINavigationBar.appearance().barTintColor = .black
         UINavigationBar.appearance().barStyle = .black

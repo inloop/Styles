@@ -4,6 +4,12 @@ import UIKit
 
 class ExLabel: UILabel { }
 
+extension Bool {
+    mutating func toggle() {
+        self = !self
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet var label: ExLabel!
     @IBOutlet var button: UIButton!
@@ -18,6 +24,10 @@ class ViewController: UIViewController {
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
+    }
+
+    @IBAction func handleButtonAction(_ sender: UIButton) {
+        navigationController?.navigationBar.prefersLargeTitles.toggle()
     }
 }
 
