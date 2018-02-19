@@ -19,7 +19,7 @@ public final class TextStyle: NSObject {
         case lineHeight(CGFloat)
     }
 
-    public enum WritingDirection: Int {
+    public enum WritingDirectionOverride: Int {
         case leftToRightEmbedding
         case rightToLeftEmbedding
         case leftToRightOverride
@@ -36,7 +36,7 @@ public final class TextStyle: NSObject {
         case underline(TextDecoration)
         case obliqueness(Double)
         case shadow(NSShadow)
-        case writingDirection([WritingDirection])
+        case writingDirectionOverrides([WritingDirectionOverride])
 
         var attribute: [(NSAttributedStringKey, Any)] {
             switch self {
@@ -66,7 +66,7 @@ public final class TextStyle: NSObject {
                 return [(.obliqueness, skew)]
             case .shadow(let shadow):
                 return [(.shadow, shadow)]
-            case .writingDirection(let overrides):
+            case .writingDirectionOverrides(let overrides):
                 let rawValues = overrides.map { $0.rawValue }
                 return [(.writingDirection, rawValues)]
             }

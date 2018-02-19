@@ -175,7 +175,7 @@ let yellowBackground = TextStyle(
 )
 
 let secret = TextStyle(
-    .writingDirection([
+    .writingDirectionOverrides([
         .rightToLeftOverride
     ])
 )
