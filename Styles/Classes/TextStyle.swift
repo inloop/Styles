@@ -37,6 +37,7 @@ public final class TextStyle: NSObject {
         case obliqueness(Double)
         case shadow(NSShadow)
         case writingDirectionOverrides([WritingDirectionOverride])
+        case baselineOffset(Double)
 
         var attribute: [(NSAttributedStringKey, Any)] {
             switch self {
@@ -69,6 +70,8 @@ public final class TextStyle: NSObject {
             case .writingDirectionOverrides(let overrides):
                 let rawValues = overrides.map { $0.rawValue }
                 return [(.writingDirection, rawValues)]
+            case .baselineOffset(let offset):
+                return [(.baselineOffset, offset)]
             }
         }
     }
@@ -89,10 +92,7 @@ public final class TextStyle: NSObject {
     @objc public func apply(to text: String) -> NSAttributedString {
         let result = NSMutableAttributedString(string: text, attributes: attributes)
         for effect in effects {
-            let effectAttributes = effect.attributes
-            for range in effect.ranges(in: text) {
-                result.addAttributes(effectAttributes, range: range)
-            }
+            effect.apply(to: result)
         }
         return result
     }

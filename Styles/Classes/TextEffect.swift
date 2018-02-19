@@ -7,19 +7,32 @@ public protocol Match {
 }
 
 final public class TextEffect: NSObject {
-    private let style: TextStyle
     private let match: Match
+    public let attributes: [NSAttributedStringKey: Any]
 
-    var attributes: [NSAttributedStringKey: Any] {
-        return style.attributes
+    public convenience init(style: TextStyle, matching match: Match) {
+        self.init(style.attributes, match)
     }
 
-    public init(style: TextStyle, matching match: Match) {
-        self.style = style
+    private init(_ attributes: [NSAttributedStringKey: Any], _ match: Match) {
+        self.attributes = attributes
         self.match = match
     }
 
-    func ranges(in text: String) -> [NSRange] {
-        return match.ranges(in: text)
+    public static func image(_ image: UIImage, style: TextStyle, match: Match) -> TextEffect {
+        let styleAttributes = style.attributes
+        let attachment = NSTextAttachment()
+        attachment.image = image
+        let attachmentAttributes: [NSAttributedStringKey: Any] = [
+            .attachment: NSAttributedString(attachment: attachment)
+        ]
+        let combinedAttachments = attachmentAttributes.merging(styleAttributes, uniquingKeysWith: { l, r in l })
+        return TextEffect(combinedAttachments, match)
+    }
+
+    public func apply(to base: NSMutableAttributedString) {
+        for range in match.ranges(in: base.string) {
+            base.addAttributes(attributes, range: range)
+        }
     }
 }
