@@ -12,8 +12,8 @@
 
 #import "Swizzle.h"
 #import "UIButton+Styles.h"
-#import "UILabel+TextStyle.h"
-#import "UINavigationBar+TextStyle.h"
+#import "UILabel+Styles.h"
+#import "UINavigationBar+Styles.h"
 #import "UITextField+Styles.h"
 #import "UIView+Styles.h"
 

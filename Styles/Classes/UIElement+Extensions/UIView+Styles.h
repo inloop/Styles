@@ -2,11 +2,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class LayerStyle;
-@class ColorStyle;
+@class ViewStyle;
 
 @interface UIView (Styles)
-@property (nonatomic, copy) LayerStyle *layerStyle UI_APPEARANCE_SELECTOR;
-@property (nonatomic, copy) ColorStyle *colorStyle UI_APPEARANCE_SELECTOR;
+@property (nonatomic, copy) ViewStyle *viewStyle UI_APPEARANCE_SELECTOR;
 - (void)applyStyle;
 @end

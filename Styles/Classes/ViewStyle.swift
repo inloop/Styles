@@ -29,8 +29,10 @@ extension UIRectCorner {
         return mask
     }
 }
-public final class LayerStyle: NSObject {
+public final class ViewStyle: NSObject {
     public enum Property: Equatable {
+        case backgroundColor(UIColor?)
+        case tintColor(UIColor?)
         case borderColor(UIColor)
         case borderWidth(CGFloat)
         case roundCorners(UIRectCorner, radius: CGFloat)
@@ -38,6 +40,10 @@ public final class LayerStyle: NSObject {
 
         func apply(to view: UIView) {
             switch self {
+            case .backgroundColor(let color):
+                view.backgroundColor = color
+            case .tintColor(let color):
+                view.tintColor = color
             case .borderColor(let color):
                 view.layer.borderColor = color.cgColor
             case .borderWidth(let width):
@@ -68,19 +74,21 @@ public final class LayerStyle: NSObject {
 
         public static func ==(lhs: Property, rhs: Property) -> Bool {
             switch (lhs, rhs) {
-            case (.borderColor, .borderColor):
+            case (.backgroundColor, .backgroundColor),
+                 (.tintColor, .tintColor),
+                 (.borderColor, .borderColor),
+                 (.borderWidth, .borderWidth),
+                 (.roundCorners, .roundCorners),
+                 (.opacity, .opacity):
                 return true
-            case (.borderWidth, .borderWidth):
-                return true
-            case (.roundCorners, .roundCorners):
-                return true
-            case (.opacity, .opacity):
-                return true
-            default: return false
+            default:
+                return false
             }
         }
 
         static let defaults = [
+            Property.backgroundColor(nil),
+            Property.tintColor(nil),
             Property.borderColor(.black),
             Property.borderWidth(0),
             Property.roundCorners(.allCorners, radius: 0),
@@ -105,7 +113,7 @@ public final class LayerStyle: NSObject {
         }
     }
 
-    public func updating(_ other: Property...) -> LayerStyle {
-        return LayerStyle(properties.updating(other))
+    public func updating(_ other: Property...) -> ViewStyle {
+        return ViewStyle(properties.updating(other))
     }
 }

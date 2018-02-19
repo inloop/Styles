@@ -1,12 +1,12 @@
 //  Copyright © 2018 Inloop, s.r.o. All rights reserved.
 
-#import "UILabel+TextStyle.h"
+#import "UILabel+Styles.h"
 #import "UIView+Styles.h"
 #import <Styles/Styles-Swift.h>
 #import <objc/runtime.h>
 #import "Swizzle.h"
 
-@implementation UILabel (TextStyle)
+@implementation UILabel (Styles)
 
 SYNTHESIZE_PROPERTY_OBJ(TextStyle, textStyle, TextStyle);
 

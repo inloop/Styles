@@ -7,12 +7,10 @@
 
 @implementation UIView (Styles)
 
-SYNTHESIZE_PROPERTY_OBJ(LayerStyle, layerStyle, LayerStyle);
-SYNTHESIZE_PROPERTY_OBJ(ColorStyle, colorStyle, ColorStyle);
+SYNTHESIZE_PROPERTY_OBJ(ViewStyle, viewStyle, ViewStyle);
 
 - (void)applyStyle {
-    [self.layerStyle applyTo:self];
-    [self.colorStyle applyTo:self];
+    [self.viewStyle applyTo:self];
 }
 
 @end
