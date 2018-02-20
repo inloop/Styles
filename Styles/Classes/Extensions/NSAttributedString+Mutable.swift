@@ -4,6 +4,6 @@ import Foundation
 
 extension NSAttributedString {
     func mutable() -> NSMutableAttributedString {
-        return mutableCopy() as! NSMutableAttributedString
+        return NSMutableAttributedString(attributedString: self)
     }
 }
