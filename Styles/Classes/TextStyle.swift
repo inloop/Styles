@@ -108,17 +108,17 @@ public final class TextStyle: NSObject {
 
     public static func +(left: TextStyle, right: TextStyle) -> TextStyle {
         let newAttributes = left.attributes.merging(right.attributes, uniquingKeysWith: { $1 })
-        let newEffects = left.effects + right.effects
+        let newEffects = left.effects.updating(right.effects)
         return TextStyle(attributes: newAttributes, effects: newEffects)
     }
 
     // MARK:- Updating effects
     public func appending(_ other: TextEffect...) -> TextStyle {
-        return TextStyle(attributes: attributes, effects: effects + other)
+        return TextStyle(attributes: attributes, effects: effects.updating(other))
     }
 
     public func appending(_ other: TextEffect) -> TextStyle {
-        return TextStyle(attributes: attributes, effects: effects + [other])
+        return TextStyle(attributes: attributes, effects: effects.updating([other]))
     }
 
     public func removing(_ other: TextEffect...) -> TextStyle {
