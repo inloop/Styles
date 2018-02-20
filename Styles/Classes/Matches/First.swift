@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct First: Match {
+public final class First: NSObject, Match {
     let string: String
     let ignoringCase: Bool
 
@@ -15,5 +15,12 @@ public struct First: Match {
         let localBase = ignoringCase ? base.lowercased() : base
         guard let range = localBase.range(of: string) else { return [] }
         return [NSRange(range, in: base)]
+    }
+}
+
+extension First {
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? First else { return false }
+        return string == other.string && ignoringCase == other.ignoringCase
     }
 }

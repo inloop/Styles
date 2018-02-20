@@ -2,37 +2,52 @@
 
 import Foundation
 
-public protocol Match {
+public protocol Match: NSObjectProtocol {
     func ranges(in base: String) -> [NSRange]
 }
 
-final public class TextEffect: NSObject {
-    private let match: Match
-    public let attributes: [NSAttributedStringKey: Any]
+public enum TextEffect {
+    case style(TextStyle, Match)
+    case image(UIImage, TextStyle, Match)
 
-    public convenience init(style: TextStyle, matching match: Match) {
-        self.init(style.attributes, match)
+    public init(style: TextStyle, matching match: Match) {
+        self = .style(style, match)
     }
 
-    private init(_ attributes: [NSAttributedStringKey: Any], _ match: Match) {
-        self.attributes = attributes
-        self.match = match
+    public init(image: UIImage, style: TextStyle = .empty, matching match: Match) {
+        self = .image(image, style, match)
     }
 
-    public static func image(_ image: UIImage, style: TextStyle, match: Match) -> TextEffect {
-        let styleAttributes = style.attributes
-        let attachment = NSTextAttachment()
-        attachment.image = image
-        let attachmentAttributes: [NSAttributedStringKey: Any] = [
-            .attachment: NSAttributedString(attachment: attachment)
-        ]
-        let combinedAttachments = attachmentAttributes.merging(styleAttributes, uniquingKeysWith: { l, r in l })
-        return TextEffect(combinedAttachments, match)
+    var match: Match {
+        switch self {
+        case .style(_, let match):
+            return match
+        case .image(_, _, let match):
+            return match
+        }
     }
 
-    public func apply(to base: NSMutableAttributedString) {
-        for range in match.ranges(in: base.string) {
-            base.addAttributes(attributes, range: range)
+    func apply(to base: NSMutableAttributedString, baseAttributes: [NSAttributedStringKey: Any]) {
+        let apply: (NSRange) -> ()
+        switch self {
+        case .style(let style, _):
+            apply = { base.addAttributes(style.attributes, range: $0) }
+        case .image(let image, let style, _):
+            let imageString = image.attachmentString(with: style, baseAttributes: baseAttributes)
+            apply = { base.insert(imageString, at: $0.location) }
+        }
+        match.ranges(in: base.string).forEach(apply)
+    }
+}
+
+extension TextEffect: Equatable {
+    public static func ==(lhs: TextEffect, rhs: TextEffect) -> Bool {
+        switch (lhs, rhs) {
+        case (.style(let lStyle, let lMatch), .style(let rStyle, let rMatch)):
+            return lStyle == rStyle && lMatch.isEqual(rMatch)
+        case (.image(let lImage, let lStyle, let lMatch), .image(let rImage, let rStyle, let rMatch)):
+            return lImage == rImage && lStyle == rStyle && lMatch.isEqual(rMatch)
+        default: return false
         }
     }
 }

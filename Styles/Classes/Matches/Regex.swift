@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Regex: Match {
+public final class Regex: NSObject, Match {
     let pattern: String
     let options: NSRegularExpression.Options
 
@@ -52,6 +52,13 @@ public struct Regex: Match {
         } catch {
             fatalError(error.localizedDescription)
         }
+    }
+}
+
+extension Regex {
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? Regex else { return false }
+        return pattern == other.pattern && options == other.options
     }
 }
 
