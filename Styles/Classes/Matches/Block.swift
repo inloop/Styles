@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Block: Match {
+public final class Block: NSObject, Match {
     public typealias Find = (_ base: String) -> [Range<String.Index>?]
     let find: Find
 

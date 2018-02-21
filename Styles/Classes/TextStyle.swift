@@ -37,6 +37,7 @@ public final class TextStyle: NSObject {
         case obliqueness(Double)
         case shadow(NSShadow)
         case writingDirectionOverrides([WritingDirectionOverride])
+        case baselineOffset(Double)
 
         var attribute: [(NSAttributedStringKey, Any)] {
             switch self {
@@ -69,6 +70,8 @@ public final class TextStyle: NSObject {
             case .writingDirectionOverrides(let overrides):
                 let rawValues = overrides.map { $0.rawValue }
                 return [(.writingDirection, rawValues)]
+            case .baselineOffset(let offset):
+                return [(.baselineOffset, offset)]
             }
         }
     }
@@ -86,18 +89,19 @@ public final class TextStyle: NSObject {
         self.effects = effects
     }
 
+    public static let empty = TextStyle(attributes: [:], effects: [])
+
     @objc public func apply(to text: String) -> NSAttributedString {
         let result = NSMutableAttributedString(string: text, attributes: attributes)
         for effect in effects {
-            let effectAttributes = effect.attributes
-            for range in effect.ranges(in: text) {
-                result.addAttributes(effectAttributes, range: range)
-            }
+            effect.apply(to: result, baseAttributes: attributes)
         }
         return result
     }
 
-    public func updating(_ properties: Property ...) -> TextStyle {
+    // MARK:- Combining Styles
+
+    public func updating(_ properties: Property...) -> TextStyle {
         let newAttributes = attributes.merging(properties.attributes, uniquingKeysWith: { $1 })
         return TextStyle(attributes: newAttributes, effects: effects)
     }
@@ -106,5 +110,22 @@ public final class TextStyle: NSObject {
         let newAttributes = left.attributes.merging(right.attributes, uniquingKeysWith: { $1 })
         let newEffects = left.effects.updating(right.effects)
         return TextStyle(attributes: newAttributes, effects: newEffects)
+    }
+
+    // MARK:- Updating effects
+    public func appending(_ other: TextEffect...) -> TextStyle {
+        return TextStyle(attributes: attributes, effects: effects.updating(other))
+    }
+
+    public func appending(_ other: TextEffect) -> TextStyle {
+        return TextStyle(attributes: attributes, effects: effects.updating([other]))
+    }
+
+    public func removing(_ other: TextEffect...) -> TextStyle {
+        return TextStyle(attributes: attributes, effects: effects.not(in: other))
+    }
+
+    public func removing(_ other: TextEffect) -> TextStyle {
+        return TextStyle(attributes: attributes, effects: effects.not(in: [other]))
     }
 }

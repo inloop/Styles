@@ -209,13 +209,17 @@ let everyOtherTildaCyan = TextEffect(
     matching: Regex("~.*?(~)")
 )
 
+let logo: UIImage = ...
+let logoBeforeCompanyName = TextEffect(image: logo, matching: First(occurenceOf: "Inloop"))
+
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
     .backgroundColor(.yellow),
     effects: [
         bigRedFirstWord,
         bigGreenLastWord,
-        everyOtherTildaCyan
+        everyOtherTildaCyan,
+        logoBeforeCompanyName
     ]
 )
 
