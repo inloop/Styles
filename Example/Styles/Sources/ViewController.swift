@@ -9,6 +9,7 @@ extension Bool {
 }
 
 final class ExLabel: UILabel { }
+final class ExButton: UIButton { }
 
 final class ViewController: UIViewController {
     @IBOutlet var label: ExLabel!

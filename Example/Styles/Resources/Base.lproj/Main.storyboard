@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-S7-xQn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-S7-xQn" customClass="ExButton" customModule="Styles_Example" customModuleProvider="target">
                                 <rect key="frame" x="139.5" y="195" width="96" height="30"/>
                                 <state key="normal" title="~~ Default ~~"/>
                                 <state key="highlighted" title="Highlighted"/>

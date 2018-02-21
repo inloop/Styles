@@ -146,20 +146,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        print(magentaFootnote.attributes)
-        print(blueFootnote.attributes)
-        // Override point for customization after application launch.
         ExLabel.appearance().textStyle = styleWithEffects
         ExLabel.appearance().viewStyle = roundedApp
-        UIButton.appearance().setTextStyle(h1, for: .normal)
-        UIButton.appearance().setTextStyle(highlight, for: .highlighted)
+
+        ExButton.appearance().setTextStyle(h1, for: .normal)
+        ExButton.appearance().setTextStyle(highlight, for: .highlighted)
+
         UITextField.appearance().setViewStyle(red, for: .editing)
         UITextField.appearance().setViewStyle(blue, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(greenHeadline, for: .inactive)
         UITextField.appearance().setPlaceholderStyle(magentaFootnote, for: .editing)
+
         UITextView.appearance().setViewStyle(red, for: .editing)
         UITextView.appearance().setViewStyle(blue, for: .inactive)
-        UITextView.appearance().setTextStyle(highlight, for: .editing)
+
         UINavigationBar.appearance().titleTextStyle = body
         UINavigationBar.appearance().largeTitleTextStyle = largeTitle
         UINavigationBar.appearance().tintColor = .yellow
