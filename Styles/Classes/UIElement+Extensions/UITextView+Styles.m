@@ -1,18 +1,17 @@
-//  Copyright © 2018 Inloop, s.r.o. All rights reserved.
+// Copyright © 2018 Inloop, s.r.o. All rights reserved.
 
-#import "UITextField+Styles.h"
+#import "UITextView+Styles.h"
 #import <objc/runtime.h>
 #import "Swizzle.h"
 #import "UIView+Styles.h"
 #import <Styles/Styles-Swift.h>
 
-@interface UITextField ()
+@interface UITextView ()
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *textStyles;
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, ViewStyle *> *viewStyles;
-@property (nonatomic, strong) NSMutableDictionary<NSNumber *, TextStyle *> *placeholderStyles;
 @end
 
-@implementation UITextField (Styles)
+@implementation UITextView (Styles)
 
 - (NSMutableDictionary *)textStyles {
     NSMutableDictionary *stored = objc_getAssociatedObject(self, @selector(textStyles));
@@ -32,25 +31,12 @@
     return stored;
 }
 
-- (NSMutableDictionary *)placeholderStyles {
-    NSMutableDictionary *stored = objc_getAssociatedObject(self, @selector(placeholderStyles));
-    if (!stored) {
-        stored = [NSMutableDictionary new];
-        [self setPlaceholderStyles:stored];
-    }
-    return stored;
-}
-
 - (void)setViewStyles:(NSMutableDictionary *)viewStyles {
     objc_setAssociatedObject(self, @selector(viewStyles), viewStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setTextStyles:(NSMutableDictionary *)textStyles {
     objc_setAssociatedObject(self, @selector(textStyles), textStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (void)setPlaceholderStyles:(NSMutableDictionary *)placeholderStyles {
-    objc_setAssociatedObject(self, @selector(placeholderStyles), placeholderStyles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (void)load {
@@ -64,20 +50,25 @@
 }
 
 - (BOOL)swizzle_becomeFirstResponder {
-    [self updateStylesForState:kEditing];
+    [self applyStylesForState:kEditing];
     return [self swizzle_becomeFirstResponder];
 }
 
 - (BOOL)swizzle_resignFirstResponder {
-    [self updateStylesForState:kInactive];
+    [self applyStylesForState:kInactive];
     return [self swizzle_resignFirstResponder];
 }
 
 - (void)swizzle_awakeFromNib {
     [self swizzle_awakeFromNib];
-    [self addTarget:self
-             action:@selector(applyStyle)
-   forControlEvents:UIControlEventEditingChanged];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textViewEditingDidChange:)
+                                                 name:UITextViewTextDidBeginEditingNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textViewEditingDidChange:)
+                                                 name:UITextViewTextDidEndEditingNotification
+                                               object:nil];
 }
 
 - (void)setTextStyle:(TextStyle *)style forState:(TextInputState)state {
@@ -90,25 +81,21 @@
     [self applyStyle];
 }
 
-- (void)setPlaceholderStyle:(TextStyle *)style forState:(TextInputState)state {
-    self.placeholderStyles[@(state)] = style;
-    [self applyStyle];
-}
-
-- (void)applyStyle {
-    [super applyStyle];
-    TextInputState state = [self isEditing] ? kEditing : kInactive;
-    [self updateStylesForState:state];
-}
-
-- (void)updateStylesForState:(TextInputState)state {
+- (void)applyStylesForState:(TextInputState)state {
     ViewStyle *viewSyle = self.viewStyles[@(state)];
     TextStyle *textStyle = self.textStyles[@(state)];
-    TextStyle *placeholderStyle = self.placeholderStyles[@(state)];
-
+    
     [self applyTextStyle:textStyle];
     [self applyViewStyle:viewSyle];
-    [self applyPlaceholderStyle:placeholderStyle];
+}
+
+- (void)textViewEditingDidChange:(NSNotification *)notification {
+    if (notification.object != self) {
+        return;
+    }
+    TextInputState state = notification.name == UITextViewTextDidBeginEditingNotification ? kEditing : kInactive;
+    [super applyStyle];
+    [self applyStylesForState:state];
 }
 
 - (void)applyTextStyle:(TextStyle *)style {
@@ -126,12 +113,5 @@
     [style applyTo:self];
 }
 
-- (void)applyPlaceholderStyle:(TextStyle *)style {
-    NSString *placeholder = self.placeholder;
-    if (!placeholder || !style) {
-        return;
-    }
-    self.attributedPlaceholder = [style applyTo:placeholder];
-}
-
 @end
+

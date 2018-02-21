@@ -252,6 +252,8 @@ let blue = ViewStyle(
 
 UITextField.appearance().setViewStyle(red, for: .editing)
 UITextField.appearance().setViewStyle(blue, for: .inactive)
+UITextView.appearance().setViewStyle(red, for: .editing)
+UITextView.appearance().setViewStyle(blue, for: .inactive)
 ```
 ```swift
 let blue = ViewStyle(
@@ -335,8 +337,8 @@ Styles is available under the MIT license. See the LICENSE file for more info.
 
 ## Authors
 
-|<div align="center"><img src="https://avatars2.githubusercontent.com/u/14109333?s=400&v=4" width="40px;"/><br />[Radim Halfar](https://github.com/radimhalfar)</div>|<div align="center"><img src="https://avatars1.githubusercontent.com/u/560958?s=400&v=4" width="40px;"><br />[Jakub Petrik](https://github.com/jakubpetrik)</div>|
-| :---: | :---: |
+|<div align="center"><img src="https://avatars2.githubusercontent.com/u/14109333?s=400&v=4" width="40px;"/><br />[Radim Halfar](https://github.com/radimhalfar)</div>|<div align="center"><img src="https://avatars1.githubusercontent.com/u/560958?s=400&v=4" width="40px;"><br />[Jakub Petrik](https://github.com/jakubpetrik)</div>|<div align="center"><img src="https://avatars1.githubusercontent.com/u/25616123?s=400&v=4" width="40px;"><br />[Matěj Děcký](https://github.com/matejdecky)</div>|
+| :---: | :---: | :---: | 
 
 <div align="center">
 <sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="Inloop">Inloop</a></sub>
