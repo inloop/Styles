@@ -65,12 +65,12 @@
 
 - (BOOL)swizzle_becomeFirstResponder {
     [self updateStylesForState:kEditing];
-    return [self becomeFirstResponder];
+    return [self swizzle_becomeFirstResponder];
 }
 
 - (BOOL)swizzle_resignFirstResponder {
     [self updateStylesForState:kInactive];
-    return [self resignFirstResponder];
+    return [self swizzle_resignFirstResponder];
 }
 
 - (void)swizzle_awakeFromNib {
