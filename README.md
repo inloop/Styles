@@ -252,6 +252,8 @@ let blue = ViewStyle(
 
 UITextField.appearance().setViewStyle(red, for: .editing)
 UITextField.appearance().setViewStyle(blue, for: .inactive)
+UITextView.appearance().setViewStyle(red, for: .editing)
+UITextView.appearance().setViewStyle(blue, for: .inactive)
 ```
 ```swift
 let blue = ViewStyle(
