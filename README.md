@@ -209,8 +209,12 @@ let everyOtherTildaCyan = TextEffect(
     matching: Regex("~.*?(~)")
 )
 
+let tint = TextStyle(
+    .foregroundColor(.red)
+)
+
 let logo: UIImage = ...
-let logoBeforeCompanyName = TextEffect(image: logo, matching: First(occurenceOf: "Inloop"))
+let logoBeforeCompanyName = TextEffect(image: logo, style: tint, matching: First(occurenceOf: "Inloop"))
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
