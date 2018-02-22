@@ -16,6 +16,7 @@
 		27693C53A8E20A438DC5D24D6A55309E /* Styles-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FD20B58529302A6C7767A63CF729044 /* Styles-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		346C8B48163B182FB3586818812E949B /* UINavigationBar+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = F9BA0053EB3198771012EACC0CE748AC /* UINavigationBar+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DB85CFC4ABD4A76D74B7F6A53B933F /* TextInputState.h in Headers */ = {isa = PBXBuildFile; fileRef = C14F42674A7A11E34A5BC920AA9FE1BE /* TextInputState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B20D445203F8959003AF6AC /* UIImage+Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20D444203F8959003AF6AC /* UIImage+Colorize.swift */; };
 		3D9FF6DE37609E6D51E3602BEB8B6819 /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10B69EB43864484EE4E38D3006EAB98 /* TextDecoration.swift */; };
 		410C5D76D7FCA3C4B2610C6759E6ACF1 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEB99AB34D1212C7140A1094F15433 /* TextStyle.swift */; };
 		50471978743B05E290BA191AB26B2C18 /* Array+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569DAC88B3617C840DF98DBFCBA61F3 /* Array+Styles.swift */; };
@@ -61,8 +62,9 @@
 		2EB4738DF1C57954EC434AAEE15938C3 /* UIImage+Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Attachment.swift"; sourceTree = "<group>"; };
 		2F023769BE64ABD2FC56D0AE624A94D6 /* Block.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		32F51507323EA8324438A81D7A06608A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3857A8D5FCDBC8B5821F1503E26DC8FE /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3857A8D5FCDBC8B5821F1503E26DC8FE /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		38998D66DDF5A96AF1E14C20D2426D70 /* Pods-Styles_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3B20D444203F8959003AF6AC /* UIImage+Colorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Colorize.swift"; sourceTree = "<group>"; };
 		3FD20B58529302A6C7767A63CF729044 /* Styles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-umbrella.h"; sourceTree = "<group>"; };
 		422BADEF33D8681DE454099484C591B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4569DAC88B3617C840DF98DBFCBA61F3 /* Array+Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Styles.swift"; sourceTree = "<group>"; };
@@ -75,11 +77,11 @@
 		85AAED44A664E7BB1D71E83A0F81586E /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
 		872A6D062FC33AB2903C911E66B1B098 /* UITextView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Styles.h"; sourceTree = "<group>"; };
 		88BEB99AB34D1212C7140A1094F15433 /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = Styles/Classes/TextStyle.swift; sourceTree = "<group>"; };
-		89FB340AA935FA7638328E5E26CF3900 /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Styles.framework; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C2D303506603766F6E243C9B6E89773 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		A5CFE00C6958425CD03450CE9A0E7B12 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		A78F83E63D83316384D0C72E45284772 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Styles_Example.framework; path = "Pods-Styles_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FB340AA935FA7638328E5E26CF3900 /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C2D303506603766F6E243C9B6E89773 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A5CFE00C6958425CD03450CE9A0E7B12 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A78F83E63D83316384D0C72E45284772 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD880FD1F52978F8BAA3A7EF87F39D2A /* Pods-Styles_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B1D85B0DE2E3DFED915769BD3D572768 /* Styles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.xcconfig; sourceTree = "<group>"; };
 		B8E399EA31012DC15F3244941ED7C25E /* Styles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Styles-dummy.m"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				4569DAC88B3617C840DF98DBFCBA61F3 /* Array+Styles.swift */,
 				FF886E07B0992D58B223D9D5E9995D5A /* NSAttributedString+Mutable.swift */,
 				2EB4738DF1C57954EC434AAEE15938C3 /* UIImage+Attachment.swift */,
+				3B20D444203F8959003AF6AC /* UIImage+Colorize.swift */,
 			);
 			name = Extensions;
 			path = Styles/Classes/Extensions;
@@ -384,6 +387,7 @@
 			files = (
 				50471978743B05E290BA191AB26B2C18 /* Array+Styles.swift in Sources */,
 				179CA7AB6521CCF526158A442C592D84 /* Block.swift in Sources */,
+				3B20D445203F8959003AF6AC /* UIImage+Colorize.swift in Sources */,
 				93794830A2CDA17C7D4FBAC3852DE108 /* First.swift in Sources */,
 				58E1D59D515BAA059E6730D5CB61E31A /* NSAttributedString+Mutable.swift in Sources */,
 				D4DFC1E1B4CD4C2D151BDEE7AF6E7FCB /* Regex.swift in Sources */,

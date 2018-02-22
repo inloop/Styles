@@ -78,7 +78,7 @@ let cyanTextWithBlueShadow = TextStyle(
 let bigRedFirstWord = TextEffect(style: bigRed, matching: First(occurenceOf: "Styles"))
 let bigGreenLastWord = TextEffect(style: bigGreen, matching: Block { $0.range(of: "awesome") })
 let everyOtherTilda = TextEffect(style: cyanTextWithBlueShadow, matching: Regex("~.*?(~)"))
-let doge = TextEffect(image: #imageLiteral(resourceName: "doge"), matching: First(occurenceOf: " i"))
+let doge = TextEffect(image: #imageLiteral(resourceName: "doge"), style: cyanTextWithBlueShadow, matching: First(occurenceOf: " i"))
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
