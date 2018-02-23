@@ -5,7 +5,12 @@ import UIKit
 extension UIImage {
     func attachmentString(with style: TextStyle, baseAttributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
         let attachment = NSTextAttachment()
-        attachment.image = self
+        let attributes = style.attributes
+        if let tintColor = attributes[.foregroundColor] as? UIColor, renderingMode != .alwaysOriginal {
+            attachment.image = tint(tintColor: tintColor)
+        } else {
+            attachment.image = self
+        }
         attachment.bounds = CGRect(origin: .zero, size: size)
         let attachmentString = NSAttributedString(attachment: attachment).mutable()
         // let style override base attributes
