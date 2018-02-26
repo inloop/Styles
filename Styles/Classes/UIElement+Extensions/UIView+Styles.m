@@ -19,7 +19,7 @@ SYNTHESIZE_PROPERTY_OBJ(ViewStyle, viewStyle, ViewStyle);
 
 - (void)swizzle_layoutSubviews {
     [self swizzle_layoutSubviews];
-    [self.viewStyle applyLayoutTo:self];
+    [self applyStyle];
 }
 
 - (void)applyStyle {
