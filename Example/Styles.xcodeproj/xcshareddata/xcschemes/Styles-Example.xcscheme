@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "3B6644E32043DFAE006A5AED"
                BuildableName = "Styles_Tests.xctest"
                BlueprintName = "Styles_Tests"
                ReferencedContainer = "container:Styles.xcodeproj">
@@ -47,10 +47,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "3B6644E32043DFAE006A5AED"
                BuildableName = "Styles_Tests.xctest"
                BlueprintName = "Styles_Tests"
                ReferencedContainer = "container:Styles.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEE2B50820448BC400DF72EA"
+               BuildableName = "StylesTests.xctest"
+               BlueprintName = "StylesTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5CE1902CE6AFB7A94A7676328C53EF74"
+               BuildableName = "Styles-Unit-Tests.xctest"
+               BlueprintName = "Styles-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

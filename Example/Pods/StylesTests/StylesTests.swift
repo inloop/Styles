@@ -1,9 +1,8 @@
 //  Copyright © 2018 Inloop, s.r.o. All rights reserved.
 
 import XCTest
-@testable import Styles
 
-class Styles_Tests: XCTestCase {
+class StylesTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

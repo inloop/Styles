@@ -1,16 +1,18 @@
 PODS:
-  - Styles (0.13.6)
+  - Styles (0.14.6)
+  - Styles/Tests (0.14.6)
 
 DEPENDENCIES:
   - Styles (from `../`)
+  - Styles/Tests (from `../`)
 
 EXTERNAL SOURCES:
   Styles:
     :path: ../
 
 SPEC CHECKSUMS:
-  Styles: 95144038b2326c138a9d728c8dfd69816d91dbea
+  Styles: bb74d11de1bff44374559fde605ed8c198f7ae8b
 
-PODFILE CHECKSUM: e325b34d83f3b3df055bc3b721d806f349b05707
+PODFILE CHECKSUM: f5341d1bc44d76e5ca1e0d50940004053970d8dc
 
 COCOAPODS: 1.4.0
