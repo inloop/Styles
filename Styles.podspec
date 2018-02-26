@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Styles'
-  s.version          = '0.12.5'
+  s.version          = '0.13.6'
   s.summary          = 'UI Elements rapid styling'
   s.description      = <<-DESC
 UIElements styling made easy, declarative and rapid.

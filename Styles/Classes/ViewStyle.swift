@@ -56,6 +56,23 @@ public final class ViewStyle: NSObject {
             }
         }
 
+        var isLayout: Bool {
+            switch self {
+            case .backgroundColor:
+                return false
+            case .tintColor:
+                return false
+            case .borderColor:
+                return false
+            case .borderWidth:
+                return false
+            case .roundCorners:
+                return true
+            case .opacity:
+                return false
+            }
+        }
+
         private func applyRoundCorners(_ corners: UIRectCorner, radius: CGFloat, toView view: UIView) {
             if #available(iOS 11.0, *) {
                 view.clipsToBounds = true
@@ -128,6 +145,13 @@ public final class ViewStyle: NSObject {
 
     @objc public func apply(to view: UIView) {
         for property in properties {
+            property.apply(to: view)
+        }
+    }
+
+    @objc public func applyLayout(to view: UIView) {
+        for property in properties {
+            guard property.isLayout else { continue }
             property.apply(to: view)
         }
     }

@@ -1,5 +1,5 @@
 PODS:
-  - Styles (0.13.5)
+  - Styles (0.13.6)
 
 DEPENDENCIES:
   - Styles (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Styles: 309e48b099e47323f65f1d596f3c06a106e1b50f
+  Styles: 95144038b2326c138a9d728c8dfd69816d91dbea
 
 PODFILE CHECKSUM: d955debdf2315159e98d47d1c3d294214ae453cf
 
