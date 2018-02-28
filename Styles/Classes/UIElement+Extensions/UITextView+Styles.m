@@ -84,7 +84,7 @@
 - (void)applyStylesForState:(TextInputState)state {
     ViewStyle *viewSyle = self.viewStyles[@(state)];
     TextStyle *textStyle = self.textStyles[@(state)];
-    
+
     [self applyTextStyle:textStyle];
     [self applyViewStyle:viewSyle];
 }
@@ -94,7 +94,7 @@
         return;
     }
     TextInputState state = notification.name == UITextViewTextDidBeginEditingNotification ? kEditing : kInactive;
-    [super applyStyle];
+    [self applyStyle];
     [self applyStylesForState:state];
 }
 
@@ -114,4 +114,3 @@
 }
 
 @end
-

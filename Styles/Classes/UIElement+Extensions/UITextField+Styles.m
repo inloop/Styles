@@ -82,21 +82,21 @@
 
 - (void)setTextStyle:(TextStyle *)style forState:(TextInputState)state {
     self.textStyles[@(state)] = style;
-    [self applyStyle];
+    [self applyStyleForCurrentState];
 }
 
 - (void)setViewStyle:(ViewStyle *)style forState:(TextInputState)state {
     self.viewStyles[@(state)] = style;
-    [self applyStyle];
+    [self applyStyleForCurrentState];
 }
 
 - (void)setPlaceholderStyle:(TextStyle *)style forState:(TextInputState)state {
     self.placeholderStyles[@(state)] = style;
-    [self applyStyle];
+    [self applyStyleForCurrentState];
 }
 
-- (void)applyStyle {
-    [super applyStyle];
+- (void)applyStyleForCurrentState {
+    [self applyStyle];
     TextInputState state = [self isEditing] ? kEditing : kInactive;
     [self updateStylesForState:state];
 }
