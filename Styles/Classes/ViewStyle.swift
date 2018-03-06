@@ -31,7 +31,7 @@ extension UIRectCorner {
 }
 
 public final class ViewStyle: NSObject {
-    public enum Property: Equatable, ValueComparable {
+    public enum Property: Equatable {
         case backgroundColor(UIColor?)
         case tintColor(UIColor?)
         case borderColor(UIColor)
@@ -73,6 +73,23 @@ public final class ViewStyle: NSObject {
             }
         }
 
+        var isLayerProperty: Bool {
+            switch self {
+            case .backgroundColor:
+                return false
+            case .tintColor:
+                return false
+            case .borderColor:
+                return true
+            case .borderWidth:
+                return true
+            case .roundCorners:
+                return true
+            case .opacity:
+                return true
+            }
+        }
+
         private func applyRoundCorners(_ corners: UIRectCorner, radius: CGFloat, toView view: UIView) {
             if #available(iOS 11.0, *) {
                 view.clipsToBounds = true
@@ -103,33 +120,6 @@ public final class ViewStyle: NSObject {
                 return false
             }
         }
-
-        internal static func ===(lhs: Property, rhs: Property) -> Bool {
-            switch (lhs, rhs) {
-            case (.backgroundColor(let l), .backgroundColor(let r)),
-                 (.tintColor(let l), .tintColor(let r)):
-                return l == r
-            case (.borderWidth(let l), .borderWidth(let r)):
-                return l == r
-            case (.opacity(let l), .opacity(let r)):
-                return l == r
-            case (.borderColor(let l), .borderColor(let r)):
-                return l == r
-            case (.roundCorners(let l1, let l2), .roundCorners(let r1, let r2)):
-                return l1 == r1 && l2 == r2
-            default:
-                return false
-            }
-        }
-
-        static let defaults = [
-            Property.backgroundColor(nil),
-            Property.tintColor(nil),
-            Property.borderColor(.black),
-            Property.borderWidth(0),
-            Property.roundCorners(.allCorners, radius: 0),
-            Property.opacity(1)
-        ]
     }
 
     let properties: [Property]
@@ -139,8 +129,7 @@ public final class ViewStyle: NSObject {
     }
 
     private init(_ properties: [Property]) {
-        let defaults = Property.defaults.not(in: properties)
-        self.properties = properties + defaults
+        self.properties = properties
     }
 
     @objc public func apply(to view: UIView) {
@@ -161,6 +150,37 @@ public final class ViewStyle: NSObject {
     }
 
     public static func +(left: ViewStyle, right: ViewStyle) -> ViewStyle {
-        return ViewStyle(left.properties.updating(right.properties.removing(Property.defaults)))
+        return ViewStyle(left.properties.updating(right.properties))
+    }
+
+    @objc public func hasEqualLayerProperties(_ other: ViewStyle) throws {
+        let filtered = properties.filter { $0.isLayerProperty }
+        let otherFiltered = other.properties.filter { $0.isLayerProperty }
+        let isSame = filtered == otherFiltered
+
+        if !isSame {
+            let diff = filtered.count > otherFiltered.count ? filtered.not(in: otherFiltered) : otherFiltered.not(in: filtered)
+            let error = NSError(domain: "com.inloopx.Styles", code: -104, userInfo: [NSLocalizedDescriptionKey: "Missing view properties: \(diff.debugDescription)" ])
+            throw error
+        }
+    }
+}
+
+extension ViewStyle.Property: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        switch self {
+        case .backgroundColor:
+            return "backgroundColor"
+        case .tintColor:
+            return "tintColor"
+        case .borderColor:
+            return "borderColor"
+        case .borderWidth:
+            return "borderWidth"
+        case .roundCorners:
+            return "roundCorners"
+        case .opacity:
+            return "opacity"
+        }
     }
 }

@@ -85,8 +85,26 @@
     ViewStyle *viewSyle = self.viewStyles[@(state)];
     TextStyle *textStyle = self.textStyles[@(state)];
 
+    [self checkEqualLayerInStyles];
     [self applyTextStyle:textStyle];
     [self applyViewStyle:viewSyle];
+}
+
+- (void)checkEqualLayerInStyles {
+    ViewStyle *editing = self.viewStyles[@(kEditing)];
+    ViewStyle *inactive = self.viewStyles[@(kInactive)];
+
+    if (editing == nil || inactive == nil) {
+        return;
+    }
+
+    NSError *error = nil;
+
+    [editing hasEqualLayerProperties:inactive error:&error];
+
+    if (error) {
+        NSAssert(NO, @"Invalid layer configuration for %@. %@", [self class], [error localizedDescription]);
+    }
 }
 
 - (void)textViewEditingDidChange:(NSNotification *)notification {
