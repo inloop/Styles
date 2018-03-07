@@ -29,23 +29,6 @@ public final class ViewStyle: NSObject {
             }
         }
 
-        var isLayout: Bool {
-            switch self {
-            case .backgroundColor:
-                return false
-            case .tintColor:
-                return false
-            case .borderColor:
-                return false
-            case .borderWidth:
-                return false
-            case .cornerRadius:
-                return true
-            case .opacity:
-                return false
-            }
-        }
-
         var isLayerProperty: Bool {
             switch self {
             case .backgroundColor:
@@ -90,13 +73,6 @@ public final class ViewStyle: NSObject {
 
     @objc public func apply(to view: UIView) {
         for property in properties {
-            property.apply(to: view)
-        }
-    }
-
-    @objc public func applyLayout(to view: UIView) {
-        for property in properties {
-            guard property.isLayout else { continue }
             property.apply(to: view)
         }
     }
