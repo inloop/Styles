@@ -91,7 +91,7 @@ let styleWithEffects = TextStyle(
 )
 
 let rounded = ViewStyle(
-        .roundCorners([.topLeft, .bottomRight], radius: 10),
+        .cornerRadius(10),
         .borderWidth(3),
         .borderColor(.red),
         .opacity(0.8)
@@ -114,12 +114,12 @@ let textFieldColorStyle = ViewStyle(
 let red = ViewStyle(
     .borderColor(.red),
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 0)
+    .cornerRadius(0)
 )
 
 let blue = red.updating(
     .borderColor(.blue),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(10)
 )
 
 let greenHeadline = TextStyle(

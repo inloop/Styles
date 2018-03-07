@@ -76,7 +76,7 @@
 - (void)swizzle_awakeFromNib {
     [self swizzle_awakeFromNib];
     [self addTarget:self
-             action:@selector(applyStyle)
+             action:@selector(applyStyleForCurrentState)
    forControlEvents:UIControlEventEditingChanged];
 }
 

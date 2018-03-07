@@ -23,8 +23,7 @@ SYNTHESIZE_PROPERTY_OBJ(TextStyle, textStyle, TextStyle);
     [self updateText];
 }
 
-- (void)swizzle_setText:(NSString *)text
-{
+- (void)swizzle_setText:(NSString *)text {
     [self swizzle_setText:text];
     [self updateText];
 }

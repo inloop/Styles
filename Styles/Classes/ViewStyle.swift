@@ -2,41 +2,13 @@
 
 import UIKit
 
-extension UIRectCorner {
-    @available(iOS 11.0, *)
-    var maskedCorners: CACornerMask {
-        var mask: CACornerMask = []
-        if contains(.topLeft) {
-            mask.formUnion(CACornerMask.layerMinXMinYCorner)
-        }
-        if contains(.topRight) {
-            mask.formUnion(CACornerMask.layerMaxXMinYCorner)
-        }
-        if contains(.bottomLeft) {
-            mask.formUnion(CACornerMask.layerMinXMaxYCorner)
-        }
-        if contains(.bottomRight) {
-            mask.formUnion(CACornerMask.layerMaxXMaxYCorner)
-        }
-        if contains(.allCorners) {
-            mask = [
-                .layerMinXMinYCorner,
-                .layerMaxXMinYCorner,
-                .layerMinXMaxYCorner,
-                .layerMaxXMaxYCorner
-            ]
-        }
-        return mask
-    }
-}
-
 public final class ViewStyle: NSObject {
     public enum Property: Equatable {
         case backgroundColor(UIColor?)
         case tintColor(UIColor?)
         case borderColor(UIColor)
         case borderWidth(CGFloat)
-        case roundCorners(UIRectCorner, radius: CGFloat)
+        case cornerRadius(CGFloat)
         case opacity(Float)
 
         func apply(to view: UIView) {
@@ -49,27 +21,11 @@ public final class ViewStyle: NSObject {
                 view.layer.borderColor = color.cgColor
             case .borderWidth(let width):
                 view.layer.borderWidth = width
-            case .roundCorners(let corners, let radius):
-                applyRoundCorners(corners, radius: radius, toView: view)
+            case .cornerRadius(let radius):
+                view.clipsToBounds = true
+                view.layer.cornerRadius = radius
             case .opacity(let opacity):
                 view.layer.opacity = opacity
-            }
-        }
-
-        var isLayout: Bool {
-            switch self {
-            case .backgroundColor:
-                return false
-            case .tintColor:
-                return false
-            case .borderColor:
-                return false
-            case .borderWidth:
-                return false
-            case .roundCorners:
-                return true
-            case .opacity:
-                return false
             }
         }
 
@@ -83,27 +39,10 @@ public final class ViewStyle: NSObject {
                 return true
             case .borderWidth:
                 return true
-            case .roundCorners:
+            case .cornerRadius:
                 return true
             case .opacity:
                 return true
-            }
-        }
-
-        private func applyRoundCorners(_ corners: UIRectCorner, radius: CGFloat, toView view: UIView) {
-            if #available(iOS 11.0, *) {
-                view.clipsToBounds = true
-                view.layer.cornerRadius = radius
-                view.layer.maskedCorners = corners.maskedCorners
-            } else {
-                let path = UIBezierPath(
-                    roundedRect: view.bounds,
-                    byRoundingCorners: corners,
-                    cornerRadii: CGSize(width: radius, height: radius)
-                )
-                let mask = CAShapeLayer()
-                mask.path = path.cgPath
-                view.layer.mask = mask
             }
         }
 
@@ -113,7 +52,7 @@ public final class ViewStyle: NSObject {
                  (.tintColor, .tintColor),
                  (.borderColor, .borderColor),
                  (.borderWidth, .borderWidth),
-                 (.roundCorners, .roundCorners),
+                 (.cornerRadius, .cornerRadius),
                  (.opacity, .opacity):
                 return true
             default:
@@ -134,13 +73,6 @@ public final class ViewStyle: NSObject {
 
     @objc public func apply(to view: UIView) {
         for property in properties {
-            property.apply(to: view)
-        }
-    }
-
-    @objc public func applyLayout(to view: UIView) {
-        for property in properties {
-            guard property.isLayout else { continue }
             property.apply(to: view)
         }
     }
@@ -177,7 +109,7 @@ extension ViewStyle.Property: CustomDebugStringConvertible {
             return "borderColor"
         case .borderWidth:
             return "borderWidth"
-        case .roundCorners:
+        case .cornerRadius:
             return "roundCorners"
         case .opacity:
             return "opacity"
