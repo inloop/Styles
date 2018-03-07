@@ -66,7 +66,7 @@
 <sub><sub><a name="soso">1</a>: In some cases.</sub></sub>
 
 ## Requirements
-- iOS 8.0+
+- iOS 10.0+
 - Xcode 9.2+
 - Swift 4.1+
 
