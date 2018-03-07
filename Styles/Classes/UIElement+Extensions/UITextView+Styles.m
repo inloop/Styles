@@ -73,12 +73,12 @@
 
 - (void)setTextStyle:(TextStyle *)style forState:(TextInputState)state {
     self.textStyles[@(state)] = style;
-    [self applyStyle];
+    [self applyStylesForCurrentState];
 }
 
 - (void)setViewStyle:(ViewStyle *)style forState:(TextInputState)state {
     self.viewStyles[@(state)] = style;
-    [self applyStyle];
+    [self applyStylesForCurrentState];
 }
 
 - (void)applyStylesForState:(TextInputState)state {
@@ -88,6 +88,12 @@
     [self checkEqualLayerInStyles];
     [self applyTextStyle:textStyle];
     [self applyViewStyle:viewSyle];
+}
+
+- (void)applyStylesForCurrentState {
+    TextInputState state = self.isFirstResponder ? kEditing : kInactive;
+    [self applyStyle];
+    [self applyStylesForState:state];
 }
 
 - (void)checkEqualLayerInStyles {

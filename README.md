@@ -233,7 +233,7 @@ let styleWithEffects = TextStyle(
 
 ```swift
 let pill = ViewStyle(
-     .roundCorners(.allCorners, radius: 10),
+     .cornerRadius(10),
      .borderWidth(3),
      .borderColor(.red),
      .opacity(0.8)
@@ -263,7 +263,7 @@ UITextView.appearance().setViewStyle(blue, for: .inactive)
 let blue = ViewStyle(
     .borderColor(.blue),
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(10)
 )
 
 myButton.viewStyle = blue
@@ -274,7 +274,7 @@ myButton.viewStyle = blue
 ```swift
 let app = ViewStyle(
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(10)
 )
 
 let blue = app.updating(.borderColor(.blue))
@@ -282,7 +282,7 @@ let blue = app.updating(.borderColor(.blue))
 ```swift
 let app = ViewStyle(
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(radius: 10)
 )
 
 let thick = app.updating(.borderWidth(3))
@@ -293,7 +293,7 @@ let thick = app.updating(.borderWidth(3))
 ```swift
 let app = ViewStyle(
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(10)
 )
 
 let semiVisible = ViewStyle(
@@ -306,7 +306,7 @@ myLabel.viewStyle = app + semiVisible
 ```swift
 let app = ViewStyle(
     .borderWidth(0.5),
-    .roundCorners(.allCorners, radius: 10)
+    .cornerRadius(10)
 )
 
 let semiVisible = ViewStyle(
