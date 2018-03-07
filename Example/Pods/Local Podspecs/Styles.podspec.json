@@ -1,6 +1,6 @@
 {
   "name": "Styles",
-  "version": "0.15.9",
+  "version": "0.15.10",
   "summary": "UI Elements rapid styling",
   "description": "UIElements styling made easy, declarative and rapid.",
   "homepage": "https://github.com/inloop/Styles",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/inloop/Styles.git",
-    "tag": "0.15.9"
+    "tag": "0.15.10"
   },
   "platforms": {
     "ios": "8.0"

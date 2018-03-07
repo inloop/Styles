@@ -113,7 +113,8 @@ let textFieldColorStyle = ViewStyle(
 
 let red = ViewStyle(
     .borderColor(.red),
-    .borderWidth(0.5)
+    .borderWidth(0.5),
+    .roundCorners(.allCorners, radius: 0)
 )
 
 let blue = red.updating(
