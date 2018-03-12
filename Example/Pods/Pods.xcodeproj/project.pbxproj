@@ -16,6 +16,10 @@
 		346C8B48163B182FB3586818812E949B /* UINavigationBar+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1ABFD08C662A48DF5834E8AE2B3AC5 /* UINavigationBar+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DB85CFC4ABD4A76D74B7F6A53B933F /* TextInputState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7949408647465609620790AEDF1C64B4 /* TextInputState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36783521D798B0884171148CF3C6D4E2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F5012DEB9025E21BACDF17D48D79D0 /* Regex.swift */; };
+		3B98AB9F20525DBF005B25F8 /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B98AB9D20525DBF005B25F8 /* ObjC.m */; };
+		3B98ABA320525E64005B25F8 /* UITextFieldStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98ABA220525E64005B25F8 /* UITextFieldStylesTests.swift */; };
+		3B98ABD6205696C1005B25F8 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98ABD5205696C1005B25F8 /* UIColor+Utils.swift */; };
+		3B98ABD820569A11005B25F8 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98ABD720569A11005B25F8 /* Shadow.swift */; };
 		3C2618907EC743E450F7990BD9BD692C /* UIImage+Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D1A8B1A9BB397B262A2ECF45C5FA0 /* UIImage+Colorize.swift */; };
 		405ACD9D05C241CF8326390EDD38478D /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265758F6F8773E39B90973E48995782F /* ViewStyle.swift */; };
 		4F9A265366D3280A577CEA4315258643 /* Array+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B165FC6E963C0B72C4BB553EF0CE1F1 /* Array+Styles.swift */; };
@@ -79,6 +83,12 @@
 		38998D66DDF5A96AF1E14C20D2426D70 /* Pods-Styles_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3B165FC6E963C0B72C4BB553EF0CE1F1 /* Array+Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Styles.swift"; sourceTree = "<group>"; };
 		3B91B946E04C5E1490513420E7D94DA7 /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
+		3B98AB9D20525DBF005B25F8 /* ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjC.m; path = Styles/Tests/Utils/ObjC.m; sourceTree = "<group>"; };
+		3B98AB9E20525DBF005B25F8 /* ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjC.h; path = Styles/Tests/Utils/ObjC.h; sourceTree = "<group>"; };
+		3B98ABA120525DD0005B25F8 /* Styles-Unit-Tests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Styles-Unit-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B98ABA220525E64005B25F8 /* UITextFieldStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITextFieldStylesTests.swift; path = Styles/Tests/UITextFieldStylesTests.swift; sourceTree = "<group>"; };
+		3B98ABD5205696C1005B25F8 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		3B98ABD720569A11005B25F8 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = Styles/Classes/Shadow.swift; sourceTree = "<group>"; };
 		3E46420FD4342678663747AFF6C1A522 /* Styles-Unit-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Styles-Unit-Tests-resources.sh"; sourceTree = "<group>"; };
 		40AF6D525075FDFB398EE46FA4CCE7E7 /* UILabel+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Styles.m"; sourceTree = "<group>"; };
 		40EA5E9F944CF3C551B4A661A6834D27 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +117,7 @@
 		C2F7FBFA6A8153C50BAE60B23EA998C8 /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = Styles/Classes/TextStyle.swift; sourceTree = "<group>"; };
 		C4CC5526612141886E9F79E4800F39E8 /* Styles.unit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.unit.xcconfig; sourceTree = "<group>"; };
 		C5E23230EFC8F8C0342733ABC5A94307 /* UITextView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Styles.h"; sourceTree = "<group>"; };
-		C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Styles-Unit-Tests"; path = "Styles-Unit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Styles-Unit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98C65A5A2F299C50F517930433FFACA /* TextStyleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyleTests.swift; path = Styles/Tests/TextStyleTests.swift; sourceTree = "<group>"; };
 		C9E87D569DC8D811124881863946604D /* Pods-Styles_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0CC5C294DFE76CC5BAAA4A449B72E4 /* Styles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-umbrella.h"; sourceTree = "<group>"; };
@@ -158,6 +168,7 @@
 				F27BB24B9AC3B4373AE450314C11E60F /* TextEffect.swift */,
 				C2F7FBFA6A8153C50BAE60B23EA998C8 /* TextStyle.swift */,
 				265758F6F8773E39B90973E48995782F /* ViewStyle.swift */,
+				3B98ABD720569A11005B25F8 /* Shadow.swift */,
 				D011CC5438F3606F7BC98ED64189CE88 /* Extensions */,
 				441BA6620EFBD392145CD7C51A381E6C /* Matches */,
 				C66729D9634B9B7756D0CA15AB7CA3D9 /* Pod */,
@@ -174,6 +185,9 @@
 			children = (
 				C98C65A5A2F299C50F517930433FFACA /* TextStyleTests.swift */,
 				B618D685A0674787E0368AE3F4E31A67 /* ViewStyleTests.swift */,
+				3B98ABA220525E64005B25F8 /* UITextFieldStylesTests.swift */,
+				3B98ABA020525DD0005B25F8 /* SupportingFiles */,
+				3B98AB9C20525C1B005B25F8 /* Utils */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -184,6 +198,24 @@
 				1CD494ED17A6FE2CCD4D89A1B4A48C44 /* Styles */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3B98AB9C20525C1B005B25F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B98AB9E20525DBF005B25F8 /* ObjC.h */,
+				3B98AB9D20525DBF005B25F8 /* ObjC.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3B98ABA020525DD0005B25F8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3B98ABA120525DD0005B25F8 /* Styles-Unit-Tests-Bridging-Header.h */,
+			);
+			name = SupportingFiles;
+			path = Styles/Tests/SupportingFiles;
 			sourceTree = "<group>";
 		};
 		441BA6620EFBD392145CD7C51A381E6C /* Matches */ = {
@@ -280,7 +312,7 @@
 			children = (
 				40EA5E9F944CF3C551B4A661A6834D27 /* Pods_Styles_Example.framework */,
 				666A0460CCB2754AC7E7B07E6425D93C /* Styles.framework */,
-				C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests */,
+				C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,6 +351,7 @@
 				75A43A278EA316125ABE28AF54530CFD /* NSAttributedString+Mutable.swift */,
 				127D00910B0B1850DFD77B1384E34E39 /* UIImage+Attachment.swift */,
 				A31D1A8B1A9BB397B262A2ECF45C5FA0 /* UIImage+Colorize.swift */,
+				3B98ABD5205696C1005B25F8 /* UIColor+Utils.swift */,
 			);
 			name = Extensions;
 			path = Styles/Classes/Extensions;
@@ -405,7 +438,7 @@
 			);
 			name = "Styles-Unit-Tests";
 			productName = "Styles-Unit-Tests";
-			productReference = C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests */;
+			productReference = C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -416,6 +449,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					FA2C8774530145507780D5A886C9A93E = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -489,9 +527,11 @@
 				85597353D5D6EB12F742544534011F35 /* TextStyle.swift in Sources */,
 				5ACD9216A5670664C0CF755C2118B04C /* UIButton+Styles.m in Sources */,
 				2814AC602D2A65BEBBA27490059DF8E4 /* UIImage+Attachment.swift in Sources */,
+				3B98ABD820569A11005B25F8 /* Shadow.swift in Sources */,
 				3C2618907EC743E450F7990BD9BD692C /* UIImage+Colorize.swift in Sources */,
 				75726812A56F47E0C4E001126A9CF7D0 /* UILabel+Styles.m in Sources */,
 				AF791521A075C0AB7A99D10626DA0900 /* UINavigationBar+Styles.m in Sources */,
+				3B98ABD6205696C1005B25F8 /* UIColor+Utils.swift in Sources */,
 				EBB9C9D43C02543BB4627DB00F006407 /* UITextField+Styles.m in Sources */,
 				DEF38C05ED01E3D014E59E4453EB6181 /* UITextView+Styles.m in Sources */,
 				EF1ED560826B24E02BC2B52BD5985B02 /* UIView+Styles.m in Sources */,
@@ -512,7 +552,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFB8CF181A8CFD3C78A2A33E18A514E /* TextStyleTests.swift in Sources */,
+				3B98ABA320525E64005B25F8 /* UITextFieldStylesTests.swift in Sources */,
 				E24DE1BA9617DD88CD3F775C2958D6FB /* ViewStyleTests.swift in Sources */,
+				3B98AB9F20525DBF005B25F8 /* ObjC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4CC5526612141886E9F79E4800F39E8 /* Styles.unit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGNING_REQUIRED = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -671,9 +714,11 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Styles/Styles-Unit-Tests-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Styles-Unit-Tests";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../Styles/Tests/SupportingFiles/Styles-Unit-Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.1;
 				VALIDATE_PRODUCT = YES;
@@ -752,6 +797,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4CC5526612141886E9F79E4800F39E8 /* Styles.unit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGNING_REQUIRED = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -760,6 +806,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Styles/Styles-Unit-Tests-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lswiftSwiftOnoneSupport",
@@ -767,6 +814,7 @@
 				PRODUCT_NAME = "Styles-Unit-Tests";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "../../Styles/Tests/SupportingFiles/Styles-Unit-Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.1;
 			};

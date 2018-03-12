@@ -85,15 +85,16 @@ final class TextStyleTests: XCTestCase {
     }
 
     func testShadow() {
-        let expected = NSShadow()
-        expected.shadowColor = UIColor.red
-        expected.shadowOffset = CGSize(width: 10, height: 4)
-        expected.shadowBlurRadius = 10.4
+        let expected = Shadow(
+            color: .red,
+            offset: UIOffset(horizontal: 10, vertical: 4),
+            radius: 10.4
+        )
         let style = TextStyle(.shadow(expected))
         let actual = style.attributes[.shadow] as? NSShadow
 
         XCTAssertNotNil(actual)
-        XCTAssertEqual(actual, expected)
+        XCTAssertEqual(actual, expected.nsShadow)
     }
 
     func testWritingDirectionOverrides() {

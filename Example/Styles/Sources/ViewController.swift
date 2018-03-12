@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
     @IBOutlet var label: ExLabel!
     @IBOutlet var button: UIButton!
     @IBOutlet var textField: UITextField!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet var containerView: UIView!
     @IBOutlet var textView: UITextView!
 
     override func viewDidLoad() {

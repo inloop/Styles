@@ -3,22 +3,24 @@
 import UIKit
 import Styles
 
-extension NSShadow {
-    static let magenta: NSShadow = {
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.magenta
-        shadow.shadowOffset = CGSize(width: 1, height: 1)
-        shadow.shadowBlurRadius = 4
-        return shadow
-    }()
+extension Shadow {
+    static let magenta = Shadow(
+        color: .magenta,
+        offset: UIOffset(horizontal: 1, vertical: 1),
+        radius: 4
+    )
 
-    static let blue: NSShadow = {
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.blue
-        shadow.shadowOffset = CGSize(width: 4, height: 4)
-        shadow.shadowBlurRadius = 4
-        return shadow
-    }()
+    static let blue = Shadow(
+        color: .blue,
+        offset: UIOffset(horizontal: 4, vertical: 4),
+        radius: 4
+    )
+
+    static let red = Shadow(
+        color: .red,
+        offset: UIOffset(horizontal: 0, vertical: 8),
+        radius: 16
+    )
 }
 
 let h1 = TextStyle(
@@ -103,7 +105,8 @@ let appColor = ViewStyle(
 )
 
 let redColor = ViewStyle(
-    .backgroundColor(.red)
+    .backgroundColor(.red),
+    .shadow(.red)
 )
 
 let textFieldColorStyle = ViewStyle(
@@ -114,12 +117,14 @@ let textFieldColorStyle = ViewStyle(
 let red = ViewStyle(
     .borderColor(.red),
     .borderWidth(0.5),
-    .cornerRadius(0)
+    .cornerRadius(0),
+    .shadow(.red)
 )
 
 let blue = red.updating(
     .borderColor(.blue),
-    .cornerRadius(10)
+    .cornerRadius(10),
+    .shadow(.none)
 )
 
 let greenHeadline = TextStyle(
