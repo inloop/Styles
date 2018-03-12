@@ -237,7 +237,7 @@ let pill = ViewStyle(
      .cornerRadius(10),
      .borderWidth(3),
      .borderColor(.red),
-     .opacity(0.8),
+     .opacity(0.8)
 )
 
 UILabel.appearance().viewStyle = pill
