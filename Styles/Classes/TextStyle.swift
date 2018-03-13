@@ -35,7 +35,7 @@ public final class TextStyle: NSObject {
         case strikethrought(TextDecoration)
         case underline(TextDecoration)
         case obliqueness(Double)
-        case shadow(NSShadow)
+        case shadow(Shadow)
         case writingDirectionOverrides([WritingDirectionOverride])
         case baselineOffset(Double)
 
@@ -66,7 +66,7 @@ public final class TextStyle: NSObject {
             case .obliqueness(let skew):
                 return [(.obliqueness, skew)]
             case .shadow(let shadow):
-                return [(.shadow, shadow)]
+                return [(.shadow, shadow.nsShadow)]
             case .writingDirectionOverrides(let overrides):
                 let rawValues = overrides.map { $0.rawValue }
                 return [(.writingDirection, rawValues)]

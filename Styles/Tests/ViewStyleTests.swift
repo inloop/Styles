@@ -54,6 +54,24 @@ final class ViewStyleTests: XCTestCase {
         XCTAssertTrue(view.layer.cornerRadius == 10)
     }
 
+    func testShadow() {
+        let offset = UIOffset(horizontal: 10, vertical: 4)
+        view.viewStyle = ViewStyle(
+            .shadow(Shadow(
+                color: .red,
+                offset: offset,
+                radius: 10.4
+            ))
+        )
+
+        XCTAssertEqual(view.layer.shadowColor, UIColor.red.cgColor)
+        XCTAssertEqual(view.layer.shadowRadius, 10.4)
+        XCTAssertEqual(view.layer.shadowOffset, offset.size)
+        XCTAssertEqual(view.layer.shouldRasterize, true)
+        XCTAssertEqual(view.layer.rasterizationScale, UIScreen.main.scale)
+        XCTAssertEqual(view.layer.masksToBounds, false)
+    }
+
     func testCombining() {
         let combinedStyle = colorStyle + tintStyle
         view.viewStyle = combinedStyle

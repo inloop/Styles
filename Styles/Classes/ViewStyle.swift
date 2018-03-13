@@ -10,6 +10,7 @@ public final class ViewStyle: NSObject {
         case borderWidth(CGFloat)
         case cornerRadius(CGFloat)
         case opacity(Float)
+        case shadow(Shadow)
 
         func apply(to view: UIView) {
             switch self {
@@ -26,6 +27,8 @@ public final class ViewStyle: NSObject {
                 view.layer.cornerRadius = radius
             case .opacity(let opacity):
                 view.layer.opacity = opacity
+            case .shadow(let shadow):
+                shadow.apply(to: view.layer)
             }
         }
 
@@ -43,6 +46,8 @@ public final class ViewStyle: NSObject {
                 return true
             case .opacity:
                 return true
+            case .shadow:
+                return true
             }
         }
 
@@ -53,7 +58,8 @@ public final class ViewStyle: NSObject {
                  (.borderColor, .borderColor),
                  (.borderWidth, .borderWidth),
                  (.cornerRadius, .cornerRadius),
-                 (.opacity, .opacity):
+                 (.opacity, .opacity),
+                 (.shadow, .shadow):
                 return true
             default:
                 return false
@@ -113,6 +119,8 @@ extension ViewStyle.Property: CustomDebugStringConvertible {
             return "roundCorners"
         case .opacity:
             return "opacity"
+        case .shadow:
+            return "shadow"
         }
     }
 }

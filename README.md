@@ -232,6 +232,7 @@ let styleWithEffects = TextStyle(
 ### ViewStyle
 
 ```swift
+
 let pill = ViewStyle(
      .cornerRadius(10),
      .borderWidth(3),
@@ -246,12 +247,18 @@ let red = ViewStyle(
     .backgroundColor(.red),
     .tintColor(.red),
     .borderColor(.red),
-    .borderWidth(0.5)
+    .borderWidth(0.5),
+    .shadow(Shadow(
+        color: .red,
+        offset: UIOffset(horizontal: 0, vertical: 8),
+        radius: 16
+    ))
 )
 
 let blue = ViewStyle(
     .borderColor(.blue),
-    .borderWidth(0.5)
+    .borderWidth(0.5),
+    .shadow(.none)
 )
 
 UITextField.appearance().setViewStyle(red, for: .editing)
