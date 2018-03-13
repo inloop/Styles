@@ -45,9 +45,12 @@
 - [Examples](#examples)
   - [TextStyle](#textstyle)
     - [Updating TextStyle](#updating-textstyle)
+    - [Combining TextStyle](#combining-textstyle)
     - [TextEffects](#texteffects)
   - [ViewStyle](#viewstyle)
+    - [Layer Properties](#layer-properties)
     - [Updating ViewStyle](#updating-viewstyle)
+    - [Combining ViewStyle](#combining-viewstyle)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [License](#license)
@@ -71,6 +74,7 @@
 - Swift 4.1+
 
 ## Examples
+For full set of feature examples refer to our [wiki page](https://github.com/inloop/Styles/wiki).
 
 ### TextStyle
 
@@ -274,6 +278,41 @@ let blue = ViewStyle(
 )
 
 myButton.viewStyle = blue
+```
+#### Layer properties
+If you set any of `[.borderColor, .borderWidth, .cornerRadius, .opacity, .shadow]` properties for particular states to `UITextView` or `UITextField`, the Styles will require to match properties under the hood. If you don't do so the styling becomes invalid because layer properties are not reset when state is changed. It is up to you to define the style. Below is the example which produces assertion error and second snippet is valid configuration.
+
+```swift
+let redBorder = ViewStyle(
+	.borderColor(.red),
+	.borderWidth(1.5)
+)
+
+let roundedCorners = ViewStyle(
+	.cornerRadius(10)
+)
+
+UITextField.appearance().setViewStyle(redBorder, for: .editing)
+// It throws an assertion error
+// because rounded corners is missing .borderColor & .borderWidth 
+UITextField.appearance().setViewStyle(roundedCorners, for: .inactive)
+```
+
+```swift
+let redRoundedBorder = ViewStyle(
+	.borderColor(.red),
+	.borderWidth(1.5),
+	.cornerRadius(10)
+)
+
+let redFlatBorder = ViewStyle(
+	.borderColor(.red),
+	.borderWidth(1.5),
+	.cornerRadius(0)
+)
+
+UITextField.appearance().setViewStyle(redRoundedBorder, for: .editing)
+UITextField.appearance().setViewStyle(redFlatBorder, for: .inactive)
 ```
 
 #### Updating ViewStyle
