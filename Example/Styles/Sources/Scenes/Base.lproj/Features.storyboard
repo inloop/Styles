@@ -14,13 +14,15 @@
             <objects>
                 <tabBarController id="Dpd-ff-jDi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="GmX-r8-H9i"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ssH-AG-gLz">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ssH-AG-gLz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.99532335999999999" green="0.095619849859999995" blue="0.37814056870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="LIT-cr-AoX" kind="relationship" relationship="viewControllers" id="wvS-Vh-h5l"/>
+                        <segue destination="sEI-ni-WRs" kind="relationship" relationship="viewControllers" id="9p1-Vx-gmY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgV-Xd-faY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -31,17 +33,27 @@
         <scene sceneID="Khz-an-jf7">
             <objects>
                 <viewControllerPlaceholder storyboardName="Styles" id="LIT-cr-AoX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3f7-8f-Mfh"/>
+                    <tabBarItem key="tabBarItem" title="Styles gallery" image="doge" id="3f7-8f-Mfh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMX-GF-rKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1606" y="-154"/>
         </scene>
-        <!--Item-->
+        <!--CustomStyle-->
+        <scene sceneID="3Ca-l0-r2w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CustomStyle" id="sEI-ni-WRs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Customization" id="U28-sl-jSg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdd-BO-O5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637" y="111"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="vmW-TA-fwd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVy-n4-N4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2qm-P7-Ezb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Txv-Jl-mWb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z4t-1t-43C">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -52,9 +64,11 @@
                         <segue destination="Dpd-ff-jDi" kind="relationship" relationship="rootViewController" id="vxJ-zq-yU0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SVy-n4-N4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="0.0"/>
+            <point key="canvasLocation" x="231" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doge" width="24" height="23"/>
+    </resources>
 </document>

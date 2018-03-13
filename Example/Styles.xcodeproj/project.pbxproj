@@ -10,6 +10,12 @@
 		CE1439CA20580A8900C7EA94 /* TextStyle+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439C920580A8900C7EA94 /* TextStyle+Defaults.swift */; };
 		CE1439CC20580BD600C7EA94 /* TextEffect+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439CB20580BD600C7EA94 /* TextEffect+Defaults.swift */; };
 		CE1439CE20580E8B00C7EA94 /* ViewStyle+Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439CD20580E8B00C7EA94 /* ViewStyle+Predefined.swift */; };
+		CE1439D12058161300C7EA94 /* CustomStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439D02058161300C7EA94 /* CustomStyleViewController.swift */; };
+		CE1439D32058162200C7EA94 /* CustomStyle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1439D22058162200C7EA94 /* CustomStyle.storyboard */; };
+		CE1439D620581FF200C7EA94 /* DefineViewStyleViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439D520581FF200C7EA94 /* DefineViewStyleViewContoller.swift */; };
+		CE1439D82058202400C7EA94 /* DefineViewStyle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1439D72058202400C7EA94 /* DefineViewStyle.storyboard */; };
+		CE1439DC20592E4400C7EA94 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439DB20592E4400C7EA94 /* ColorPickerViewController.swift */; };
+		CE1439DE2059308900C7EA94 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */; };
 		CE6CD201202DC08200DA4491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD1F9202DC08100DA4491 /* AppDelegate.swift */; };
 		CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FB202DC08200DA4491 /* LaunchScreen.xib */; };
 		CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FD202DC08200DA4491 /* Features.storyboard */; };
@@ -37,6 +43,12 @@
 		CE1439C920580A8900C7EA94 /* TextStyle+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Defaults.swift"; sourceTree = "<group>"; };
 		CE1439CB20580BD600C7EA94 /* TextEffect+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextEffect+Defaults.swift"; sourceTree = "<group>"; };
 		CE1439CD20580E8B00C7EA94 /* ViewStyle+Predefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+Predefined.swift"; sourceTree = "<group>"; };
+		CE1439D02058161300C7EA94 /* CustomStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyleViewController.swift; sourceTree = "<group>"; };
+		CE1439D22058162200C7EA94 /* CustomStyle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomStyle.storyboard; sourceTree = "<group>"; };
+		CE1439D520581FF200C7EA94 /* DefineViewStyleViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineViewStyleViewContoller.swift; sourceTree = "<group>"; };
+		CE1439D72058202400C7EA94 /* DefineViewStyle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefineViewStyle.storyboard; sourceTree = "<group>"; };
+		CE1439DB20592E4400C7EA94 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		CE6CD1F9202DC08100DA4491 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6CD1FC202DC08200DA4491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE6CD1FE202DC08200DA4491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Features.storyboard; sourceTree = "<group>"; };
@@ -121,6 +133,35 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		CE1439CF205815FC00C7EA94 /* CustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				CE1439DA20592E3300C7EA94 /* ColorPicker */,
+				CE1439D420581FE100C7EA94 /* DefineViewStyle */,
+				CE1439D02058161300C7EA94 /* CustomStyleViewController.swift */,
+				CE1439D22058162200C7EA94 /* CustomStyle.storyboard */,
+			);
+			path = CustomStyle;
+			sourceTree = "<group>";
+		};
+		CE1439D420581FE100C7EA94 /* DefineViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				CE1439D520581FF200C7EA94 /* DefineViewStyleViewContoller.swift */,
+				CE1439D72058202400C7EA94 /* DefineViewStyle.storyboard */,
+			);
+			path = DefineViewStyle;
+			sourceTree = "<group>";
+		};
+		CE1439DA20592E3300C7EA94 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE1439DB20592E4400C7EA94 /* ColorPickerViewController.swift */,
+				CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
 		CE6CD1F7202DC08100DA4491 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +196,7 @@
 			children = (
 				CE78DE8C2057EE8B00A5DCFE /* FeaturesTabBarController.swift */,
 				CE6CD1FD202DC08200DA4491 /* Features.storyboard */,
+				CE1439CF205815FC00C7EA94 /* CustomStyle */,
 				CE78DE872057D68200A5DCFE /* Features */,
 			);
 			path = Scenes;
@@ -255,8 +297,11 @@
 			files = (
 				CE78DE8F2057F32D00A5DCFE /* Styles.storyboard in Resources */,
 				CE6CD204202DC08200DA4491 /* Images.xcassets in Resources */,
+				CE1439D82058202400C7EA94 /* DefineViewStyle.storyboard in Resources */,
+				CE1439DE2059308900C7EA94 /* ColorPicker.storyboard in Resources */,
 				CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */,
 				CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */,
+				CE1439D32058162200C7EA94 /* CustomStyle.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +375,9 @@
 				CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */,
 				CE78DE942057F51700A5DCFE /* TextStyleCell.swift in Sources */,
 				CE78DE982057FD5200A5DCFE /* Shadow+Defaults.swift in Sources */,
+				CE1439D12058161300C7EA94 /* CustomStyleViewController.swift in Sources */,
+				CE1439DC20592E4400C7EA94 /* ColorPickerViewController.swift in Sources */,
+				CE1439D620581FF200C7EA94 /* DefineViewStyleViewContoller.swift in Sources */,
 				CE1439CE20580E8B00C7EA94 /* ViewStyle+Predefined.swift in Sources */,
 				CE78DE8A2057D72C00A5DCFE /* StylesController.swift in Sources */,
 			);
