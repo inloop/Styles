@@ -10,30 +10,34 @@
 </div>
 
 <br />
-
 <div align="center">
-    <!-- Travis-CI -->
-    <a href="https://travis-ci.org/inloop/Styles">
-        <img src="https://travis-ci.org/inloop/Styles.svg?branch=master"
+  <!-- License -->
+  <a href="https://raw.githubusercontent.com/inloop/Styles/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg"
+      alt="License" />
+  </a>
+  <!-- Travis-CI -->
+  <a href="https://travis-ci.org/inloop/Styles">
+    <img src="https://travis-ci.org/inloop/Styles.svg?branch=master"
           alt="Travis-CI" />
-    </a>
+  </a>
   <!-- Version -->
   <a href="http://cocoapods.org/pods/Styles">
     <img src="https://img.shields.io/cocoapods/v/Styles.svg?style=flat"
       alt="Version" />
-  </a>
-  <!-- License -->
-  <a href="http://cocoapods.org/pods/Styles">
-    <img src="https://img.shields.io/cocoapods/l/Styles.svg?style=flat"
-      alt="License" />
   </a>
   <!-- Platform -->
   <a href="http://cocoapods.org/pods/Styles">
     <img src="https://img.shields.io/cocoapods/p/Styles.svg?style=flat"
       alt="Platform" />
   </a>
+  <!-- Carthage -->
+  <a href="https://github.com/Carthage/Carthage">
+    <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
+      alt="Platform" />
+  </a>
   <!-- Swift version -->
-  <a href="http://cocoapods.org/pods/Styles">
+  <a href="https://developer.apple.com/swift">
     <img src="https://img.shields.io/badge/swift-4-orange.svg"
       alt="Swift version" />
   </a>
@@ -370,12 +374,52 @@ myLabel.viewStyle = labelStyle
 
 ## Installation
 
-Styles is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 1.1+ is required to build Styles.
+
+To integrate Styles into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Styles', :git => 'https://github.com/inloop/Styles.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'Styles', :git => 'https://github.com/inloop/Styles.git'
+end
 ```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate Styles into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "inloop/Styles"
+```
+
+Run `carthage update` to build the framework and drag the built `Styles.framework` into your Xcode project.
 
 ## Contributions
 
