@@ -16,6 +16,12 @@ final class ColorPickerViewController: UIViewController {
 	@IBOutlet weak var colorView: UIView!
 	var completion: ((_ color: UIColor?) -> Void)?
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		navigationItem.title = "Define color"
+		applyColor()
+	}
+
 	@IBAction func sliderValueChanged(_ sender: UISlider) {
 		let value = Float(roundf((sender.value * 1000.0) / 1000.0))
 		sender.value = value

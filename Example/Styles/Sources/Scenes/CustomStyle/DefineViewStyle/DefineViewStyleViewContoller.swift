@@ -20,6 +20,7 @@ final class DefineViewStyleViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		navigationItem.title = "Define view style"
 	}
 
 	@IBAction func borderWidthChanged(_ sender: UISlider) {
@@ -67,6 +68,7 @@ final class DefineViewStyleViewController: UIViewController {
 		delegate?.didPickViewStyleDefinition(definition)
 		navigationController?.popViewController(animated: true)
 	}
+
 	private func presentColorPickerWithCompletion(_ completion: @escaping (_ color: UIColor?) -> Void) {
 		guard let controller = ColorPickerViewController.makeInstance() else { return }
 		controller.completion = completion

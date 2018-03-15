@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Customization-->
+        <!-- -->
         <scene sceneID="69y-zu-WBE">
             <objects>
                 <viewController id="vqO-6e-lPT" customClass="CustomStyleViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,6 +63,9 @@
                                             <constraint firstAttribute="height" constant="44" id="H6C-Ac-oyf"/>
                                         </constraints>
                                         <state key="normal" title="Define text style"/>
+                                        <connections>
+                                            <segue destination="sT9-CN-2ZH" kind="show" id="i8P-0x-e4f"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icG-9n-yfn">
                                         <rect key="frame" x="16" y="16" width="343" height="162.5"/>
@@ -73,7 +76,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Hwh-Ze-uIo" secondAttribute="bottom" constant="202" id="0ny-OZ-lcY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hwh-Ze-uIo" secondAttribute="bottom" constant="16" id="0ny-OZ-lcY"/>
                                     <constraint firstItem="icG-9n-yfn" firstAttribute="top" secondItem="9W8-Fg-S1R" secondAttribute="top" constant="16" id="2vO-I1-A20"/>
                                     <constraint firstItem="SrB-Mf-A8p" firstAttribute="leading" secondItem="P3U-5E-hkv" secondAttribute="leading" id="4Hj-Sx-061"/>
                                     <constraint firstItem="SrB-Mf-A8p" firstAttribute="top" secondItem="yl2-PZ-6Re" secondAttribute="bottom" constant="18.5" id="4Mi-lK-Urt"/>
@@ -111,6 +114,9 @@
                         <viewLayoutGuide key="safeArea" id="hNY-36-8Pc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Customization" id="9tk-TC-S1d"/>
+                    <navigationItem key="navigationItem" title=" " id="TDE-zT-Q63">
+                        <barButtonItem key="backBarButtonItem" title=" " id="urR-pr-OwF"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textLabel" destination="icG-9n-yfn" id="Tlu-NZ-58r"/>
@@ -128,7 +134,15 @@
                 <viewControllerPlaceholder storyboardName="DefineViewStyle" id="yXZ-st-a2E" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LO5-wM-hvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-85"/>
+            <point key="canvasLocation" x="774" y="66"/>
+        </scene>
+        <!--DefineTextStyle-->
+        <scene sceneID="0EX-Y5-y9h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DefineTextStyle" id="sT9-CN-2ZH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMD-Rs-irW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="264"/>
         </scene>
     </scenes>
 </document>

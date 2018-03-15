@@ -4,7 +4,7 @@ import Styles
 
 protocol StylePickerDelegate: class {
 	func didPickViewStyleDefinition(_ definition: ViewStyle.Definition)
-	func didPickTextStyleDefinition(_ definition: ViewStyle.Definition)
+	func didPickTextStyleDefinition(_ definition: TextStyle.Definition)
 }
 
 final class CustomStyleViewController: UIViewController {
@@ -16,7 +16,8 @@ final class CustomStyleViewController: UIViewController {
 		switch segue.destination {
 		case let controller as DefineViewStyleViewController:
 			controller.delegate = self
-			break
+		case let controller as DefineTextStyleViewController:
+			controller.delegate = self
 		default:
 			break
 		}
@@ -24,8 +25,9 @@ final class CustomStyleViewController: UIViewController {
 }
 
 extension CustomStyleViewController: StylePickerDelegate {
-	func didPickTextStyleDefinition(_ definition: ViewStyle.Definition) {
-
+	func didPickTextStyleDefinition(_ definition: TextStyle.Definition) {
+		textStyleDescriptionLabel.text = definition.styleDescription
+		textLabel.textStyle = definition.textStyle
 	}
 
 	func didPickViewStyleDefinition(_ definition: ViewStyle.Definition) {

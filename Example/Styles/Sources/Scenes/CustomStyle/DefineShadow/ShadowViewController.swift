@@ -25,6 +25,11 @@ final class ShadowViewController: UIViewController {
 	var shadow = Shadow.none
 	weak var delegate: ShadowPickerDelegate?
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		navigationItem.title = "Define shadow"
+	}
+
 	@IBAction func sliderValueChanged(_ sender: UISlider) {
 		let value = roundf(sender.value)
 		sender.value = value
@@ -35,7 +40,7 @@ final class ShadowViewController: UIViewController {
 		case horizontalOffsetSlider.tag:
 			horizontalOffsetLabel.text = "Horizontal offset \(value)"
 		case opacitySlider.tag:
-			opacityLabel.text = "Opacity \(value)"
+			opacityLabel.text = "Opacity \(value / 100.0)"
 		case radiusSlider.tag:
 			radiusLabel.text = "Radius \(value)"
 		case rasterizationScaleSlider.tag:
@@ -60,6 +65,7 @@ final class ShadowViewController: UIViewController {
 				vertical: \(CGFloat(verticalOffsetSlider.value))
 			),
 			radius: \(CGFloat(radiusSlider.value)),
+			opacity: \(opacitySlider.value / 100.0),
 			shouldRasterizeLayer: \(rasterizeSwitch.isOn),
 			rasterizationScale: \(CGFloat(rasterizationScaleSlider.value))
 		)
@@ -85,6 +91,7 @@ final class ShadowViewController: UIViewController {
 				vertical: CGFloat(verticalOffsetSlider.value)
 			),
 			radius: CGFloat(radiusSlider.value),
+			opacity: opacitySlider.value / 100.0,
 			shouldRasterizeLayer: rasterizeSwitch.isOn,
 			rasterizationScale: CGFloat(rasterizationScaleSlider.value)
 		)
