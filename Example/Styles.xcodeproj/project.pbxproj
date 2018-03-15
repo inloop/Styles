@@ -28,6 +28,8 @@
 		CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE952057F6FC00A5DCFE /* TextStyle+Predefined.swift */; };
 		CE78DE982057FD5200A5DCFE /* Shadow+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE972057FD5200A5DCFE /* Shadow+Defaults.swift */; };
 		CE78DE9B2057FE7D00A5DCFE /* ViewStyle+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE9A2057FE7D00A5DCFE /* ViewStyle+Defaults.swift */; };
+		CE850F87205945EA00C62E35 /* Shadow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE850F86205945EA00C62E35 /* Shadow.storyboard */; };
+		CE850F89205945FD00C62E35 /* ShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850F88205945FD00C62E35 /* ShadowViewController.swift */; };
 		E85D480F059FB7239992BE0B /* Pods_Styles_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		CE78DE952057F6FC00A5DCFE /* TextStyle+Predefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Predefined.swift"; sourceTree = "<group>"; };
 		CE78DE972057FD5200A5DCFE /* Shadow+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shadow+Defaults.swift"; sourceTree = "<group>"; };
 		CE78DE9A2057FE7D00A5DCFE /* ViewStyle+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+Defaults.swift"; sourceTree = "<group>"; };
+		CE850F86205945EA00C62E35 /* Shadow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shadow.storyboard; sourceTree = "<group>"; };
+		CE850F88205945FD00C62E35 /* ShadowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewController.swift; sourceTree = "<group>"; };
 		F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +140,7 @@
 		CE1439CF205815FC00C7EA94 /* CustomStyle */ = {
 			isa = PBXGroup;
 			children = (
+				CE850F852059438A00C62E35 /* DefineShadow */,
 				CE1439DA20592E3300C7EA94 /* ColorPicker */,
 				CE1439D420581FE100C7EA94 /* DefineViewStyle */,
 				CE1439D02058161300C7EA94 /* CustomStyleViewController.swift */,
@@ -156,8 +161,8 @@
 		CE1439DA20592E3300C7EA94 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				CE1439DB20592E4400C7EA94 /* ColorPickerViewController.swift */,
 				CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */,
+				CE1439DB20592E4400C7EA94 /* ColorPickerViewController.swift */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -222,6 +227,15 @@
 				CE1439CD20580E8B00C7EA94 /* ViewStyle+Predefined.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE850F852059438A00C62E35 /* DefineShadow */ = {
+			isa = PBXGroup;
+			children = (
+				CE850F86205945EA00C62E35 /* Shadow.storyboard */,
+				CE850F88205945FD00C62E35 /* ShadowViewController.swift */,
+			);
+			path = DefineShadow;
 			sourceTree = "<group>";
 		};
 		D189273C33F2BBE6BCBA13A5 /* Frameworks */ = {
@@ -301,6 +315,7 @@
 				CE1439DE2059308900C7EA94 /* ColorPicker.storyboard in Resources */,
 				CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */,
 				CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */,
+				CE850F87205945EA00C62E35 /* Shadow.storyboard in Resources */,
 				CE1439D32058162200C7EA94 /* CustomStyle.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE850F89205945FD00C62E35 /* ShadowViewController.swift in Sources */,
 				CE78DE8D2057EE8B00A5DCFE /* FeaturesTabBarController.swift in Sources */,
 				CE1439CC20580BD600C7EA94 /* TextEffect+Defaults.swift in Sources */,
 				CE6CD201202DC08200DA4491 /* AppDelegate.swift in Sources */,

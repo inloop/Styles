@@ -3,6 +3,11 @@
 import Styles
 
 extension Shadow {
+	struct ShadowDefinition {
+		let shadow: Shadow
+		let shadowDescription: String
+	}
+
 	static let magenta = Shadow(
 		color: .magenta,
 		offset: UIOffset(horizontal: 1, vertical: 1),

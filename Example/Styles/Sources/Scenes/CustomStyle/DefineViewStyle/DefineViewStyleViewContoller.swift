@@ -12,20 +12,11 @@ final class DefineViewStyleViewController: UIViewController {
 	@IBOutlet weak var opacityLabel: UILabel!
 	@IBOutlet weak var cornerRadiusLabel: UILabel!
 	@IBOutlet weak var borderWidthLabel: UILabel!
+	@IBOutlet weak var shadowLabel: UILabel!
 
 	private var shadow = Shadow.none
-	private var shadowDescription = """
-	let shadow = Shadow(
-		color: .black,
-		offset: UIOffset(horizontal: 0, vertical: -3),
-		radius: 3,
-		opacity: 0,
-		shouldRasterizeLayer: false,
-		rasterizationScale: 1.0
-	)
-	"""
+	private var shadowDefinition: Shadow.ShadowDefinition?
 	weak var delegate: StylePickerDelegate?
-
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -70,7 +61,7 @@ final class DefineViewStyleViewController: UIViewController {
 				.opacity(\(opacitySlider.value),
 				.shadow(shadow)
 			)
-			\(shadowDescription)
+			\(shadowDefinition?.shadowDescription ?? "")
 			"""
 		)
 		delegate?.didPickViewStyleDefinition(definition)
@@ -98,5 +89,19 @@ final class DefineViewStyleViewController: UIViewController {
 		presentColorPickerWithCompletion { [weak self] color in
 			self?.borderColorView.backgroundColor = color
 		}
+	}
+
+	@IBAction func selectShadow(_ sender: UIButton) {
+		let storyboard = UIStoryboard(name: "Shadow", bundle: nil)
+		guard let shadowController = storyboard.instantiateInitialViewController() as? ShadowViewController else { return }
+		shadowController.delegate = self
+		navigationController?.pushViewController(shadowController, animated: true)
+	}
+}
+
+extension DefineViewStyleViewController: ShadowPickerDelegate {
+	func didPickShadow(_ definition: Shadow.ShadowDefinition) {
+		shadowLabel.text = definition.shadowDescription
+		shadow = definition.shadow
 	}
 }

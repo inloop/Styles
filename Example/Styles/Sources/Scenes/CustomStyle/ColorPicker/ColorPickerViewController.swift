@@ -20,7 +20,6 @@ final class ColorPickerViewController: UIViewController {
 		let value = Float(roundf((sender.value * 1000.0) / 1000.0))
 		sender.value = value
 		applyColor()
-		print(value)
 	}
 
 	private func applyColor() {
