@@ -193,8 +193,8 @@ Where is the remaining dollar?</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line height (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txL-qH-rdy">
-                                        <rect key="frame" x="16" y="116" width="112" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line spacing (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txL-qH-rdy">
+                                        <rect key="frame" x="16" y="116" width="123.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -361,8 +361,8 @@ Where is the remaining dollar?</string>
                         <outlet property="foregroundColorView" destination="bFV-Ca-maz" id="dhd-7b-Guf"/>
                         <outlet property="letterSpacingLabel" destination="YZS-NB-5j4" id="fpE-kZ-1OB"/>
                         <outlet property="letterSpacingSlider" destination="H3m-I4-m7S" id="4Th-2d-IL3"/>
-                        <outlet property="lineHeightLabel" destination="txL-qH-rdy" id="TER-kX-hCu"/>
-                        <outlet property="lineHeightSlider" destination="voh-V9-T2q" id="skm-FU-JvW"/>
+                        <outlet property="lineSpacingLabel" destination="txL-qH-rdy" id="TER-kX-hCu"/>
+                        <outlet property="lineSpacingSlider" destination="voh-V9-T2q" id="z49-H4-taX"/>
                         <outlet property="obliquenessLabel" destination="BaU-HZ-zMg" id="eTc-i6-qem"/>
                         <outlet property="obliquenessSlider" destination="UBi-sV-k4q" id="H3n-c1-Dhs"/>
                     </connections>

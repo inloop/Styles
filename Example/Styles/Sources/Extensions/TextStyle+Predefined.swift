@@ -40,7 +40,7 @@ extension TextStyle {
 				.letterSpacing(1.5),
 				.paragraphStyle([
 					.alignment(.natural),
-					.lineHeight(2.5)
+					.lineSpacing(2.5)
 					]),
 				.strikethrought(TextDecoration(
 					style: .thick,
@@ -68,7 +68,7 @@ extension TextStyle {
 				.letterSpacing(1.5),
 				.paragraphStyle([
 					.alignment(.natural),
-					.lineHeight(2.5)
+					.lineSpacing(2.5)
 					]),
 				.strikethrought(TextDecoration(
 					style: .thick,

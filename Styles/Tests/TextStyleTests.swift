@@ -33,7 +33,7 @@ final class TextStyleTests: XCTestCase {
     }
 
     func testParagraphStyle() {
-        let style = TextStyle(.paragraphStyle([.alignment(.center), .lineHeight(104)]))
+        let style = TextStyle(.paragraphStyle([.alignment(.center), .lineSpacing(104)]))
         let actual = style.attributes[.paragraphStyle] as? NSParagraphStyle
 
         XCTAssertNotNil(actual)
