@@ -7,7 +7,7 @@ public extension NSMutableParagraphStyle {
         switch style {
         case let .alignment(textAlignment):
             alignment = textAlignment
-        case let .lineHeight(spacing):
+        case let .lineSpacing(spacing):
             lineSpacing = spacing
         }
     }
@@ -16,7 +16,7 @@ public extension NSMutableParagraphStyle {
 public final class TextStyle: NSObject {
     public enum ParagraphStyle {
         case alignment(NSTextAlignment)
-        case lineHeight(CGFloat)
+        case lineSpacing(CGFloat)
     }
 
     public enum WritingDirectionOverride: Int {

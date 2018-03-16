@@ -9,8 +9,8 @@ final class DefineTextStyleViewController: UIViewController {
 	@IBOutlet weak var fontSizeSlider: UISlider!
 	@IBOutlet weak var backgroundColorView: UIView!
 	@IBOutlet weak var foregroundColorView: UIView!
-	@IBOutlet weak var lineHeightLabel: UILabel!
-	@IBOutlet weak var lineHeightSlider: UISlider!
+	@IBOutlet weak var lineSpacingLabel: UILabel!
+	@IBOutlet weak var lineSpacingSlider: UISlider!
 	@IBOutlet weak var alignmentControl: UISegmentedControl!
 	@IBOutlet weak var letterSpacingLabel: UILabel!
 	@IBOutlet weak var letterSpacingSlider: UISlider!
@@ -39,7 +39,7 @@ final class DefineTextStyleViewController: UIViewController {
 			.font(font),
 			.paragraphStyle([
 				.alignment(alignments[alignmentControl.selectedSegmentIndex]),
-				.lineHeight(CGFloat(lineHeightSlider.value))
+				.lineSpacing(CGFloat(lineSpacingSlider.value))
 				]),
 			.letterSpacing(CGFloat(letterSpacingSlider.value)),
 			.obliqueness(Double(obliquenessSlider.value)),
@@ -98,8 +98,8 @@ final class DefineTextStyleViewController: UIViewController {
 		switch sender.tag {
 		case fontSizeSlider.tag:
 			fontSizeLabel.text = "Font size \(value)"
-		case lineHeightSlider.tag:
-			lineHeightLabel.text = "Line height \(value)"
+		case lineSpacingSlider.tag:
+			lineSpacingLabel.text = "Line spacing \(value)"
 		case letterSpacingSlider.tag:
 			letterSpacingLabel.text = "Letter spacing \(value)"
 		case obliquenessSlider.tag:
@@ -149,7 +149,7 @@ final class DefineTextStyleViewController: UIViewController {
 			.font(\(font)),
 			.paragraphStyle([
 				.alignment(\(alignments[alignmentControl.selectedSegmentIndex].codeDescription)),
-				.lineHeight(\(CGFloat(lineHeightSlider.value)))
+				.lineSpacing(\(CGFloat(lineSpacingSlider.value)))
 			]),
 			.letterSpacing(\(CGFloat(letterSpacingSlider.value))),
 			.obliqueness(\(Double(obliquenessSlider.value))),
