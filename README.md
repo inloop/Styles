@@ -6,7 +6,7 @@
   <strong>Styling framework that works</strong>
 </div>
 <div align="center">
-  A declarative and type-safe framework for beautiful applications
+  A declarative and type-safe framework for beautiful applications.
 </div>
 
 <br />
@@ -69,6 +69,7 @@
 - __saves you from the `NSAttributedString`<sup><sup>[1](#soso)</sup></sup>__: Just work with `String`s.
 - __text, color and layer properties__: Custom line height, letter spacing, corners? Me gusta.
 - __supports Styles updating__: Design base style for you app and update it on the fly as needed.
+- __Zeplin extension__: Just copy styles over to your project. Super easy. Check out: https://github.com/inloop/styles-zeplin-extension  
 
 <sub><sub><a name="soso">1</a>: In some cases.</sub></sub>
 
@@ -222,7 +223,7 @@ let tint = TextStyle(
 )
 
 let logo: UIImage = ...
-let logoBeforeCompanyName = TextEffect(image: logo, style: tint, matching: First(occurenceOf: "Inloop"))
+let logoBeforeCompanyName = TextEffect(image: logo, style: tint, matching: First(occurenceOf: "INLOOPX"))
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
@@ -435,5 +436,5 @@ Styles is available under the MIT license. See the LICENSE file for more info.
 | :---: | :---: | :---: | 
 
 <div align="center">
-<sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="Inloop">Inloop</a></sub>
+<sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="INLOOPX">INLOOPX</a></sub>
 </div>
