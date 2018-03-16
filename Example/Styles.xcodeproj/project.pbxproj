@@ -34,6 +34,14 @@
 		CE850F90205A7F9700C62E35 /* DefineTextStyle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE850F8F205A7F9700C62E35 /* DefineTextStyle.storyboard */; };
 		CE850F93205A921A00C62E35 /* FontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850F92205A921A00C62E35 /* FontPickerViewController.swift */; };
 		CE850F96205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850F95205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift */; };
+		CE850F99205BB61300C62E35 /* TextDecoration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE850F98205BB61300C62E35 /* TextDecoration.storyboard */; };
+		CE850F9B205BB62200C62E35 /* TextDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850F9A205BB62200C62E35 /* TextDecorationViewController.swift */; };
+		CE850F9F205BBB1B00C62E35 /* TextDecoration+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850F9E205BBB1B00C62E35 /* TextDecoration+Definition.swift */; };
+		CE850FA1205BBB4600C62E35 /* NSTextAlignment+CodeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FA0205BBB4600C62E35 /* NSTextAlignment+CodeDescription.swift */; };
+		CE850FA3205BBB6E00C62E35 /* WritingDirection+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FA2205BBB6E00C62E35 /* WritingDirection+Description.swift */; };
+		CE850FA5205BBB8E00C62E35 /* PatternPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FA4205BBB8E00C62E35 /* PatternPickerViewController.swift */; };
+		CE850FA7205BBDA400C62E35 /* StylePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FA6205BBDA400C62E35 /* StylePickerViewController.swift */; };
+		CE850FAA205BC42700C62E35 /* UIColor+CodeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FA9205BC42700C62E35 /* UIColor+CodeDescription.swift */; };
 		E85D480F059FB7239992BE0B /* Pods_Styles_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +81,14 @@
 		CE850F8F205A7F9700C62E35 /* DefineTextStyle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefineTextStyle.storyboard; sourceTree = "<group>"; };
 		CE850F92205A921A00C62E35 /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
 		CE850F95205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDirectionPickerViewController.swift; sourceTree = "<group>"; };
+		CE850F98205BB61300C62E35 /* TextDecoration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextDecoration.storyboard; sourceTree = "<group>"; };
+		CE850F9A205BB62200C62E35 /* TextDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDecorationViewController.swift; sourceTree = "<group>"; };
+		CE850F9E205BBB1B00C62E35 /* TextDecoration+Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextDecoration+Definition.swift"; sourceTree = "<group>"; };
+		CE850FA0205BBB4600C62E35 /* NSTextAlignment+CodeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+CodeDescription.swift"; sourceTree = "<group>"; };
+		CE850FA2205BBB6E00C62E35 /* WritingDirection+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WritingDirection+Description.swift"; sourceTree = "<group>"; };
+		CE850FA4205BBB8E00C62E35 /* PatternPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternPickerViewController.swift; sourceTree = "<group>"; };
+		CE850FA6205BBDA400C62E35 /* StylePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePickerViewController.swift; sourceTree = "<group>"; };
+		CE850FA9205BC42700C62E35 /* UIColor+CodeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CodeDescription.swift"; sourceTree = "<group>"; };
 		F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -234,6 +250,10 @@
 				CE1439CB20580BD600C7EA94 /* TextEffect+Defaults.swift */,
 				CE78DE952057F6FC00A5DCFE /* TextStyle+Predefined.swift */,
 				CE1439CD20580E8B00C7EA94 /* ViewStyle+Predefined.swift */,
+				CE850F9E205BBB1B00C62E35 /* TextDecoration+Definition.swift */,
+				CE850FA0205BBB4600C62E35 /* NSTextAlignment+CodeDescription.swift */,
+				CE850FA2205BBB6E00C62E35 /* WritingDirection+Description.swift */,
+				CE850FA9205BC42700C62E35 /* UIColor+CodeDescription.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +270,7 @@
 		CE850F8C205A7F7200C62E35 /* DefineTextStyle */ = {
 			isa = PBXGroup;
 			children = (
+				CE850F97205BB60100C62E35 /* TextDecoration */,
 				CE850F94205ACF1500C62E35 /* WritingDirectionPicker */,
 				CE850F91205A920700C62E35 /* FontPicker */,
 				CE850F8D205A7F8800C62E35 /* DefineTextStyleViewController.swift */,
@@ -272,6 +293,33 @@
 				CE850F95205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift */,
 			);
 			path = WritingDirectionPicker;
+			sourceTree = "<group>";
+		};
+		CE850F97205BB60100C62E35 /* TextDecoration */ = {
+			isa = PBXGroup;
+			children = (
+				CE850F9D205BB79600C62E35 /* StylePicker */,
+				CE850F9C205BB78F00C62E35 /* PatternPicker */,
+				CE850F98205BB61300C62E35 /* TextDecoration.storyboard */,
+				CE850F9A205BB62200C62E35 /* TextDecorationViewController.swift */,
+			);
+			path = TextDecoration;
+			sourceTree = "<group>";
+		};
+		CE850F9C205BB78F00C62E35 /* PatternPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE850FA4205BBB8E00C62E35 /* PatternPickerViewController.swift */,
+			);
+			path = PatternPicker;
+			sourceTree = "<group>";
+		};
+		CE850F9D205BB79600C62E35 /* StylePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE850FA6205BBDA400C62E35 /* StylePickerViewController.swift */,
+			);
+			path = StylePicker;
 			sourceTree = "<group>";
 		};
 		D189273C33F2BBE6BCBA13A5 /* Frameworks */ = {
@@ -350,6 +398,7 @@
 				CE850F90205A7F9700C62E35 /* DefineTextStyle.storyboard in Resources */,
 				CE1439D82058202400C7EA94 /* DefineViewStyle.storyboard in Resources */,
 				CE1439DE2059308900C7EA94 /* ColorPicker.storyboard in Resources */,
+				CE850F99205BB61300C62E35 /* TextDecoration.storyboard in Resources */,
 				CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */,
 				CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */,
 				CE850F87205945EA00C62E35 /* Shadow.storyboard in Resources */,
@@ -421,17 +470,24 @@
 				CE850F89205945FD00C62E35 /* ShadowViewController.swift in Sources */,
 				CE78DE8D2057EE8B00A5DCFE /* FeaturesTabBarController.swift in Sources */,
 				CE850F96205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift in Sources */,
+				CE850F9F205BBB1B00C62E35 /* TextDecoration+Definition.swift in Sources */,
 				CE1439CC20580BD600C7EA94 /* TextEffect+Defaults.swift in Sources */,
+				CE850FA1205BBB4600C62E35 /* NSTextAlignment+CodeDescription.swift in Sources */,
 				CE6CD201202DC08200DA4491 /* AppDelegate.swift in Sources */,
 				CE850F93205A921A00C62E35 /* FontPickerViewController.swift in Sources */,
 				CE78DE9B2057FE7D00A5DCFE /* ViewStyle+Defaults.swift in Sources */,
+				CE850F9B205BB62200C62E35 /* TextDecorationViewController.swift in Sources */,
 				CE78DE922057F45700A5DCFE /* ViewStyleCell.swift in Sources */,
 				CE1439CA20580A8900C7EA94 /* TextStyle+Defaults.swift in Sources */,
+				CE850FAA205BC42700C62E35 /* UIColor+CodeDescription.swift in Sources */,
+				CE850FA5205BBB8E00C62E35 /* PatternPickerViewController.swift in Sources */,
 				CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */,
 				CE78DE942057F51700A5DCFE /* TextStyleCell.swift in Sources */,
 				CE78DE982057FD5200A5DCFE /* Shadow+Defaults.swift in Sources */,
+				CE850FA7205BBDA400C62E35 /* StylePickerViewController.swift in Sources */,
 				CE1439D12058161300C7EA94 /* CustomStyleViewController.swift in Sources */,
 				CE1439DC20592E4400C7EA94 /* ColorPickerViewController.swift in Sources */,
+				CE850FA3205BBB6E00C62E35 /* WritingDirection+Description.swift in Sources */,
 				CE1439D620581FF200C7EA94 /* DefineViewStyleViewContoller.swift in Sources */,
 				CE1439CE20580E8B00C7EA94 /* ViewStyle+Predefined.swift in Sources */,
 				CE850F8E205A7F8800C62E35 /* DefineTextStyleViewController.swift in Sources */,

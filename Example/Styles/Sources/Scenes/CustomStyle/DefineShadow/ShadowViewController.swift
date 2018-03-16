@@ -59,7 +59,7 @@ final class ShadowViewController: UIViewController {
 		let shadowDescription =
 		"""
 		let shadow = Shadow(
-			color: \((colorView.backgroundColor ?? .black).debugDescription),
+			color: \((colorView.backgroundColor ?? .black).codeDescription)),
 			offset: UIOffset(
 				horizontal: \(CGFloat(horizontalOffsetSlider.value)),
 				vertical: \(CGFloat(verticalOffsetSlider.value))

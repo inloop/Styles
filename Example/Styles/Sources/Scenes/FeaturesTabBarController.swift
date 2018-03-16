@@ -2,6 +2,4 @@
 
 import UIKit
 
-final class FeaturesTabBarController: UITabBarController {
-	
-}
+final class FeaturesTabBarController: UITabBarController { }
