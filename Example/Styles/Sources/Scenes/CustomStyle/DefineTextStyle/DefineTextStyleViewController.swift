@@ -176,7 +176,7 @@ final class DefineTextStyleViewController: UIViewController {
 		let textStyle\(propertyCount) = TextStyle(
 			.foregroundColor(\((foregroundColorView.backgroundColor ?? .black).codeDescription)),
 			.backgroundColor(\((backgroundColorView.backgroundColor ?? .white).codeDescription)),
-			.font(\(font)),
+			.font(\(font.codeDescription)),
 			.paragraphStyle([
 				.alignment(\(alignments[alignmentControl.selectedSegmentIndex].codeDescription)),
 				.lineSpacing(\(CGFloat(lineSpacingSlider.value)))

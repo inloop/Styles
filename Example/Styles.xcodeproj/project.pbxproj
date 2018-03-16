@@ -49,6 +49,7 @@
 		CE850FB5205BDC4500C62E35 /* Match+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FB4205BDC4500C62E35 /* Match+Definition.swift */; };
 		CE850FB8205BDFB900C62E35 /* MatchPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FB7205BDFB900C62E35 /* MatchPickerViewController.swift */; };
 		CE850FBA205BDFED00C62E35 /* MatchPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE850FB9205BDFED00C62E35 /* MatchPicker.storyboard */; };
+		CE850FBC205BFB1C00C62E35 /* UIFont+CodeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FBB205BFB1C00C62E35 /* UIFont+CodeDescription.swift */; };
 		E85D480F059FB7239992BE0B /* Pods_Styles_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		CE850FB4205BDC4500C62E35 /* Match+Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Match+Definition.swift"; sourceTree = "<group>"; };
 		CE850FB7205BDFB900C62E35 /* MatchPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPickerViewController.swift; sourceTree = "<group>"; };
 		CE850FB9205BDFED00C62E35 /* MatchPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchPicker.storyboard; sourceTree = "<group>"; };
+		CE850FBB205BFB1C00C62E35 /* UIFont+CodeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CodeDescription.swift"; sourceTree = "<group>"; };
 		F5E944D2434D454E67C3D05E /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,6 +272,7 @@
 				CE850FA9205BC42700C62E35 /* UIColor+CodeDescription.swift */,
 				CE850FB2205BD52F00C62E35 /* TextEffect+Definition.swift */,
 				CE850FB4205BDC4500C62E35 /* Match+Definition.swift */,
+				CE850FBB205BFB1C00C62E35 /* UIFont+CodeDescription.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */,
 				CE78DE942057F51700A5DCFE /* TextStyleCell.swift in Sources */,
 				CE850FB8205BDFB900C62E35 /* MatchPickerViewController.swift in Sources */,
+				CE850FBC205BFB1C00C62E35 /* UIFont+CodeDescription.swift in Sources */,
 				CE78DE982057FD5200A5DCFE /* Shadow+Defaults.swift in Sources */,
 				CE850FA7205BBDA400C62E35 /* StylePickerViewController.swift in Sources */,
 				CE1439D12058161300C7EA94 /* CustomStyleViewController.swift in Sources */,
