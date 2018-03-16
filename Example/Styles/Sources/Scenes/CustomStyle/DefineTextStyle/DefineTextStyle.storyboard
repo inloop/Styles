@@ -179,6 +179,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-Jg-8pG">
+                                        <rect key="frame" x="271" y="1046.5" width="88" height="30"/>
+                                        <state key="normal" title="Select"/>
+                                        <connections>
+                                            <action selector="selectTextEffect:" destination="a72-pR-gUS" eventType="touchUpInside" id="CyT-EQ-KcN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text effects (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-rj-AYJ">
+                                        <rect key="frame" x="16" y="1051.5" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-Jz-vwA">
                                         <rect key="frame" x="16" y="356" width="343" height="243.5"/>
                                         <string key="text">Three people check into a hotel. They pay $30 to the manager and go to their room. The manager finds out that the room rate is $25 and gives the bellboy $5 to return to the guests. On the way to the room the bellboy reasons that $5 would be difficult to split among three people so he pockets $2 and gives $1 to each person. Now each person paid $10 and got back $1. So they paid $9 each, totaling $27. The bellboy has another $2, adding up to $29.
@@ -230,7 +243,7 @@ Where is the remaining dollar?</string>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SH-Zz-qyt">
-                                        <rect key="frame" x="16" y="1051.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1096.5" width="343" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="As4-Kk-8tC"/>
                                         </constraints>
@@ -268,6 +281,7 @@ Where is the remaining dollar?</string>
                                     <constraint firstItem="3SH-Zz-qyt" firstAttribute="trailing" secondItem="Bhq-EI-WVO" secondAttribute="trailing" id="KE7-iF-XiF"/>
                                     <constraint firstItem="ayH-u6-cjR" firstAttribute="top" secondItem="UBi-sV-k4q" secondAttribute="bottom" constant="12" id="Kxl-96-ujF"/>
                                     <constraint firstItem="DbY-yN-2xd" firstAttribute="centerY" secondItem="oPb-cV-7Nk" secondAttribute="centerY" id="Kz9-fy-irw"/>
+                                    <constraint firstItem="UKr-Jg-8pG" firstAttribute="leading" secondItem="Bhq-EI-WVO" secondAttribute="leading" id="NiM-gw-whh"/>
                                     <constraint firstItem="Sxr-uq-zex" firstAttribute="leading" secondItem="H3m-I4-m7S" secondAttribute="leading" id="ObZ-eV-eEm"/>
                                     <constraint firstItem="Wmh-lC-vBb" firstAttribute="leading" secondItem="ml2-3s-AvZ" secondAttribute="trailing" constant="16" id="Orn-nz-ooz"/>
                                     <constraint firstItem="Dal-Qu-fRJ" firstAttribute="leading" secondItem="Axk-Pu-XjD" secondAttribute="leading" id="P8T-ns-BHd"/>
@@ -275,6 +289,7 @@ Where is the remaining dollar?</string>
                                     <constraint firstItem="mht-XH-2dV" firstAttribute="top" secondItem="ml2-3s-AvZ" secondAttribute="bottom" constant="6.5" id="QY8-et-Ncd"/>
                                     <constraint firstItem="ksO-oh-kkE" firstAttribute="leading" secondItem="bFV-Ca-maz" secondAttribute="leading" id="QbU-Zd-C5M"/>
                                     <constraint firstItem="ml2-3s-AvZ" firstAttribute="top" secondItem="aVI-3y-LAn" secondAttribute="bottom" constant="16" id="Qd1-bL-KUR"/>
+                                    <constraint firstItem="3SH-Zz-qyt" firstAttribute="top" secondItem="GPc-rj-AYJ" secondAttribute="bottom" constant="24" id="Qr2-Ta-2fu"/>
                                     <constraint firstItem="YZS-NB-5j4" firstAttribute="leading" secondItem="voh-V9-T2q" secondAttribute="leading" id="Rd1-1d-2VQ"/>
                                     <constraint firstItem="Tbr-2i-sRN" firstAttribute="leading" secondItem="dqO-Sp-uOZ" secondAttribute="leading" id="Rio-pz-aAX"/>
                                     <constraint firstItem="Sxr-uq-zex" firstAttribute="top" secondItem="H3m-I4-m7S" secondAttribute="bottom" constant="8" id="S7Z-wg-al2"/>
@@ -285,6 +300,7 @@ Where is the remaining dollar?</string>
                                     <constraint firstItem="H3m-I4-m7S" firstAttribute="top" secondItem="YZS-NB-5j4" secondAttribute="bottom" constant="14" id="TyW-F6-8oK"/>
                                     <constraint firstItem="oPb-cV-7Nk" firstAttribute="top" secondItem="EoU-S0-mVw" secondAttribute="bottom" constant="8" id="USn-do-7vg"/>
                                     <constraint firstItem="ksO-oh-kkE" firstAttribute="top" secondItem="bFV-Ca-maz" secondAttribute="bottom" constant="16.5" id="UW7-9A-nhA"/>
+                                    <constraint firstItem="UKr-Jg-8pG" firstAttribute="trailing" secondItem="Bhq-EI-WVO" secondAttribute="trailing" id="Vv2-vp-DZV"/>
                                     <constraint firstItem="Tbr-2i-sRN" firstAttribute="trailing" secondItem="dqO-Sp-uOZ" secondAttribute="trailing" id="WzS-TL-7kn"/>
                                     <constraint firstItem="PQm-Jf-NIQ" firstAttribute="trailing" secondItem="DbY-yN-2xd" secondAttribute="trailing" id="XC1-Bl-B0l"/>
                                     <constraint firstItem="ayH-u6-cjR" firstAttribute="leading" secondItem="UBi-sV-k4q" secondAttribute="leading" id="XCC-zh-OLL"/>
@@ -300,7 +316,6 @@ Where is the remaining dollar?</string>
                                     <constraint firstAttribute="bottom" secondItem="3SH-Zz-qyt" secondAttribute="bottom" constant="16" id="ci6-ji-B1V"/>
                                     <constraint firstItem="JR8-IH-GDj" firstAttribute="centerY" secondItem="Wmh-lC-vBb" secondAttribute="centerY" id="d6L-vp-ngQ"/>
                                     <constraint firstItem="Axk-Pu-XjD" firstAttribute="top" secondItem="ayH-u6-cjR" secondAttribute="bottom" constant="16" id="dVK-Bf-d98"/>
-                                    <constraint firstItem="3SH-Zz-qyt" firstAttribute="top" secondItem="e3A-bB-YRc" secondAttribute="bottom" constant="16" id="dh5-19-X3y"/>
                                     <constraint firstItem="e3A-bB-YRc" firstAttribute="top" secondItem="Dal-Qu-fRJ" secondAttribute="bottom" constant="16" id="eFr-vS-hi6"/>
                                     <constraint firstItem="BaU-HZ-zMg" firstAttribute="top" secondItem="sRI-iU-ifn" secondAttribute="bottom" constant="13.5" id="esm-8U-ln5"/>
                                     <constraint firstItem="DbY-yN-2xd" firstAttribute="trailing" secondItem="JR8-IH-GDj" secondAttribute="trailing" id="gem-rS-NAY"/>
@@ -319,7 +334,9 @@ Where is the remaining dollar?</string>
                                     <constraint firstItem="DbY-yN-2xd" firstAttribute="centerX" secondItem="JR8-IH-GDj" secondAttribute="centerX" id="pNh-fb-h4I"/>
                                     <constraint firstItem="CGp-gy-5kg" firstAttribute="leading" secondItem="oPb-cV-7Nk" secondAttribute="leading" id="pcN-5m-TQi"/>
                                     <constraint firstItem="voh-V9-T2q" firstAttribute="leading" secondItem="txL-qH-rdy" secondAttribute="leading" id="s5F-Iu-Jo6"/>
+                                    <constraint firstItem="UKr-Jg-8pG" firstAttribute="centerY" secondItem="GPc-rj-AYJ" secondAttribute="centerY" id="sO2-6r-D8b"/>
                                     <constraint firstItem="EoU-S0-mVw" firstAttribute="top" secondItem="8sb-Jz-vwA" secondAttribute="bottom" constant="16" id="t6L-tk-Zc7"/>
+                                    <constraint firstItem="GPc-rj-AYJ" firstAttribute="leading" secondItem="e3A-bB-YRc" secondAttribute="leading" id="tOw-1J-4M4"/>
                                     <constraint firstItem="dqO-Sp-uOZ" firstAttribute="leading" secondItem="PQm-Jf-NIQ" secondAttribute="leading" id="tcG-43-W45"/>
                                     <constraint firstItem="mht-XH-2dV" firstAttribute="leading" secondItem="ml2-3s-AvZ" secondAttribute="leading" id="und-Ac-cwg"/>
                                     <constraint firstItem="5uZ-Np-VAT" firstAttribute="centerY" secondItem="Dal-Qu-fRJ" secondAttribute="centerY" id="vKi-iE-hyg"/>
@@ -327,6 +344,7 @@ Where is the remaining dollar?</string>
                                     <constraint firstItem="Bhq-EI-WVO" firstAttribute="centerY" secondItem="e3A-bB-YRc" secondAttribute="centerY" id="w98-pM-JTi"/>
                                     <constraint firstItem="Axk-Pu-XjD" firstAttribute="leading" secondItem="ayH-u6-cjR" secondAttribute="leading" id="wCO-nD-Hc8"/>
                                     <constraint firstItem="PQm-Jf-NIQ" firstAttribute="leading" secondItem="DbY-yN-2xd" secondAttribute="leading" id="xGp-ie-nDg"/>
+                                    <constraint firstItem="GPc-rj-AYJ" firstAttribute="top" secondItem="e3A-bB-YRc" secondAttribute="bottom" constant="16" id="xeJ-yU-XjY"/>
                                     <constraint firstItem="voh-V9-T2q" firstAttribute="top" secondItem="txL-qH-rdy" secondAttribute="bottom" constant="14" id="yiH-S4-YrT"/>
                                     <constraint firstItem="txL-qH-rdy" firstAttribute="top" secondItem="ft6-sn-Wxq" secondAttribute="bottom" constant="7.5" id="yk3-s2-x8O"/>
                                     <constraint firstItem="DbY-yN-2xd" firstAttribute="leading" secondItem="oPb-cV-7Nk" secondAttribute="trailing" constant="36" id="zDd-Bm-tVJ"/>
@@ -365,6 +383,7 @@ Where is the remaining dollar?</string>
                         <outlet property="lineSpacingSlider" destination="voh-V9-T2q" id="z49-H4-taX"/>
                         <outlet property="obliquenessLabel" destination="BaU-HZ-zMg" id="eTc-i6-qem"/>
                         <outlet property="obliquenessSlider" destination="UBi-sV-k4q" id="H3n-c1-Dhs"/>
+                        <outlet property="textEffectsLabel" destination="GPc-rj-AYJ" id="pgA-fc-apf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmL-rl-1fl" userLabel="First Responder" sceneMemberID="firstResponder"/>

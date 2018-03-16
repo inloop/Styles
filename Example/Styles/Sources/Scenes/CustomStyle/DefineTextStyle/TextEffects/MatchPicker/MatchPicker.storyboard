@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X5e-KY-Twf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Match Picker View Controller-->
+        <scene sceneID="EnY-67-UBG">
+            <objects>
+                <viewController id="X5e-KY-Twf" customClass="MatchPickerViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xe-mH-tng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="twD-04-wzd">
+                                <rect key="frame" x="16" y="36" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Block"/>
+                                    <segment title="First"/>
+                                    <segment title="Regex"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occurence of:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQT-cB-YoZ">
+                                <rect key="frame" x="16" y="82" width="108.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="awesome" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ld-zg-A4e">
+                                <rect key="frame" x="16" y="111" width="343" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.28571810787671231" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="M4B-it-2tN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-Y2-AhH">
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
+                                <state key="normal" title="Apply"/>
+                                <connections>
+                                    <action selector="applyAndExit:" destination="X5e-KY-Twf" eventType="touchUpInside" id="DOR-pl-FIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2Ld-zg-A4e" firstAttribute="leading" secondItem="EQT-cB-YoZ" secondAttribute="leading" id="2b4-2z-vBa"/>
+                            <constraint firstItem="XyN-88-64O" firstAttribute="trailing" secondItem="twD-04-wzd" secondAttribute="trailing" constant="16" id="I01-aO-rbK"/>
+                            <constraint firstItem="2Ld-zg-A4e" firstAttribute="top" secondItem="EQT-cB-YoZ" secondAttribute="bottom" constant="8" id="Uzz-v2-39J"/>
+                            <constraint firstItem="aZt-Y2-AhH" firstAttribute="trailing" secondItem="2Ld-zg-A4e" secondAttribute="trailing" id="WyO-Ph-Wgl"/>
+                            <constraint firstItem="EQT-cB-YoZ" firstAttribute="leading" secondItem="twD-04-wzd" secondAttribute="leading" id="YJj-Gj-cBX"/>
+                            <constraint firstItem="aZt-Y2-AhH" firstAttribute="top" secondItem="2Ld-zg-A4e" secondAttribute="bottom" constant="16" id="ZGI-w6-f8t"/>
+                            <constraint firstItem="EQT-cB-YoZ" firstAttribute="top" secondItem="twD-04-wzd" secondAttribute="bottom" constant="18" id="e4f-Hx-6bo"/>
+                            <constraint firstItem="twD-04-wzd" firstAttribute="leading" secondItem="XyN-88-64O" secondAttribute="leading" constant="16" id="fZU-Xg-u3N"/>
+                            <constraint firstItem="2Ld-zg-A4e" firstAttribute="trailing" secondItem="twD-04-wzd" secondAttribute="trailing" id="iVK-Wa-d5M"/>
+                            <constraint firstItem="twD-04-wzd" firstAttribute="top" secondItem="XyN-88-64O" secondAttribute="top" constant="16" id="qGO-4H-njr"/>
+                            <constraint firstItem="aZt-Y2-AhH" firstAttribute="leading" secondItem="2Ld-zg-A4e" secondAttribute="leading" id="rrW-XY-PDD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XyN-88-64O"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Z02-vZ-CHO" appends="YES" id="vbc-9o-GHZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="matchOccurenceTextView" destination="2Ld-zg-A4e" id="bVh-ul-KIN"/>
+                        <outlet property="matchSegmentControl" destination="twD-04-wzd" id="M0k-S5-Aem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZm-a1-oKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Z02-vZ-CHO">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="X5e-KY-Twf" id="lSw-oJ-bGh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="36" y="134"/>
+        </scene>
+    </scenes>
+</document>

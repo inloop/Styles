@@ -18,6 +18,7 @@ final class DefineTextStyleViewController: UIViewController {
 	@IBOutlet weak var obliquenessSlider: UISlider!
 	@IBOutlet weak var baselineOffsetLabel: UILabel!
 	@IBOutlet weak var baselineOffsetSlider: UISlider!
+	@IBOutlet weak var textEffectsLabel: UILabel!
 
 	private let alignments = [NSTextAlignment.left, .right, .center, .justified, .natural]
 	fileprivate var shadowDefinition: Shadow.ShadowDefinition?
@@ -25,7 +26,8 @@ final class DefineTextStyleViewController: UIViewController {
 	fileprivate var underlineDefinition: TextDecoration.Definition?
 	fileprivate var font = UIFont.systemFont(ofSize: 17)
 	fileprivate var selectedWritingDirectionOverrides = [TextStyle.WritingDirectionOverride]()
-
+	fileprivate var textEffects = [TextEffect.Definition]()
+	var propertyCount = ""
 	weak var delegate: StylePickerDelegate?
 
 	override func viewDidLoad() {
@@ -35,6 +37,7 @@ final class DefineTextStyleViewController: UIViewController {
 	}
 
 	fileprivate func setTextStyle() {
+		let effects = textEffects.map { $0.effect }
 		var style = TextStyle(
 			.foregroundColor(foregroundColorView.backgroundColor ?? .black),
 			.backgroundColor(backgroundColorView.backgroundColor ?? .white),
@@ -47,6 +50,7 @@ final class DefineTextStyleViewController: UIViewController {
 			.obliqueness(Double(obliquenessSlider.value)),
 			.writingDirectionOverrides(selectedWritingDirectionOverrides),
 			.baselineOffset(Double(baselineOffsetSlider.value))
+			, effects: effects
 		)
 		if let shadow = shadowDefinition?.shadow {
 			style = style.updating(.shadow(shadow))
@@ -155,13 +159,24 @@ final class DefineTextStyleViewController: UIViewController {
 		navigationController?.pushViewController(controller, animated: true)
 	}
 
+	@IBAction func selectTextEffect(_ sender: UIButton) {
+		let controller = TextEffectsListViewController()
+		controller.completion = { [weak self] effects in
+			self?.textEffects = effects
+			self?.textEffectsLabel.text = "Text effects (\(effects.count))"
+			self?.setTextStyle()
+		}
+		controller.textEffects = textEffects
+		navigationController?.pushViewController(controller, animated: true)
+	}
+
 	@IBAction func applyAndExit(_ sender: UIButton) {
 		var styleDescription =
 		"""
-		let style = TextStyle(
+		let textStyle\(propertyCount) = TextStyle(
 			.foregroundColor(\((foregroundColorView.backgroundColor ?? .black).codeDescription)),
 			.backgroundColor(\((backgroundColorView.backgroundColor ?? .white).codeDescription)),
-			.font(\(font)),
+			.font(\(font.codeDescription)),
 			.paragraphStyle([
 				.alignment(\(alignments[alignmentControl.selectedSegmentIndex].codeDescription)),
 				.lineSpacing(\(CGFloat(lineSpacingSlider.value)))
@@ -171,10 +186,24 @@ final class DefineTextStyleViewController: UIViewController {
 			.writingDirectionOverrides([\(selectedWritingDirectionOverrides.map { $0.codeDescription }.joined(separator: ","))]),
 			.baselineOffset(\(Double(baselineOffsetSlider.value)))
 		"""
+		styleDescription = addSpecialEffectsDescription(styleDescription)
+		styleDescription = addTextEffectsDescription(styleDescription)
+
+		navigationController?.popViewController(animated: true)
+		delegate?.didPickTextStyleDefinition(
+			TextStyle.Definition(
+				textStyle: exampleText.textStyle,
+				styleDescription: styleDescription
+			)
+		)
+	}
+
+	private func addSpecialEffectsDescription(_ descriptionString: String) -> String {
+		var styleDescription = descriptionString
 		styleDescription.append("\(shadowDefinition != nil ? ",\n        .shadow(shadow)" : "")")
 		styleDescription.append("\(underlineDefinition != nil ? ",\n        .underline(underline)" : "")")
 		styleDescription.append("\(strikethrioughDefinition != nil ? ",\n        .strikethrought(strikethrought)" : "")")
-		styleDescription.append("\n)")
+		styleDescription.append(",\n        textEffects: effects\(propertyCount)\n)")
 		if let shadowDescription = shadowDefinition?.shadowDescription {
 			styleDescription.append("\n\(shadowDescription)")
 		}
@@ -184,13 +213,29 @@ final class DefineTextStyleViewController: UIViewController {
 		if let underlineDescription = underlineDefinition?.decorationDescription {
 			styleDescription.append("\n\(underlineDescription)")
 		}
-		navigationController?.popViewController(animated: true)
-		delegate?.didPickTextStyleDefinition(
-			TextStyle.Definition(
-				textStyle: exampleText.textStyle,
-				styleDescription: styleDescription
-			)
+		return styleDescription
+	}
+
+	private func addTextEffectsDescription(_ descriptionString: String) -> String {
+		var styleDescription = descriptionString
+
+		styleDescription.append(
+			"""
+			\n
+			let effects\(propertyCount) = [
+			\(textEffects.map { $0.effectDescription }.joined(separator: ",\n"))
+			]
+			"""
 		)
+		if textEffects.count > 0 {
+			styleDescription.append(
+				"""
+				\n
+				\(textEffects.map { $0.textStyleDescription }.joined(separator: ",\n"))
+				"""
+			)
+		}
+		return styleDescription
 	}
 }
 
@@ -208,3 +253,4 @@ extension DefineTextStyleViewController: FontPickerDelegate {
 		makeFont(fontName)
 	}
 }
+
