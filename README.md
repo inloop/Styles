@@ -223,7 +223,7 @@ let tint = TextStyle(
 )
 
 let logo: UIImage = ...
-let logoBeforeCompanyName = TextEffect(image: logo, style: tint, matching: First(occurenceOf: "Inloop"))
+let logoBeforeCompanyName = TextEffect(image: logo, style: tint, matching: First(occurenceOf: "INLOOPX"))
 
 let styleWithEffects = TextStyle(
     .font(.preferredFont(forTextStyle: .body)),
@@ -436,5 +436,5 @@ Styles is available under the MIT license. See the LICENSE file for more info.
 | :---: | :---: | :---: | 
 
 <div align="center">
-<sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="Inloop">Inloop</a></sub>
+<sub>Built with ❤︎ at <a href="http://www.inloopx.com" alt="INLOOPX">INLOOPX</a></sub>
 </div>
