@@ -2,12 +2,29 @@
 
 import Foundation
 
+/**
+ TextDecoration represents either underline or strikethrough of TextStyle properties.
+ Seealso: `TextStyle.Property` for reference
+*/
 public struct TextDecoration {
+    /**
+     Represents style of the text decoration
+     * .single
+     * .thick
+     * .double
+    */
     public enum Style: Int {
+        /// Single line
         case single
+        // Single thick line
         case thick
+        // Double line
         case double
 
+        /**
+         Raw intepretation of style representing according `NSUnderlineStyle`.
+         - SeeAlso: `NSUnderlineStyle.style.rawValue`
+        */
         public var rawValue: Int {
             switch self {
             case .single: return NSUnderlineStyle.styleSingle.rawValue
@@ -17,12 +34,27 @@ public struct TextDecoration {
         }
     }
 
+    /**
+     Represents pattern of the decoration
+     * .dot
+     * .dash
+     * .dashDot
+     * .dashDotDot
+    */
     public enum Pattern: Int {
+        /// Dotted pattern
         case dot
+        /// Dashed pattern
         case dash
+        /// Dash dotted pattern
         case dashDot
+        /// One dash two dots pattern
         case dashDotDot
 
+        /**
+         Raw intepretation of style representing according `NSUnderlineStyle`.
+         - SeeAlso: `NSUnderlineStyle.pattern.rawValue`
+        */
         public var rawValue: Int {
             switch self {
             case .dot: return NSUnderlineStyle.patternDot.rawValue
@@ -38,6 +70,15 @@ public struct TextDecoration {
     let byWord: Bool
     let color: UIColor?
 
+    /**
+     Designated initializer for TextDecoration
+
+     - Parameter style: Style of the decoration @see `Style`
+     - Parameter pattern: The pattern of the decoration @see `Pattern`
+     - Parameter byWord: Should be applied by word? *Default value* = `false`
+     - Parameter color: Color of the decoration. *Default value* = `nil`
+     - Returns: New instance of TextDecoration
+    */
     public init(style: Style, pattern: Pattern, byWord: Bool = false, color: UIColor? = nil) {
         self.style = style
         self.pattern = pattern
