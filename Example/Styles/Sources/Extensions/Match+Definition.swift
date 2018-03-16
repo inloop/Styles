@@ -3,6 +3,6 @@
 import Styles
 
 struct MatchDefinition {
-	let match: Match
-	let matchDescription: String
+    let match: Match
+    let matchDescription: String
 }

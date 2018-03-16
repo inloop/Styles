@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4yM-Bs-uql">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UI Elements-->
+        <scene sceneID="VKD-YA-Rv4">
+            <objects>
+                <viewController id="4yM-Bs-uql" customClass="UIElementsViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mU2-ze-xVC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0v-uq-d1A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-LF-sIb">
+                                        <rect key="frame" x="16" y="16" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-6s-RIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="1" id="Ro4-DB-Sjl"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNF-Fj-Shh">
+                                        <rect key="frame" x="16" y="110" width="343" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="qQP-rG-7oj"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3a-Uv-jbM">
+                                        <rect key="frame" x="16" y="294" width="343" height="30"/>
+                                        <state key="normal" title="Select view style"/>
+                                        <connections>
+                                            <segue destination="xpg-ad-SbN" kind="show" id="eJ6-0Y-woa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa7-Io-oCj">
+                                        <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                        <state key="normal" title="Select text style"/>
+                                        <connections>
+                                            <segue destination="jrg-uY-gEb" kind="show" id="Vjp-xl-DM3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yNF-Fj-Shh" secondAttribute="bottom" constant="16" id="2Bc-cb-7T0"/>
+                                    <constraint firstItem="Oa7-Io-oCj" firstAttribute="top" secondItem="r3a-Uv-jbM" secondAttribute="bottom" constant="16" id="3gb-7n-eZA"/>
+                                    <constraint firstItem="yNF-Fj-Shh" firstAttribute="leading" secondItem="BAx-LF-sIb" secondAttribute="leading" id="7R3-EU-fgr"/>
+                                    <constraint firstItem="BAx-LF-sIb" firstAttribute="top" secondItem="uTs-6s-RIG" secondAttribute="bottom" constant="16" id="Gxf-Tz-pRi"/>
+                                    <constraint firstAttribute="trailing" secondItem="BAx-LF-sIb" secondAttribute="trailing" constant="16" id="JH9-IK-fq0"/>
+                                    <constraint firstItem="uTs-6s-RIG" firstAttribute="leading" secondItem="B0v-uq-d1A" secondAttribute="leading" id="LOa-k8-b3w"/>
+                                    <constraint firstItem="Oa7-Io-oCj" firstAttribute="trailing" secondItem="r3a-Uv-jbM" secondAttribute="trailing" id="SEa-U0-eK6"/>
+                                    <constraint firstItem="uTs-6s-RIG" firstAttribute="top" secondItem="B0v-uq-d1A" secondAttribute="top" id="YcK-Vs-qP5"/>
+                                    <constraint firstItem="BAx-LF-sIb" firstAttribute="leading" secondItem="B0v-uq-d1A" secondAttribute="leading" constant="16" id="fqh-LO-klc"/>
+                                    <constraint firstItem="r3a-Uv-jbM" firstAttribute="leading" secondItem="yNF-Fj-Shh" secondAttribute="leading" id="iMt-5f-NkB"/>
+                                    <constraint firstItem="yNF-Fj-Shh" firstAttribute="trailing" secondItem="BAx-LF-sIb" secondAttribute="trailing" id="lKm-iR-sKS"/>
+                                    <constraint firstItem="yNF-Fj-Shh" firstAttribute="top" secondItem="BAx-LF-sIb" secondAttribute="bottom" constant="64" id="mB6-0r-d9o"/>
+                                    <constraint firstAttribute="trailing" secondItem="uTs-6s-RIG" secondAttribute="trailing" id="nzI-Bc-G9a"/>
+                                    <constraint firstItem="Oa7-Io-oCj" firstAttribute="leading" secondItem="r3a-Uv-jbM" secondAttribute="leading" id="otd-aF-t0p"/>
+                                    <constraint firstItem="r3a-Uv-jbM" firstAttribute="trailing" secondItem="yNF-Fj-Shh" secondAttribute="trailing" id="ta1-LZ-K7c"/>
+                                    <constraint firstItem="r3a-Uv-jbM" firstAttribute="top" secondItem="yNF-Fj-Shh" secondAttribute="bottom" constant="24" id="uDw-vm-mUs"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xwn-iz-gtf" appends="YES" id="Zvk-rW-vh4"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6AG-d3-SiU" firstAttribute="trailing" secondItem="B0v-uq-d1A" secondAttribute="trailing" id="4sv-Pi-g88"/>
+                            <constraint firstItem="B0v-uq-d1A" firstAttribute="leading" secondItem="6AG-d3-SiU" secondAttribute="leading" id="5DV-JN-9DP"/>
+                            <constraint firstItem="uTs-6s-RIG" firstAttribute="width" secondItem="mU2-ze-xVC" secondAttribute="width" id="KOr-AV-3Sp"/>
+                            <constraint firstItem="6AG-d3-SiU" firstAttribute="bottom" secondItem="B0v-uq-d1A" secondAttribute="bottom" id="pMN-5K-yDB"/>
+                            <constraint firstItem="B0v-uq-d1A" firstAttribute="top" secondItem="mU2-ze-xVC" secondAttribute="top" id="uY5-gd-E5t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6AG-d3-SiU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UI Elements" id="Pm6-Fd-29Z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textField" destination="BAx-LF-sIb" id="qPB-MY-iqr"/>
+                        <outlet property="textView" destination="yNF-Fj-Shh" id="iId-j1-FfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvb-2c-0Tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xwn-iz-gtf">
+                    <connections>
+                        <action selector="resignFirstResponder:" destination="4yM-Bs-uql" id="9KV-yc-uBO"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="88.605697151424295"/>
+        </scene>
+        <!--DefineTextStyle-->
+        <scene sceneID="7do-aS-Vhs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DefineTextStyle" id="jrg-uY-gEb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVz-xv-rs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="3"/>
+        </scene>
+        <!--DefineViewStyle-->
+        <scene sceneID="JbS-yt-gcN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DefineViewStyle" id="xpg-ad-SbN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDB-Hz-Xje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="139"/>
+        </scene>
+    </scenes>
+</document>
