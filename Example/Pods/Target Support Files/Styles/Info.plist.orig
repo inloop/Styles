@@ -15,7 +15,11 @@
   <key>CFBundlePackageType</key>
   <string>FMWK</string>
   <key>CFBundleShortVersionString</key>
+<<<<<<< HEAD
+  <string>0.20.13</string>
+=======
   <string>0.21.13</string>
+>>>>>>> FIX: Carret position is invalid if editing text not at the end
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleVersion</key>
