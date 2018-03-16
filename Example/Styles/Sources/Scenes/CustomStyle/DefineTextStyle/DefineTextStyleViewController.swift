@@ -166,6 +166,7 @@ final class DefineTextStyleViewController: UIViewController {
 			self?.textEffectsLabel.text = "Text effects (\(effects.count))"
 			self?.setTextStyle()
 		}
+		controller.textEffects = textEffects
 		navigationController?.pushViewController(controller, animated: true)
 	}
 
