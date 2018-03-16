@@ -127,12 +127,12 @@
     if (!text || !style) {
         return;
     }
-
-	UITextRange *range = self.selectedTextRange;
-	[self setAttributedText:[style applyTo:text]];
-	if (range) {
-		self.selectedTextRange = range;
-	}
+    
+    UITextRange *range = self.selectedTextRange;
+    [self setAttributedText:[style applyTo:text]];
+    if (range) {
+        self.selectedTextRange = range;
+    }
 }
 
 - (void)applyViewStyle:(ViewStyle *)style {

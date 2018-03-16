@@ -3,7 +3,7 @@
 import UIKit
 
 extension UIFont {
-	var codeDescription: String {
-		return "UIFont(name: \(fontName), size: \(pointSize))"
-	}
+    var codeDescription: String {
+        return "UIFont(name: \(fontName), size: \(pointSize))"
+    }
 }

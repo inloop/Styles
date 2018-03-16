@@ -133,15 +133,15 @@
 - (void)applyTextStyle:(TextStyle *)style {
     NSString *text = self.text;
 
-	if (!text || !style) {
+    if (!text || !style) {
         return;
     }
 
-	UITextRange *range = self.selectedTextRange;
+    UITextRange *range = self.selectedTextRange;
     [self setAttributedText:[style applyTo:text]];
-	if (range) {
-		self.selectedTextRange = range;
-	}
+    if (range) {
+        self.selectedTextRange = range;
+    }
 }
 
 - (void)applyViewStyle:(ViewStyle *)style {
