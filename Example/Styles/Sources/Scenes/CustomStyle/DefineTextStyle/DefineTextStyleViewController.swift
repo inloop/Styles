@@ -21,6 +21,8 @@ final class DefineTextStyleViewController: UIViewController {
 
 	private let alignments = [NSTextAlignment.left, .right, .center, .justified, .natural]
 	fileprivate var shadowDefinition: Shadow.ShadowDefinition?
+	fileprivate var strikethrioughDefinition: TextDecoration.Definition?
+	fileprivate var underlineDefinition: TextDecoration.Definition?
 	fileprivate var font = UIFont.systemFont(ofSize: 17)
 	fileprivate var selectedWritingDirectionOverrides = [TextStyle.WritingDirectionOverride]()
 
@@ -33,36 +35,43 @@ final class DefineTextStyleViewController: UIViewController {
 	}
 
 	fileprivate func setTextStyle() {
-		let style = TextStyle(
+		var style = TextStyle(
 			.foregroundColor(foregroundColorView.backgroundColor ?? .black),
 			.backgroundColor(backgroundColorView.backgroundColor ?? .white),
 			.font(font),
 			.paragraphStyle([
 				.alignment(alignments[alignmentControl.selectedSegmentIndex]),
 				.lineSpacing(CGFloat(lineSpacingSlider.value))
-				]),
+            ]),
 			.letterSpacing(CGFloat(letterSpacingSlider.value)),
 			.obliqueness(Double(obliquenessSlider.value)),
 			.writingDirectionOverrides(selectedWritingDirectionOverrides),
 			.baselineOffset(Double(baselineOffsetSlider.value))
 		)
 		if let shadow = shadowDefinition?.shadow {
-			exampleText.textStyle = style.updating(.shadow(shadow))
-		} else {
-			exampleText.textStyle = style
+			style = style.updating(.shadow(shadow))
 		}
-		
-		//TODO:
-		/*
-		case strikethrought(TextDecoration)
-		case underline(TextDecoration)
-		*/
+		if let strikethrough = strikethrioughDefinition?.decoration {
+			style = style.updating(.strikethrought(strikethrough))
+		}
+		if let underline = underlineDefinition?.decoration {
+			style = style.updating(.underline(underline))
+		}
+		exampleText.textStyle = style
 	}
 
 	private func presentColorPickerWithCompletion(_ completion: @escaping (_ color: UIColor?) -> Void) {
 		guard let controller = ColorPickerViewController.makeInstance() else { return }
 		controller.completion = completion
-		self.navigationController?.pushViewController(controller, animated: true)
+		navigationController?.pushViewController(controller, animated: true)
+	}
+
+	private func selectTextDecoration(_ propertyName: String = "decoration", _ completion: @escaping (_ definition: TextDecoration.Definition) -> Void) {
+		let storyboard = UIStoryboard(name: "TextDecoration", bundle: nil)
+		guard let controller = storyboard.instantiateInitialViewController() as? TextDecorationViewController else { return }
+		controller.propertyName = propertyName
+		controller.completion = completion
+		navigationController?.pushViewController(controller, animated: true)
 	}
 
 	fileprivate func makeFont(_ name: String = "") {
@@ -123,11 +132,17 @@ final class DefineTextStyleViewController: UIViewController {
 	}
 
 	@IBAction func selectStrikethrough(_ sender: UIButton) {
-		// TODO:
+		selectTextDecoration("strikethrought") { [weak self] definition in
+			self?.strikethrioughDefinition = definition
+			self?.setTextStyle()
+		}
 	}
 	
 	@IBAction func selectUnderline(_ sender: UIButton) {
-		// TODO:
+		selectTextDecoration("underline") { [weak self] definition in
+			self?.underlineDefinition = definition
+			self?.setTextStyle()
+		}
 	}
 
 	@IBAction func selectWritingDirection(_ sender: UIButton) {
@@ -144,8 +159,8 @@ final class DefineTextStyleViewController: UIViewController {
 		var styleDescription =
 		"""
 		let style = TextStyle(
-			.foregroundColor(\(foregroundColorView.backgroundColor ?? .black)),
-			.backgroundColor(\(backgroundColorView.backgroundColor ?? .white)),
+			.foregroundColor(\((foregroundColorView.backgroundColor ?? .black).codeDescription)),
+			.backgroundColor(\((backgroundColorView.backgroundColor ?? .white).codeDescription)),
 			.font(\(font)),
 			.paragraphStyle([
 				.alignment(\(alignments[alignmentControl.selectedSegmentIndex].codeDescription)),
@@ -153,13 +168,21 @@ final class DefineTextStyleViewController: UIViewController {
 			]),
 			.letterSpacing(\(CGFloat(letterSpacingSlider.value))),
 			.obliqueness(\(Double(obliquenessSlider.value))),
-		.writingDirectionOverrides([\(selectedWritingDirectionOverrides.map { $0.codeDescription }.joined(separator: ","))]),
+			.writingDirectionOverrides([\(selectedWritingDirectionOverrides.map { $0.codeDescription }.joined(separator: ","))]),
 			.baselineOffset(\(Double(baselineOffsetSlider.value)))
 		"""
+		styleDescription.append("\(shadowDefinition != nil ? ",\n        .shadow(shadow)" : "")")
+		styleDescription.append("\(underlineDefinition != nil ? ",\n        .underline(underline)" : "")")
+		styleDescription.append("\(strikethrioughDefinition != nil ? ",\n        .strikethrought(strikethrought)" : "")")
+		styleDescription.append("\n)")
 		if let shadowDescription = shadowDefinition?.shadowDescription {
-			styleDescription.append("\n        .shadow(shadow)\n)\n\(shadowDescription)")
-		} else {
-			styleDescription.append("\n)\n")
+			styleDescription.append("\n\(shadowDescription)")
+		}
+		if let strikethroughtDescription = strikethrioughDefinition?.decorationDescription {
+			styleDescription.append("\n\(strikethroughtDescription)")
+		}
+		if let underlineDescription = underlineDefinition?.decorationDescription {
+			styleDescription.append("\n\(underlineDescription)")
 		}
 		navigationController?.popViewController(animated: true)
 		delegate?.didPickTextStyleDefinition(
@@ -183,22 +206,5 @@ extension DefineTextStyleViewController: FontPickerDelegate {
 		navigationController?.popViewController(animated: true)
 		fontLabel.text = fontName
 		makeFont(fontName)
-	}
-}
-
-extension NSTextAlignment {
-	var codeDescription: String {
-		switch self {
-		case .center:
-			return ".center"
-		case .left:
-			return ".left"
-		case .right:
-			return ".right"
-		case .justified:
-			return ".justified"
-		case .natural:
-			return ".natural"
-		}
 	}
 }

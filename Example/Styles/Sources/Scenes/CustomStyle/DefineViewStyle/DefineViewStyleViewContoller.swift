@@ -53,10 +53,10 @@ final class DefineViewStyleViewController: UIViewController {
 			styleDescription:
 			"""
 			let style = ViewStyle(
-				.backgroundColor(\(backgroundColorView.backgroundColor.debugDescription)),
-				.tintColor(\(tintColorView.backgroundColor.debugDescription)),
+				.backgroundColor(\(backgroundColorView.backgroundColor?.codeDescription ?? "nil")),
+				.tintColor(\(tintColorView.backgroundColor?.codeDescription ?? "nil")),
 				.cornerRadius(\(CGFloat(cornerRadiusSlider.value)),
-				.borderColor(\((borderColorView.backgroundColor ?? .black).debugDescription)),
+				.borderColor(\((borderColorView.backgroundColor ?? .black).codeDescription)),
 				.borderWidth(\(CGFloat(borderWidthSlider.value))),
 				.cornerRadius(\(CGFloat(cornerRadiusSlider.value))),
 				.opacity(\(opacitySlider.value),
