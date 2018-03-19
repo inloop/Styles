@@ -3,14 +3,14 @@
 import Foundation
 
 public final class Block: NSObject, Match {
-    public typealias Find = (_ base: String) -> [Range<String.Index>?]
+    public typealias Find = (_ base: String) -> [Swift.Range<String.Index>?]
     let find: Find
 
     public init(_ find: @escaping Find) {
         self.find = find
     }
 
-    public init(_ findSimple: @escaping (String) -> Range<String.Index>?) {
+    public init(_ findSimple: @escaping (String) -> Swift.Range<String.Index>?) {
         self.find = { [findSimple($0)] }
     }
 
