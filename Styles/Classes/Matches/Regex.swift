@@ -4,7 +4,7 @@ import Foundation
 
 /**
  Regex represents `Match` by Regular expression.
- - SeeAlso: `Match`
+ @see `Match`
 */
 public final class Regex: NSObject, Match {
     let pattern: String

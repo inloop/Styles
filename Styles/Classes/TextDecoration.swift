@@ -4,7 +4,7 @@ import Foundation
 
 /**
  TextDecoration represents either underline or strikethrough of TextStyle properties.
- Seealso: `TextStyle.Property` for reference
+ @see `TextStyle.Property`
 */
 public struct TextDecoration {
     /**
@@ -23,7 +23,7 @@ public struct TextDecoration {
 
         /**
          Raw intepretation of style representing according `NSUnderlineStyle`.
-         - SeeAlso: `NSUnderlineStyle.style.rawValue`
+         @see `NSUnderlineStyle.style.rawValue`
         */
         public var rawValue: Int {
             switch self {
@@ -53,7 +53,7 @@ public struct TextDecoration {
 
         /**
          Raw intepretation of style representing according `NSUnderlineStyle`.
-         - SeeAlso: `NSUnderlineStyle.pattern.rawValue`
+         @see `NSUnderlineStyle.pattern.rawValue`
         */
         public var rawValue: Int {
             switch self {

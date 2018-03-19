@@ -4,7 +4,7 @@ import Foundation
 
 /**
  First represents `Match` which finds first string matching given condition
- - SeeAlso: `Match`
+ @see `Match`
  */
 public final class First: NSObject, Match {
     let string: String

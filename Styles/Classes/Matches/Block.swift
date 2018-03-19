@@ -4,7 +4,7 @@ import Foundation
 
 /**
  Block represents `Match` which is executed in block
- - SeeAlso: `Match`
+ @see `Match`
  */
 public final class Block: NSObject, Match {
     /**

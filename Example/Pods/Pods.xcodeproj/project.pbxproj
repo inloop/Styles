@@ -47,7 +47,8 @@
 		AA09148AF668C907742CCAD0DE51A65C /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBA42BF4C445849AF3D1D248F6D431 /* Swizzle.m */; };
 		BF413F6224DA468FD465673A7F7EA4D4 /* UILabel+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA023E7EE80BD5ED28743B48F634284 /* UILabel+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6828EF3A93DF4F25CB0D78356847305 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CECE929214C7D2760FC259EC473D437 /* TextStyle.swift */; };
-		CE850FC3205C0D6600C62E35 /* UIOffset+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FC2205C0D6600C62E35 /* UIOffset+Size.swift */; };
+		CE850FC6205F873E00C62E35 /* NSMutableParagraphStyle+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FC4205F871B00C62E35 /* NSMutableParagraphStyle+TextStyle.swift */; };
+		CE850FC7205F875300C62E35 /* UIOffset+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE850FC2205C0D6600C62E35 /* UIOffset+Size.swift */; };
 		CFAE016F419BE95665E481F05F8877C3 /* UILabel+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BADD400D9DBE286A485EF9C357DC617 /* UILabel+Styles.m */; };
 		D53712326E89E058A8466DFE269E2C34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772661D4E69DB9060E7ABEC7EBC2C5DE /* Foundation.framework */; };
 		DCCD8238EEA513A1F21AF526123C747A /* UITextField+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = B6169B00F71BCB62EF9235D9767AB3F3 /* UITextField+Styles.m */; };
@@ -158,6 +159,7 @@
 		CE49C1FC8A92F28C5762C054EA946175 /* TextDecoration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDecoration.swift; path = Styles/Classes/TextDecoration.swift; sourceTree = "<group>"; };
 		CE5E8AC880248FA233C3387DF943FB19 /* Shadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = Styles/Classes/Shadow.swift; sourceTree = "<group>"; };
 		CE850FC2205C0D6600C62E35 /* UIOffset+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIOffset+Size.swift"; sourceTree = "<group>"; };
+		CE850FC4205F871B00C62E35 /* NSMutableParagraphStyle+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle+TextStyle.swift"; sourceTree = "<group>"; };
 		D446777DC0C0BD0D40613E9FA3CD6E12 /* UITextField+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Styles.h"; sourceTree = "<group>"; };
 		D5B7D80E52A800828DD575D720021D16 /* Styles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Styles-dummy.m"; sourceTree = "<group>"; };
 		DE8BEDCA5DA425F7F7F50C5AF7E92E7F /* Pods-Styles_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Styles_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				45C8BF1E9B23A10609E7EB62060C872B /* UIImage+Attachment.swift */,
 				1395CE5809BA9EA11FDB1CED4C716582 /* UIImage+Colorize.swift */,
 				CE850FC2205C0D6600C62E35 /* UIOffset+Size.swift */,
+				CE850FC4205F871B00C62E35 /* NSMutableParagraphStyle+TextStyle.swift */,
 			);
 			name = Extensions;
 			path = Styles/Classes/Extensions;
@@ -557,6 +560,29 @@
 				4A309753BCF5566D2CEED228795EB735 /* UITextView+Styles.m in Sources */,
 				730029609881B22E759F3E0545A03A53 /* UIView+Styles.m in Sources */,
 				81694A5273B008808634F2A88761989B /* ViewStyle.swift in Sources */,
+				2E52F65C6C0AD82BC9E2CCD5F47B00AC /* Array+Styles.swift in Sources */,
+				94AAD27D1C9327FF83A15138AA2200B8 /* Block.swift in Sources */,
+				0E389FD7A80D14750462B212184C1ACB /* First.swift in Sources */,
+				87391B6EC4FFEB38814EE558C6E98D24 /* NSAttributedString+Mutable.swift in Sources */,
+				9D0F793010A7D84A606041D9B212B59E /* Regex.swift in Sources */,
+				60CBCF41CA21D3C4CD3EA89083F4EF2B /* Shadow.swift in Sources */,
+				15C6C1E53AEAC87F3C98E4C234DCF63B /* Styles-dummy.m in Sources */,
+				AA09148AF668C907742CCAD0DE51A65C /* Swizzle.m in Sources */,
+				9EC668E3D70CD7B17BC2F1A2B30FA3B0 /* TextDecoration.swift in Sources */,
+				0AED681C0598EE488BE695C02DD9BBCB /* TextEffect.swift in Sources */,
+				C6828EF3A93DF4F25CB0D78356847305 /* TextStyle.swift in Sources */,
+				5298904A09B9A2E86B584685D39FEE27 /* UIButton+Styles.m in Sources */,
+				1C5FEC5E230A87871DF5B5FA1C23667B /* UIColor+Utils.swift in Sources */,
+				CE850FC7205F875300C62E35 /* UIOffset+Size.swift in Sources */,
+				0CA8F8782927C1F01355895CD7ED61E7 /* UIImage+Attachment.swift in Sources */,
+				1D0D54109FADA7D0842C718E002A1120 /* UIImage+Colorize.swift in Sources */,
+				CE850FC6205F873E00C62E35 /* NSMutableParagraphStyle+TextStyle.swift in Sources */,
+				CFAE016F419BE95665E481F05F8877C3 /* UILabel+Styles.m in Sources */,
+				58A6B496FD0672DB29E545712BCA8EAF /* UINavigationBar+Styles.m in Sources */,
+				36C88C3832D90C48D413A71E83087D50 /* UITextField+Styles.m in Sources */,
+				689AC654FFED50689AC650389B443832 /* UITextView+Styles.m in Sources */,
+				16560A167BF1308DC7E91C032E9C4A75 /* UIView+Styles.m in Sources */,
+				FC11BD54FDB75253B1D7A5CD231EF871 /* ViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C5491848003C85CEB424075D9E017E0 /* Pods-Styles_Example-dummy.m in Sources */,
-				CE850FC3205C0D6600C62E35 /* UIOffset+Size.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
