@@ -2,14 +2,32 @@
 
 import UIKit
 
+/**
+ The `ViewStyle` defines style of any `UIView`.
+ Can define color, tint, border, shadow and layer properties.
+ @see `ViewStyle.Property`
+ */
 public final class ViewStyle: NSObject {
+    /**
+     Property enumerates available options to define the ViewStyle.
+     Available options are [.backgroundColor, .tintColor, .borderColor,
+     .borderWidth, .cornerRadius, .opacity, .shadow].
+     @see `Shadow`
+     */
     public enum Property: Equatable {
+        /// Specifies optional background color
         case backgroundColor(UIColor?)
+        /// Specifies optional tint color
         case tintColor(UIColor?)
+        /// Specifies border color
         case borderColor(UIColor)
+        /// Specifies width of the border
         case borderWidth(CGFloat)
+        /// Specifies corner radius
         case cornerRadius(CGFloat)
+        /// Specifies opacity
         case opacity(Float)
+        /// Specifies shadow. @see `Shadow`
         case shadow(Shadow)
 
         func apply(to view: UIView) {
@@ -69,6 +87,12 @@ public final class ViewStyle: NSObject {
 
     let properties: [Property]
 
+    /**
+     Create a new instance of `ViewStyle` using properties
+
+     - Parametes properties: The array of properties
+     - Returns: New instance of `ViewStyle`
+     */
     public convenience init(_ properties: Property...) {
         self.init(properties)
     }
@@ -77,20 +101,47 @@ public final class ViewStyle: NSObject {
         self.properties = properties
     }
 
+    /**
+     Applies self to given `UIView`
+
+     - Parameter view: The view on which to apply the style
+     */
     @objc public func apply(to view: UIView) {
         for property in properties {
             property.apply(to: view)
         }
     }
 
+    /**
+     Updates curent style with given properties. It uses right associativity rule thus if you redefine any of the original properties assigned to self it will ve overwritten by the new one
+
+     - Parameter properties: The array of `Property` to be added to the style
+     - Returns: The instance of `ViewStyle` with combined properties
+
+     ```swift
+     let red = ViewStyle(.backgroundColor(.red))
+     let redTint = red(.tintColor(.red))
+     ```
+     */
     public func updating(_ other: Property...) -> ViewStyle {
         return ViewStyle(properties.updating(other))
     }
 
+    /**
+     Operator `+` combines two styles. It uses right associativity rule thus if both styles match any property the right will be used.
+     - Parameter left: The `ViewStyle` to be combined with `right`
+     - Parameter right: The `ViewStyle` to be combined with `left`
+     - Returns: The resulting `ViewStyle` containing bot properties from `left` and `right`
+     */
     public static func +(left: ViewStyle, right: ViewStyle) -> ViewStyle {
         return ViewStyle(left.properties.updating(right.properties))
     }
 
+    /**
+     Checks for equality of layer properties.
+     If the defined layer properties does not match with otehr style the function throws an error. The layer properties has to match otherwise UI glitched may be created. If the error is thrown it contains a description which properties are missing.
+     - Parameter other: The view style to check for equal layer properties
+     */
     @objc public func hasEqualLayerProperties(_ other: ViewStyle) throws {
         let filtered = properties.filter { $0.isLayerProperty }
         let otherFiltered = other.properties.filter { $0.isLayerProperty }
@@ -105,6 +156,7 @@ public final class ViewStyle: NSObject {
 }
 
 extension ViewStyle.Property: CustomDebugStringConvertible {
+    /// Describes the property name for debug purposes
     public var debugDescription: String {
         switch self {
         case .backgroundColor:

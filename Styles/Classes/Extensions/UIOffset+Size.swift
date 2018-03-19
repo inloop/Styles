@@ -3,7 +3,7 @@
 import UIKit
 
 extension UIOffset {
-    var size: CGSize {
+    public var size: CGSize {
         return CGSize(width: horizontal, height: vertical)
     }
 
