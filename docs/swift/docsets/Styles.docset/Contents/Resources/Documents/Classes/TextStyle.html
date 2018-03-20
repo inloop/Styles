@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TextStyle Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TextStyle" class="dashAnchor"></a>
+    <a title="TextStyle Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Styles Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/inloop/styles"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Styles Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TextStyle Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Block.html">Block</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/First.html">First</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Regex.html">Regex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextStyle.html">TextStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextStyle/ParagraphStyle.html">– ParagraphStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextStyle/WritingDirectionOverride.html">– WritingDirectionOverride</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextStyle/Property.html">– Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewStyle.html">ViewStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewStyle/Property.html">– Property</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TextEffect.html">TextEffect</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSMutableParagraphStyle.html">NSMutableParagraphStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIOffset.html">UIOffset</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Match.html">Match</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Shadow.html">Shadow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextDecoration.html">TextDecoration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextDecoration/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextDecoration/Pattern.html">– Pattern</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TextStyle</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TextStyle</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Define a TextStyle using <code><a href="../Classes/TextStyle/Property.html">TextStyle.Property</a></code> array.</p>
+
+<p><strong>Note</strong>
+If you set the view style on given UI element it simply takes the text
+assigned to it and tranforms it into <code>NSAttributedString</code> applying
+the array of <code><a href="../Classes/TextStyle/Property.html">TextStyle.Property</a></code>.</p>
+
+<p>It can represent the style of:</p>
+
+<ul>
+<li>UITextView</li>
+<li>UILabel</li>
+<li>UITextField</li>
+</ul>
+
+<p><strong>Example</strong></p>
+<pre class="highlight swift"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span>
+
+<span class="k">let</span> <span class="nv">redColor</span> <span class="o">=</span> <span class="kt">TextStyle</span><span class="p">(</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">red</span><span class="p">))</span>
+<span class="n">label</span><span class="o">.</span><span class="n">textStyle</span> <span class="o">=</span> <span class="n">style</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC09ParagraphC0O"></a>
+                    <a name="//apple_ref/swift/Enum/ParagraphStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC09ParagraphC0O">ParagraphStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines a style of an paragraph.
+Can define <code>NSTextAlignment</code> by <code>.alignment</code> and <code>.lineSpacing</code></p>
+
+                        <a href="../Classes/TextStyle/ParagraphStyle.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ParagraphStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC24WritingDirectionOverrideO"></a>
+                    <a name="//apple_ref/swift/Enum/WritingDirectionOverride" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC24WritingDirectionOverrideO">WritingDirectionOverride</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides the writing direction. For more reference
+@see NSAttributedStringKey.writingDirection</p>
+
+                        <a href="../Classes/TextStyle/WritingDirectionOverride.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">WritingDirectionOverride</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC8PropertyO"></a>
+                    <a name="//apple_ref/swift/Enum/Property" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC8PropertyO">Property</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Property enumerates the options available for <code><a href="../Classes/TextStyle.html">TextStyle</a></code>. You can pick from
+[.font, foregroundColor, .backgroundColor,
+.paragraphStyle, .letterSpacing, .strikethrought,
+.underline, .obliqueness, .shadow,
+.writingDirectionOverrides, .baselineOffset].</p>
+
+<p>@see <code><a href="../Classes/TextStyle/ParagraphStyle.html">ParagraphStyle</a></code>, <code><a href="../Structs/TextDecoration.html">TextDecoration</a></code>, <code><a href="../Structs/Shadow.html">Shadow</a></code>, <code><a href="../Classes/TextStyle/WritingDirectionOverride.html">WritingDirectionOverride</a></code></p>
+
+                        <a href="../Classes/TextStyle/Property.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Property</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Styles@objc(cs)TextStyle(py)attributes"></a>
+                    <a name="//apple_ref/swift/Property/attributes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Styles@objc(cs)TextStyle(py)attributes">attributes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The array of NSAttributedStringKey which are created from <code><a href="../Classes/TextStyle/Property.html">TextStyle.Property</a></code> array specified during init</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="k">let</span> <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSAttributedStringKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleCACSayAC8PropertyOGd_SayAA0B6EffectOG7effectstcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:effects:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleCACSayAC8PropertyOGd_SayAA0B6EffectOG7effectstcfc">init(_:effects:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated initializer of <code>TextStyle</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">properties</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextStyle/Property.html">Property</a></span><span class="o">...</span><span class="p">,</span> <span class="nv">effects</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/TextEffect.html">TextEffect</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>properties</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array of properties defining the style</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>effects</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array of effects that should be applied to style.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>New instance of TextStyle
+@see <code><a href="../Classes/TextStyle/Property.html">TextStyle.Property</a></code>, <code><a href="../Enums/TextEffect.html">TextEffect</a></code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC5emptyACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/empty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC5emptyACvZ">empty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An empty TextStyle having no properties and effects</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">empty</span> <span class="o">=</span> <span class="kt">TextStyle</span><span class="p">(</span><span class="nv">attributes</span><span class="p">:</span> <span class="p">[:],</span> <span class="nv">effects</span><span class="p">:</span> <span class="p">[])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Styles@objc(cs)TextStyle(im)applyTo:"></a>
+                    <a name="//apple_ref/swift/Method/apply(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Styles@objc(cs)TextStyle(im)applyTo:">apply(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies self to given text by creating <code>NSAttributedString</code> using <code><a href="../Classes/TextStyle.html#/c:@M@Styles@objc(cs)TextStyle(py)attributes">attributes</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">apply</span><span class="p">(</span><span class="n">to</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to apply style on it</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>NSAttributedString</code> on which are the <code><a href="../Classes/TextStyle.html#/c:@M@Styles@objc(cs)TextStyle(py)attributes">attributes</a></code> and the effects applied</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MARK:-%20Combining%20Styles"></a>
+                <a name="//apple_ref/swift/Section/MARK:- Combining Styles" class="dashAnchor"></a>
+                <a href="#/MARK:-%20Combining%20Styles">
+                  <h3 class="section-name">MARK:- Combining Styles</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC8updatingACSayAC8PropertyOGd_tF"></a>
+                    <a name="//apple_ref/swift/Method/updating(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC8updatingACSayAC8PropertyOGd_tF">updating(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates curent style with given properties. It uses right associativity rule thus if you redefine any of the original properties assigned to self it will ve overwritten by the new one</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">redText</span> <span class="o">=</span> <span class="kt">TextStyle</span><span class="p">(</span><span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">red</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">redTextAndBackground</span> <span class="o">=</span> <span class="n">redText</span><span class="o">.</span><span class="nf">updating</span><span class="p">(</span><span class="o">.</span><span class="nf">backgroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">red</span><span class="p">))</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updating</span><span class="p">(</span><span class="n">_</span> <span class="nv">properties</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextStyle/Property.html">Property</a></span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>properties</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array of <code><a href="../Classes/TextStyle/Property.html">Property</a></code> to be added to the style</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The instance of <code>TextStyle</code> with combined properties</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC1poiA2C_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC1poiA2C_ACtFZ">+(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Operator <code>+</code> combines two styles. It uses right associativity rule thus if both styles match any property the right will be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">TextStyle</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">TextStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>left</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>TextStyle</code> to be combined with <code>right</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>right</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>TextStyle</code> to be combined with <code>left</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The resulting <code>TextStyle</code> containing bot properties from <code>left</code> and <code>right</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MARK:-%20Updating%20effects"></a>
+                <a name="//apple_ref/swift/Section/MARK:- Updating effects" class="dashAnchor"></a>
+                <a href="#/MARK:-%20Updating%20effects">
+                  <h3 class="section-name">MARK:- Updating effects</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC9appendingACSayAA0B6EffectOGd_tF"></a>
+                    <a name="//apple_ref/swift/Method/appending(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC9appendingACSayAA0B6EffectOGd_tF">appending(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends text effects to the current style. It uses right associativity rule thus if current style defines any effect contained in updating it will be overriden and newly defined one will be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appending</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextEffect.html">TextEffect</a></span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of <code><a href="../Enums/TextEffect.html">TextEffect</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>TextStyle</code> containing original and newly defined effects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC9appendingAcA0B6EffectOF"></a>
+                    <a name="//apple_ref/swift/Method/appending(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC9appendingAcA0B6EffectOF">appending(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends text effect to the current style. It uses right associativity rule thus if current style defines an effect matching the updating one it will be overriden and newly defined one will be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appending</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextEffect.html">TextEffect</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Enums/TextEffect.html">TextEffect</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>TextStyle</code> containing original effects and newly defined one</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC8removingACSayAA0B6EffectOGd_tF"></a>
+                    <a name="//apple_ref/swift/Method/removing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC8removingACSayAA0B6EffectOGd_tF">removing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes text effects from the current style.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removing</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextEffect.html">TextEffect</a></span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of <code><a href="../Enums/TextEffect.html">TextEffect</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>TextStyle</code> containing original effects without specified ones</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Styles9TextStyleC8removingAcA0B6EffectOF"></a>
+                    <a name="//apple_ref/swift/Method/removing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Styles9TextStyleC8removingAcA0B6EffectOF">removing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes text effect from the current style.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removing</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextEffect.html">TextEffect</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TextStyle</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Enums/TextEffect.html">TextEffect</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>TextStyle</code> containing original effects without specified one</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://inloopx.com" target="_blank" rel="external">INLOOPX</a>. All rights reserved. (Last updated: 2018-03-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

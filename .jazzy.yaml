@@ -1,0 +1,11 @@
+module: Styles
+author: INLOOPX
+author_url: http://inloopx.com
+github_url: https://github.com/inloop/styles
+objc: true
+sdk: iphonesimulator
+umbrella_header: ./Styles/Classes/Styles.h
+framework_root: .
+min_acl: public
+exclude:
+    - "./Styles/Classes/UIElements+Extensions/Swizzle.h"

@@ -1,0 +1,103 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/Extensions/UIOffset+Size.swift",
+      "line": 6,
+      "symbol": "UIOffset.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/Extensions/UIOffset+Size.swift",
+      "line": 10,
+      "symbol": "UIOffset.zero",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/Matches/First.swift",
+      "line": 37,
+      "symbol": "First.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/Matches/Regex.swift",
+      "line": 113,
+      "symbol": "Regex.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/Shadow.swift",
+      "line": 16,
+      "symbol": "Shadow.radius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextDecoration.swift",
+      "line": 20,
+      "symbol": "TextDecoration.Style.thick",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextDecoration.swift",
+      "line": 22,
+      "symbol": "TextDecoration.Style.double",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextEffect.swift",
+      "line": 10,
+      "symbol": "Match.ranges(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 32,
+      "symbol": "TextStyle.ParagraphStyle.alignment",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 33,
+      "symbol": "TextStyle.ParagraphStyle.lineSpacing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 41,
+      "symbol": "TextStyle.WritingDirectionOverride.leftToRightEmbedding",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 42,
+      "symbol": "TextStyle.WritingDirectionOverride.rightToLeftEmbedding",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 43,
+      "symbol": "TextStyle.WritingDirectionOverride.leftToRightOverride",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles/Styles/Classes/TextStyle.swift",
+      "line": 44,
+      "symbol": "TextStyle.WritingDirectionOverride.rightToLeftOverride",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/radimhalfar/Desktop/DISK/github/Styles/Styles"
+}
