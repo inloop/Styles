@@ -29,7 +29,9 @@ public final class TextStyle: NSObject {
      Can define `NSTextAlignment` by `.alignment` and `.lineSpacing`
      */
     public enum ParagraphStyle {
+        /// Represents an NSAlignment in paragraph
         case alignment(NSTextAlignment)
+        /// Represents line spacing in paragraph
         case lineSpacing(CGFloat)
     }
 
@@ -38,9 +40,13 @@ public final class TextStyle: NSObject {
      @see NSAttributedStringKey.writingDirection
      */
     public enum WritingDirectionOverride: Int {
+        /// Embeds left to right direction override
         case leftToRightEmbedding
+        /// Embeds right to left direction override
         case rightToLeftEmbedding
+        /// Overrides left to right direction override
         case leftToRightOverride
+        /// Overrides right to left direction override
         case rightToLeftOverride
     }
 

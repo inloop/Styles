@@ -7,6 +7,12 @@ import Foundation
  @see `First`, `Regex`, `Block`
  */
 public protocol Match: NSObjectProtocol {
+    /**
+     Finds ranges in base string
+
+     - Parameter base: The string in which to lookup
+     - Returns: An array of `NSRange` objects
+     */
     func ranges(in base: String) -> [NSRange]
 }
 

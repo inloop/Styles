@@ -110,6 +110,7 @@ public final class Regex: NSObject, Match {
 }
 
 extension Regex {
+    /// :nodoc:
     public override func isEqual(_ object: Any?) -> Bool {
         guard let other = object as? Regex else { return false }
         return pattern == other.pattern && options == other.options

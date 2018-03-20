@@ -34,6 +34,7 @@ public final class First: NSObject, Match {
 }
 
 extension First {
+    /// :nodoc:
     public override func isEqual(_ object: Any?) -> Bool {
         guard let other = object as? First else { return false }
         return string == other.string && ignoringCase == other.ignoringCase

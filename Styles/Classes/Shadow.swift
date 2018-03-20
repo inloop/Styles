@@ -12,7 +12,7 @@ public struct Shadow {
     public let opacity: Float
     /// Shadow offset
     public let offset: UIOffset
-    // Shadow radius
+    /// Shadow radius
     public let radius: CGFloat
     /// Should the layer be rasterized?
     public let shouldRasterizeLayer: Bool

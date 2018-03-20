@@ -16,9 +16,9 @@ public struct TextDecoration {
     public enum Style: Int {
         /// Single line
         case single
-        // Single thick line
+        /// Single thick line
         case thick
-        // Double line
+        /// Double line
         case double
 
         /**
