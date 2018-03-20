@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Styles.h"
 #import "Swizzle.h"
 #import "TextInputState.h"
 #import "UIButton+Styles.h"

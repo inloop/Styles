@@ -57,6 +57,10 @@ public final class Range: NSObject, Match {
         super.init()
     }
 
+    /// Finds `[NSRange]` in given string
+    ///
+    /// - Parameter base: The base string in which to lookup
+    /// - Returns: An array of `NSRange`s
     public func ranges(in base: String) -> [NSRange] {
         return ranges.map { range in
             switch range {

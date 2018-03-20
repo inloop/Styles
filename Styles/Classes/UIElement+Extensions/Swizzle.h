@@ -5,8 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
+/// :nodoc:
 FOUNDATION_EXPORT void swizzle_instance_method(Class class, SEL original, SEL swizzled);
 
+/// :nodoc:
 #define SYNTHESIZE_PROPERTY_OBJ(TYPE, PROPERTY_NAME, PROPERTY_NAME_UPPER) \
 \
 - (void)set##PROPERTY_NAME_UPPER:(TYPE *)PROPERTY_NAME { \
