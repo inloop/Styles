@@ -9,9 +9,9 @@
  */
 @interface UIView (Styles)
 /// ViewStyle to be applied to the view
-@property (nonatomic, copy) ViewStyle *viewStyle UI_APPEARANCE_SELECTOR;
+@property (nonatomic, copy) ViewStyle *_viewStyle UI_APPEARANCE_SELECTOR;
 /**
  Applies the style to view
  */
-- (void)applyStyle;
+- (void)_applyStyle;
 @end

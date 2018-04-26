@@ -18,29 +18,30 @@
 		2DFB8CF181A8CFD3C78A2A33E18A514E /* TextStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67563C707EE3F30D695F4599E2E275 /* TextStyleTests.swift */; };
 		31734FCF307A977622EB4B935A0CC7EE /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF55E769E38CCF356AF47EBA67D16E0 /* Swizzle.m */; };
 		373A2E6839620FDB0EEE061D21AC81AA /* UIButton+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA34D7C7DE23EC898F83F48DCEACB25 /* UIButton+Styles.m */; };
-		408A3D35B98C8281DB4C8CCF5DA7D757 /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63880683B2A4ED289B535572023379 /* Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B14335F20637F2B005908EF /* UIView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 7506B2DF4617F34DF536B67B6A7CBB8D /* UIView+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3B14336020637F31005908EF /* UIView+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FE94FDE74281E1223896A85A35595D /* UIView+Styles.m */; };
+		3B14336420638128005908EF /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14336320638128005908EF /* UIView+Styles.swift */; };
+		408A3D35B98C8281DB4C8CCF5DA7D757 /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63880683B2A4ED289B535572023379 /* Swizzle.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4C998E79CD0751316C6A355361127458 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13739910F25922F2EFCFF3B16FD5AD05 /* ViewStyle.swift */; };
 		53A956F362B36BED5EC2831184100400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772661D4E69DB9060E7ABEC7EBC2C5DE /* Foundation.framework */; };
 		567F4944BA6DE909E0AA28560CAA963B /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4593C9F478E3C9401A9F69FE8125586E /* First.swift */; };
 		5EAB7C0EE25A3664AA55CF42CA3BD150 /* UIImage+Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A12874B5B7C03AFF9E7EA37DA2421 /* UIImage+Attachment.swift */; };
-		6A73E51D04FF76058B50585B4865929A /* UIButton+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCC67594CDF895FED887A4659524A41 /* UIButton+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A73E51D04FF76058B50585B4865929A /* UIButton+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCC67594CDF895FED887A4659524A41 /* UIButton+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6C5491848003C85CEB424075D9E017E0 /* Pods-Styles_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25422082CBBE5892F1A7DA090D9750C5 /* Pods-Styles_Example-dummy.m */; };
-		6C72D66B2026CCEE3D57D43992455AA7 /* UILabel+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A036248E8C7FA0DDDF1E5D4A489F15B /* UILabel+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C72D66B2026CCEE3D57D43992455AA7 /* UILabel+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A036248E8C7FA0DDDF1E5D4A489F15B /* UILabel+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7A29E6ECADF103DDB30222D107820C04 /* UIOffset+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566701172AD207EFF542743EB4C99F12 /* UIOffset+Size.swift */; };
 		7C4296BD170F30B35135B0A653B53FD0 /* Styles-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F695EFC4D2CB732E6F039A285EBD60 /* Styles-dummy.m */; };
 		7E3E7E583855FFE4EDF9C2A01DC1AD21 /* TextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED8F23D9F06A198B25B18D2B20CA37D /* TextDecoration.swift */; };
 		82FEF6946A432EA33B1125C6939928DE /* NSMutableParagraphStyle+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35569E13639BBE9A6C27406AF79797 /* NSMutableParagraphStyle+TextStyle.swift */; };
 		87111F4C026284064DD980D42236EC1E /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F44FBD01FC0E6BA9092D64DEC1A4155 /* UIColor+Utils.swift */; };
 		88B02CA86F9C0EBA4545BFF5BD3574BC /* Styles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F06609F447D5845B19F07A1D36D57C /* Styles.framework */; };
-		9232F6D00E695DBA81C60E4E4BED554F /* TextInputState.h in Headers */ = {isa = PBXBuildFile; fileRef = A143CEFF231AA612A9F4BCA3963931A0 /* TextInputState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9232F6D00E695DBA81C60E4E4BED554F /* TextInputState.h in Headers */ = {isa = PBXBuildFile; fileRef = A143CEFF231AA612A9F4BCA3963931A0 /* TextInputState.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A46A0C4FF91080006751DA065DD07DE7 /* UITextView+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = B445AB810544BB5015BF047337FD3275 /* UITextView+Styles.m */; };
 		AD5986E23E2CDB2452D0770F78DA1265 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0927CF151D6210056C73BFF5BDDF9363 /* Block.swift */; };
-		B7A79583E5FA5D98DB1E6409B7E150D1 /* UINavigationBar+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 816A1D00E98758C56D7236116C228D6B /* UINavigationBar+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9521EDA9EFA80572F11DF8FAB8D8A3C /* UIView+Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FE94FDE74281E1223896A85A35595D /* UIView+Styles.m */; };
-		BCD04F50B3AB0F2A30DFAEB95793D73C /* UITextField+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = A92BA1B70A3271EB477449266A584445 /* UITextField+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7A79583E5FA5D98DB1E6409B7E150D1 /* UINavigationBar+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 816A1D00E98758C56D7236116C228D6B /* UINavigationBar+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BCD04F50B3AB0F2A30DFAEB95793D73C /* UITextField+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = A92BA1B70A3271EB477449266A584445 /* UITextField+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C3E8AB2F7C53D4EABE7997DA74AE79B5 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908ED1EEBBBD934ACFBE135C55ABF94 /* Range.swift */; };
-		CECC4ED2CFEC01C7FA6DB2F3821ED8E2 /* UIView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = 7506B2DF4617F34DF536B67B6A7CBB8D /* UIView+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D34057BEFB6F8C84D32E996A0CF38CDE /* UITextView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE69EA2D821430C5B14EA489312346A /* UITextView+Styles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D34057BEFB6F8C84D32E996A0CF38CDE /* UITextView+Styles.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE69EA2D821430C5B14EA489312346A /* UITextView+Styles.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D53712326E89E058A8466DFE269E2C34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772661D4E69DB9060E7ABEC7EBC2C5DE /* Foundation.framework */; };
 		D926AFB39AD312824EA95AE9B49CDDAF /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF845AF4BC7E9C3AD2ED4248C4D2010 /* TextStyle.swift */; };
 		E24DE1BA9617DD88CD3F775C2958D6FB /* ViewStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312961CC35DE6C560A8D3369968016F7 /* ViewStyleTests.swift */; };
@@ -84,6 +85,9 @@
 		31FE94FDE74281E1223896A85A35595D /* UIView+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styles.m"; sourceTree = "<group>"; };
 		32F51507323EA8324438A81D7A06608A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38998D66DDF5A96AF1E14C20D2426D70 /* Pods-Styles_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3B14336320638128005908EF /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
+		3B1433652063860A005908EF /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		3B14336820638887005908EF /* Styles.private.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = Styles.private.modulemap; sourceTree = "<group>"; };
 		3EBA4C7CB887AA2235914CE82978F98C /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		40EA5E9F944CF3C551B4A661A6834D27 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		443EFD868C1CA0171FF0D786AF3BD009 /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
@@ -163,7 +167,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EB15251431E54F693040D33717ECA7F /* UIElement+Extensions */ = {
+		3B143361206380EB005908EF /* objc */ = {
 			isa = PBXGroup;
 			children = (
 				DC63880683B2A4ED289B535572023379 /* Swizzle.h */,
@@ -181,6 +185,33 @@
 				B445AB810544BB5015BF047337FD3275 /* UITextView+Styles.m */,
 				7506B2DF4617F34DF536B67B6A7CBB8D /* UIView+Styles.h */,
 				31FE94FDE74281E1223896A85A35595D /* UIView+Styles.m */,
+				3B143366206386B4005908EF /* StylesPrivate */,
+				3B14336820638887005908EF /* Styles.private.modulemap */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		3B143362206380FE005908EF /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				3B14336320638128005908EF /* UIView+Styles.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		3B143366206386B4005908EF /* StylesPrivate */ = {
+			isa = PBXGroup;
+			children = (
+				3B1433652063860A005908EF /* module.modulemap */,
+			);
+			path = StylesPrivate;
+			sourceTree = "<group>";
+		};
+		5EB15251431E54F693040D33717ECA7F /* UIElement+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B143362206380FE005908EF /* swift */,
+				3B143361206380EB005908EF /* objc */,
 			);
 			name = "UIElement+Extensions";
 			path = "Styles/Classes/UIElement+Extensions";
@@ -361,12 +392,12 @@
 				F6265396E83CA66D7CF08709076978D2 /* Styles.h in Headers */,
 				408A3D35B98C8281DB4C8CCF5DA7D757 /* Swizzle.h in Headers */,
 				9232F6D00E695DBA81C60E4E4BED554F /* TextInputState.h in Headers */,
-				6A73E51D04FF76058B50585B4865929A /* UIButton+Styles.h in Headers */,
+				3B14335F20637F2B005908EF /* UIView+Styles.h in Headers */,
 				6C72D66B2026CCEE3D57D43992455AA7 /* UILabel+Styles.h in Headers */,
 				B7A79583E5FA5D98DB1E6409B7E150D1 /* UINavigationBar+Styles.h in Headers */,
 				BCD04F50B3AB0F2A30DFAEB95793D73C /* UITextField+Styles.h in Headers */,
 				D34057BEFB6F8C84D32E996A0CF38CDE /* UITextView+Styles.h in Headers */,
-				CECC4ED2CFEC01C7FA6DB2F3821ED8E2 /* UIView+Styles.h in Headers */,
+				6A73E51D04FF76058B50585B4865929A /* UIButton+Styles.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +466,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					27C84E1FD143F448D565BD4420907B2E = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -498,6 +534,7 @@
 			files = (
 				2CE58FDCC7985AB23F665CEF70673036 /* Array+Styles.swift in Sources */,
 				AD5986E23E2CDB2452D0770F78DA1265 /* Block.swift in Sources */,
+				3B14336020637F31005908EF /* UIView+Styles.m in Sources */,
 				567F4944BA6DE909E0AA28560CAA963B /* First.swift in Sources */,
 				EE661D10FCE014C9865D8E6369494D10 /* NSAttributedString+Mutable.swift in Sources */,
 				82FEF6946A432EA33B1125C6939928DE /* NSMutableParagraphStyle+TextStyle.swift in Sources */,
@@ -517,8 +554,8 @@
 				1B71F2FB99556AF787F7AC7F4EFD61B0 /* UINavigationBar+Styles.m in Sources */,
 				7A29E6ECADF103DDB30222D107820C04 /* UIOffset+Size.swift in Sources */,
 				FB8B3C3248E3F4005F713F1BB8BCDB0A /* UITextField+Styles.m in Sources */,
+				3B14336420638128005908EF /* UIView+Styles.swift in Sources */,
 				A46A0C4FF91080006751DA065DD07DE7 /* UITextView+Styles.m in Sources */,
-				B9521EDA9EFA80572F11DF8FAB8D8A3C /* UIView+Styles.m in Sources */,
 				4C998E79CD0751316C6A355361127458 /* ViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9E87D569DC8D811124881863946604D /* Pods-Styles_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -587,6 +625,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -676,6 +715,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Styles/Styles.modulemap";
+				MODULEMAP_PRIVATE_FILE = "Target Support Files/Styles/Classes/UIElement+Extensions/objc/Styles.private.modulemap";
 				PRODUCT_NAME = Styles;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -729,6 +769,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Styles/Styles.modulemap";
+				MODULEMAP_PRIVATE_FILE = "Target Support Files/Styles/Classes/UIElement+Extensions/objc/Styles.private.modulemap";
 				PRODUCT_NAME = Styles;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -828,6 +869,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD880FD1F52978F8BAA3A7EF87F39D2A /* Pods-Styles_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -852,6 +894,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

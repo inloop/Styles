@@ -1,0 +1,12 @@
+module StylesPrivate {
+    header "../Swizzle.h"
+    header "../TextInputState.h"
+    header "../TextInputState.h"
+    header "../UIButton+Styles.h"
+    header "../UILabel+Styles.h"
+    header "../UINavigationBar+Styles.h"
+    header "../UITextField+Styles.h"
+    header "../UITextView+Styles.h"
+    header "../UIView+Styles.h"
+    export *
+}
