@@ -16,6 +16,7 @@
 #import "UIButton+Styles.h"
 #import "UILabel+Styles.h"
 #import "UINavigationBar+Styles.h"
+#import "UISwitch+Styles.h"
 #import "UITextField+Styles.h"
 #import "UITextView+Styles.h"
 #import "UIView+Styles.h"

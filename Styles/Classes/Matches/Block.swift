@@ -40,7 +40,7 @@ public final class Block: NSObject, Match {
     */
     public func ranges(in base: String) -> [NSRange] {
         return find(base)
-            .flatMap { $0 }
+            .compactMap { $0 }
             .map { NSRange($0, in: base) }
     }
 }
