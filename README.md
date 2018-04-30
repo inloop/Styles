@@ -55,6 +55,7 @@
     - [Layer Properties](#layer-properties)
     - [Updating ViewStyle](#updating-viewstyle)
     - [Combining ViewStyle](#combining-viewstyle)
+  - [SwitchStyle](#switchstyle)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [License](#license)
@@ -371,6 +372,22 @@ let blue = ViewStyle(
 let labelStyle = app + semiVisible + blue
 
 myLabel.viewStyle = labelStyle
+```
+
+### SwitchStyle
+
+```swift
+let prettySwitchStyle = SwitchStyle(
+    .onTintColor(.red),
+    .tintColor(.blue),
+    .thumbTintColor(.yellow)
+)
+
+// style only one switch
+mySwitch.switchStyle = prettySwitchStyle
+
+// style all switches
+UISwitch.appearance().switchStyle = prettySwitchStyle
 ```
 
 ## Installation
