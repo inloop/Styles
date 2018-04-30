@@ -120,7 +120,7 @@ public final class ViewStyle: NSObject {
 
      ```swift
      let red = ViewStyle(.backgroundColor(.red))
-     let redTint = red(.tintColor(.red))
+     let redTint = red.updating(.tintColor(.red))
      ```
      */
     public func updating(_ other: Property...) -> ViewStyle {
@@ -139,7 +139,7 @@ public final class ViewStyle: NSObject {
 
     /**
      Checks for equality of layer properties.
-     If the defined layer properties does not match with otehr style the function throws an error. The layer properties has to match otherwise UI glitched may be created. If the error is thrown it contains a description which properties are missing.
+     If the defined layer properties does not match with otehr style the function throws an error. The layer properties has to match otherwise UI glitches may be created. If the error is thrown it contains a description which properties are missing.
      - Parameter other: The view style to check for equal layer properties
      */
     @objc public func hasEqualLayerProperties(_ other: ViewStyle) throws {
