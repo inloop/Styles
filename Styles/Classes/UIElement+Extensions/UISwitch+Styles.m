@@ -11,7 +11,7 @@
 SYNTHESIZE_PROPERTY_OBJ(SwitchStyle, switchStyle, SwitchStyle)
 
 - (void)applyStyle {
-    [self.viewStyle applyTo:self];
+    [super applyStyle];
     [self.switchStyle applyTo:self];
 }
 
