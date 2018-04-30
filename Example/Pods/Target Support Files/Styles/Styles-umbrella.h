@@ -19,6 +19,7 @@
 #import "UITextField+Styles.h"
 #import "UITextView+Styles.h"
 #import "UIView+Styles.h"
+#import "UISwitch+Styles.h"
 
 FOUNDATION_EXPORT double StylesVersionNumber;
 FOUNDATION_EXPORT const unsigned char StylesVersionString[];
