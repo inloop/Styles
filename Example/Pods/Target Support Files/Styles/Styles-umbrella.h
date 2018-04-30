@@ -16,10 +16,10 @@
 #import "UIButton+Styles.h"
 #import "UILabel+Styles.h"
 #import "UINavigationBar+Styles.h"
+#import "UISwitch+Styles.h"
 #import "UITextField+Styles.h"
 #import "UITextView+Styles.h"
 #import "UIView+Styles.h"
-#import "UISwitch+Styles.h"
 
 FOUNDATION_EXPORT double StylesVersionNumber;
 FOUNDATION_EXPORT const unsigned char StylesVersionString[];
