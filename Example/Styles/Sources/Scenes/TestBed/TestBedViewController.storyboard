@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hfr-Ft-eYD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test Bed View Controller-->
+        <scene sceneID="ueC-Wn-XIA">
+            <objects>
+                <viewController id="Hfr-Ft-eYD" customClass="TestBedViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZmF-Wa-zTq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUx-Ki-3CE">
+                                <rect key="frame" x="20" y="111" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BSw-rK-kUK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="DUx-Ki-3CE" firstAttribute="leading" secondItem="Cr2-gK-pa5" secondAttribute="leading" constant="20" id="Yl6-k6-pxo"/>
+                            <constraint firstItem="Cr2-gK-pa5" firstAttribute="trailing" secondItem="DUx-Ki-3CE" secondAttribute="trailing" constant="20" id="b91-9v-4a2"/>
+                            <constraint firstItem="DUx-Ki-3CE" firstAttribute="top" secondItem="Cr2-gK-pa5" secondAttribute="top" constant="91" id="b95-10-5T3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cr2-gK-pa5"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8bN-qh-W0w" appends="YES" id="aVc-x9-gtq"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="DUx-Ki-3CE" id="4tK-KL-oKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nil-kL-DzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8bN-qh-W0w">
+                    <connections>
+                        <action selector="cancelEditing" destination="Hfr-Ft-eYD" id="9n5-5h-9RT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="28" y="233"/>
+        </scene>
+    </scenes>
+</document>

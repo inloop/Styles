@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qm-P7-Ezb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qm-P7-Ezb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,16 +24,17 @@
                         <segue destination="LIT-cr-AoX" kind="relationship" relationship="viewControllers" id="wvS-Vh-h5l"/>
                         <segue destination="sEI-ni-WRs" kind="relationship" relationship="viewControllers" id="9p1-Vx-gmY"/>
                         <segue destination="aey-XY-fui" kind="relationship" relationship="viewControllers" id="rbL-c7-MG3"/>
+                        <segue destination="OWe-S7-6Ev" kind="relationship" relationship="viewControllers" id="bvA-RU-zsR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgV-Xd-faY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969" y="0.0"/>
         </scene>
-        <!--Styles-->
+        <!--GalleryViewController-->
         <scene sceneID="Khz-an-jf7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Styles" id="LIT-cr-AoX" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="GalleryViewController" id="LIT-cr-AoX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Styles gallery" image="doge" id="3f7-8f-Mfh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMX-GF-rKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,7 +49,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdd-BO-O5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="111"/>
+            <point key="canvasLocation" x="1562" y="-110"/>
+        </scene>
+        <!--TestBedViewController-->
+        <scene sceneID="FYA-fC-1m2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestBedViewController" id="OWe-S7-6Ev" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TestBed" id="r0v-Go-u2I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYC-Cm-yQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-5"/>
         </scene>
         <!--UIElements-->
         <scene sceneID="yj9-ZP-JQq">
@@ -58,7 +69,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phx-O5-d5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659" y="227"/>
+            <point key="canvasLocation" x="1554" y="-58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vmW-TA-fwd">

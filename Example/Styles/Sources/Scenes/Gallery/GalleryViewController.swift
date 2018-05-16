@@ -3,7 +3,7 @@
 import Foundation
 import Styles
 
-final class StylesController: UITableViewController {
+final class GalleryViewController: UITableViewController {
     struct ViewModel {
         enum StyleType {
             case view(ViewStyle.Definition)

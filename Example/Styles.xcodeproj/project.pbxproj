@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA50EE020ABF50600633461 /* TestBedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA50EDF20ABF50600633461 /* TestBedViewController.swift */; };
+		3BA50EE220ABF51200633461 /* TestBedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA50EE120ABF51200633461 /* TestBedViewController.storyboard */; };
 		CE1439CA20580A8900C7EA94 /* TextStyle+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439C920580A8900C7EA94 /* TextStyle+Defaults.swift */; };
 		CE1439CC20580BD600C7EA94 /* TextEffect+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439CB20580BD600C7EA94 /* TextEffect+Defaults.swift */; };
 		CE1439CE20580E8B00C7EA94 /* ViewStyle+Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1439CD20580E8B00C7EA94 /* ViewStyle+Predefined.swift */; };
@@ -18,11 +20,10 @@
 		CE1439DE2059308900C7EA94 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */; };
 		CE6CD201202DC08200DA4491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD1F9202DC08100DA4491 /* AppDelegate.swift */; };
 		CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FB202DC08200DA4491 /* LaunchScreen.xib */; };
-		CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FD202DC08200DA4491 /* Features.storyboard */; };
+		CE6CD203202DC08200DA4491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FD202DC08200DA4491 /* Main.storyboard */; };
 		CE6CD204202DC08200DA4491 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD1FF202DC08200DA4491 /* Images.xcassets */; };
-		CE78DE8A2057D72C00A5DCFE /* StylesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE892057D72C00A5DCFE /* StylesController.swift */; };
-		CE78DE8D2057EE8B00A5DCFE /* FeaturesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE8C2057EE8B00A5DCFE /* FeaturesTabBarController.swift */; };
-		CE78DE8F2057F32D00A5DCFE /* Styles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE78DE8E2057F32D00A5DCFE /* Styles.storyboard */; };
+		CE78DE8A2057D72C00A5DCFE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE892057D72C00A5DCFE /* GalleryViewController.swift */; };
+		CE78DE8F2057F32D00A5DCFE /* GalleryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE78DE8E2057F32D00A5DCFE /* GalleryViewController.storyboard */; };
 		CE78DE922057F45700A5DCFE /* ViewStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE912057F45700A5DCFE /* ViewStyleCell.swift */; };
 		CE78DE942057F51700A5DCFE /* TextStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE932057F51700A5DCFE /* TextStyleCell.swift */; };
 		CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DE952057F6FC00A5DCFE /* TextStyle+Predefined.swift */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		22053086918D4A57D6F797DF /* Pods-Styles_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Styles_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Styles_Example/Pods-Styles_Example.release.xcconfig"; sourceTree = "<group>"; };
 		31ED7C1CA5FCF1CBFFF90BFA /* Styles.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Styles.podspec; path = ../Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3BA50EDF20ABF50600633461 /* TestBedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBedViewController.swift; sourceTree = "<group>"; };
+		3BA50EE120ABF51200633461 /* TestBedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestBedViewController.storyboard; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Styles_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Styles_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6631DF66EE27FD89BE4579DD /* Pods_Styles_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +78,10 @@
 		CE1439DD2059308900C7EA94 /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		CE6CD1F9202DC08100DA4491 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6CD1FC202DC08200DA4491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CE6CD1FE202DC08200DA4491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Features.storyboard; sourceTree = "<group>"; };
+		CE6CD1FE202DC08200DA4491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6CD1FF202DC08200DA4491 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CE78DE892057D72C00A5DCFE /* StylesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylesController.swift; sourceTree = "<group>"; };
-		CE78DE8C2057EE8B00A5DCFE /* FeaturesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTabBarController.swift; sourceTree = "<group>"; };
-		CE78DE8E2057F32D00A5DCFE /* Styles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Styles.storyboard; sourceTree = "<group>"; };
+		CE78DE892057D72C00A5DCFE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		CE78DE8E2057F32D00A5DCFE /* GalleryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryViewController.storyboard; sourceTree = "<group>"; };
 		CE78DE912057F45700A5DCFE /* ViewStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyleCell.swift; sourceTree = "<group>"; };
 		CE78DE932057F51700A5DCFE /* TextStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleCell.swift; sourceTree = "<group>"; };
 		CE78DE952057F6FC00A5DCFE /* TextStyle+Predefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Predefined.swift"; sourceTree = "<group>"; };
@@ -131,6 +133,23 @@
 				22053086918D4A57D6F797DF /* Pods-Styles_Example.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3BA50EDE20ABF4EE00633461 /* TestBed */ = {
+			isa = PBXGroup;
+			children = (
+				3BA50EDF20ABF50600633461 /* TestBedViewController.swift */,
+				3BA50EE120ABF51200633461 /* TestBedViewController.storyboard */,
+			);
+			path = TestBed;
+			sourceTree = "<group>";
+		};
+		3BA50EE320ABF58700633461 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CD1FD202DC08200DA4491 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -231,24 +250,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CE78DE872057D68200A5DCFE /* Features */ = {
+		CE78DE872057D68200A5DCFE /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
 				CE78DE902057F44C00A5DCFE /* Cells */,
-				CE78DE892057D72C00A5DCFE /* StylesController.swift */,
-				CE78DE8E2057F32D00A5DCFE /* Styles.storyboard */,
+				CE78DE892057D72C00A5DCFE /* GalleryViewController.swift */,
+				CE78DE8E2057F32D00A5DCFE /* GalleryViewController.storyboard */,
 			);
-			path = Features;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		CE78DE8B2057EE7700A5DCFE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CE78DE8C2057EE8B00A5DCFE /* FeaturesTabBarController.swift */,
-				CE6CD1FD202DC08200DA4491 /* Features.storyboard */,
+				3BA50EE320ABF58700633461 /* Main */,
+				3BA50EDE20ABF4EE00633461 /* TestBed */,
 				CE1439CF205815FC00C7EA94 /* CustomStyle */,
 				CE850FBD205C032000C62E35 /* UIElements */,
-				CE78DE872057D68200A5DCFE /* Features */,
+				CE78DE872057D68200A5DCFE /* Gallery */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -447,7 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE850FBA205BDFED00C62E35 /* MatchPicker.storyboard in Resources */,
-				CE78DE8F2057F32D00A5DCFE /* Styles.storyboard in Resources */,
+				CE78DE8F2057F32D00A5DCFE /* GalleryViewController.storyboard in Resources */,
 				CE6CD204202DC08200DA4491 /* Images.xcassets in Resources */,
 				CE850F90205A7F9700C62E35 /* DefineTextStyle.storyboard in Resources */,
 				CE1439D82058202400C7EA94 /* DefineViewStyle.storyboard in Resources */,
@@ -455,7 +474,8 @@
 				CE850FBF205C034700C62E35 /* UIElements.storyboard in Resources */,
 				CE850F99205BB61300C62E35 /* TextDecoration.storyboard in Resources */,
 				CE6CD202202DC08200DA4491 /* LaunchScreen.xib in Resources */,
-				CE6CD203202DC08200DA4491 /* Features.storyboard in Resources */,
+				CE6CD203202DC08200DA4491 /* Main.storyboard in Resources */,
+				3BA50EE220ABF51200633461 /* TestBedViewController.storyboard in Resources */,
 				CE850F87205945EA00C62E35 /* Shadow.storyboard in Resources */,
 				CE850FAD205BD02A00C62E35 /* TextEffects.storyboard in Resources */,
 				CE1439D32058162200C7EA94 /* CustomStyle.storyboard in Resources */,
@@ -509,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE850F89205945FD00C62E35 /* ShadowViewController.swift in Sources */,
-				CE78DE8D2057EE8B00A5DCFE /* FeaturesTabBarController.swift in Sources */,
 				CE850F96205ACFBB00C62E35 /* WritingDirectionPickerViewController.swift in Sources */,
 				CE850FB5205BDC4500C62E35 /* Match+Definition.swift in Sources */,
 				CE850F9F205BBB1B00C62E35 /* TextDecoration+Definition.swift in Sources */,
@@ -527,6 +546,7 @@
 				CE1439CA20580A8900C7EA94 /* TextStyle+Defaults.swift in Sources */,
 				CE850FAA205BC42700C62E35 /* UIColor+CodeDescription.swift in Sources */,
 				CE850FA5205BBB8E00C62E35 /* PatternPickerViewController.swift in Sources */,
+				3BA50EE020ABF50600633461 /* TestBedViewController.swift in Sources */,
 				CE78DE962057F6FC00A5DCFE /* TextStyle+Predefined.swift in Sources */,
 				CE78DE942057F51700A5DCFE /* TextStyleCell.swift in Sources */,
 				CE850FB8205BDFB900C62E35 /* MatchPickerViewController.swift in Sources */,
@@ -539,7 +559,7 @@
 				CE1439D620581FF200C7EA94 /* DefineViewStyleViewContoller.swift in Sources */,
 				CE1439CE20580E8B00C7EA94 /* ViewStyle+Predefined.swift in Sources */,
 				CE850F8E205A7F8800C62E35 /* DefineTextStyleViewController.swift in Sources */,
-				CE78DE8A2057D72C00A5DCFE /* StylesController.swift in Sources */,
+				CE78DE8A2057D72C00A5DCFE /* GalleryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,12 +574,12 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		CE6CD1FD202DC08200DA4491 /* Features.storyboard */ = {
+		CE6CD1FD202DC08200DA4491 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE6CD1FE202DC08200DA4491 /* Base */,
 			);
-			name = Features.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
