@@ -64,13 +64,15 @@
 }
 
 - (BOOL)swizzle_becomeFirstResponder {
+    BOOL isFirstResponder = [self swizzle_becomeFirstResponder];
     [self updateStylesForState:kEditing];
-    return [self swizzle_becomeFirstResponder];
+    return isFirstResponder;
 }
 
 - (BOOL)swizzle_resignFirstResponder {
+    BOOL didResignFirstResponder = [self swizzle_resignFirstResponder];
     [self updateStylesForState:kInactive];
-    return [self swizzle_resignFirstResponder];
+    return didResignFirstResponder;
 }
 
 - (void)swizzle_awakeFromNib {
@@ -131,17 +133,7 @@
 }
 
 - (void)applyTextStyle:(TextStyle *)style {
-    NSString *text = self.text;
-
-    if (!text || !style) {
-        return;
-    }
-
-    UITextRange *range = self.selectedTextRange;
-    [self setAttributedText:[style applyTo:text]];
-    if (range) {
-        self.selectedTextRange = range;
-    }
+    [self setDefaultTextAttributes:[style attributes]];
 }
 
 - (void)applyViewStyle:(ViewStyle *)style {

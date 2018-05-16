@@ -73,181 +73,71 @@
 
 /* Begin PBXFileReference section */
 		01818DB1A7DB742C37A6022DA049C4E1 /* First.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
-		020886FDC6A78DB6A095781239A9DDD3 /* Categories.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Categories.html; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories.html; sourceTree = "<group>"; };
-		046C6567B67695CCAEFDEEB878D237F8 /* Property.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Property.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/TextStyle/Property.html; sourceTree = "<group>"; };
-		07D68CC26485DEEF3C755A012C1A5C49 /* TextEffect.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextEffect.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Enums/TextEffect.html; sourceTree = "<group>"; };
-		081ECEFDA585D1A42F9773276CB0EDEA /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/swift/img/carat.png; sourceTree = "<group>"; };
-		0869B98A201D57C67B752C1A1DB4254B /* UINavigationBar(TextStyle).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UINavigationBar(TextStyle).html"; path = "docs/objc/Categories/UINavigationBar(TextStyle).html"; sourceTree = "<group>"; };
 		092AC87F24E14872A785A02888E64EEB /* SwitchStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchStyle.swift; path = Styles/Classes/SwitchStyle.swift; sourceTree = "<group>"; };
-		0A88DF59FAA7CB6C001A10A82127A4F5 /* Categories.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Categories.html; path = docs/objc/Categories.html; sourceTree = "<group>"; };
-		0AC44D225FF8A9C365D5BA13BED70030 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/swift/Classes.html; sourceTree = "<group>"; };
-		0D6FDC9D35059770F5709F82829AD340 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
-		10077BE57CB0A1DFAF9E87D00344B159 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
 		1103A84ED35933464CD190CB41D5DFD3 /* NSMutableParagraphStyle+TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle+TextStyle.swift"; sourceTree = "<group>"; };
-		15626F81780CBF0F1C432356E9E60601 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/objc/js/jquery.min.js; sourceTree = "<group>"; };
-		1A7AA9A58D5D32D143B71CA0120C4154 /* TextEffect.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextEffect.html; path = docs/swift/Enums/TextEffect.html; sourceTree = "<group>"; };
 		1E02B94B908D572E5DFC21197B826655 /* UITextField+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Styles.m"; sourceTree = "<group>"; };
-		1E6412444B96FFA91F9EEF4D97395007 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/swift/img/gh.png; sourceTree = "<group>"; };
 		1F600D5C8375D6976D8D33CBA59579AE /* Pods-Styles_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Styles_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1F99B3E5C0D14B5F3CA69A019FE92FC2 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/swift/docsets/Styles.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
-		213AC29BD51836C9C9413F3914E27377 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/objc/docsets/Styles.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		21C0AEAC8A415238B8AF84EAF2A5613E /* UIOffset.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIOffset.html; path = docs/swift/Extensions/UIOffset.html; sourceTree = "<group>"; };
 		25422082CBBE5892F1A7DA090D9750C5 /* Pods-Styles_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Styles_Example-dummy.m"; sourceTree = "<group>"; };
 		25E29A41E6A87BE232AE98AEC32A0220 /* NSAttributedString+Mutable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Mutable.swift"; sourceTree = "<group>"; };
 		265A6897C1B8BF3951D9D3B7B5EC3B47 /* UILabel+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UILabel+Styles.h"; sourceTree = "<group>"; };
-		269B634B9285034CF0DF486EE78C66C9 /* UIView(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIView(Styles).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UIView(Styles).html"; sourceTree = "<group>"; };
 		26ACF933809E934208E6F0CC76B80750 /* UIColor+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
-		27E9C239527DAA8FD7D72481A487C046 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/swift/Structs.html; sourceTree = "<group>"; };
-		289B5FA3DF9A2A2F1DF4B0E470BC5CEA /* Block.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Block.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/Block.html; sourceTree = "<group>"; };
-		2A96F9524E79E91C49A0B6316711395F /* Styles.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = Styles.tgz; path = docs/swift/docsets/Styles.tgz; sourceTree = "<group>"; };
-		2A97FA0F669020093168DA7ADD409EC0 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		2D2BC44E40D83EB3338F9DDDCEEF0FD7 /* UILabel(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UILabel(Styles).html"; path = "docs/objc/Categories/UILabel(Styles).html"; sourceTree = "<group>"; };
-		2E48613EE18DF2A01F6E75B16C03FED8 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
 		2EEF2C621486B96A46360966B204E77C /* Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Swizzle.h; sourceTree = "<group>"; };
-		2F2E1167C6AC63BDFE4ECCE6DA586D55 /* Pattern.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Pattern.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Structs/TextDecoration/Pattern.html; sourceTree = "<group>"; };
 		31122CDA698504BDFB1569C61367A3AF /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
 		3193E41C8F56FC80D668A44E77E98D69 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Colorize.swift"; sourceTree = "<group>"; };
-		31D8F7DDEEC07228919AC9045D2A392F /* TextStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextStyle.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/TextStyle.html; sourceTree = "<group>"; };
-		32A5F75BE79C1D8D7619C12A8D03335A /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/objc/badge.svg; sourceTree = "<group>"; };
 		32F51507323EA8324438A81D7A06608A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AFB41697E8DAC17614A4E84AD505A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35F98FE389B76793C09CB74F4A9FB795 /* UINavigationBar(TextStyle).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UINavigationBar(TextStyle).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UINavigationBar(TextStyle).html"; sourceTree = "<group>"; };
 		36B1FE6C75132E93002767A5A9B49836 /* Shadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shadow.swift; path = Styles/Classes/Shadow.swift; sourceTree = "<group>"; };
 		38927F565972AB43D41E224816AC3F52 /* UISwitch+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+Styles.m"; sourceTree = "<group>"; };
 		38998D66DDF5A96AF1E14C20D2426D70 /* Pods-Styles_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3906353910E8E13592CA9EB85B817DBA /* UIButton(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIButton(Styles).html"; path = "docs/objc/Categories/UIButton(Styles).html"; sourceTree = "<group>"; };
-		3B8EBCE945E8589928C6A9F0B3652176 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/objc/css/highlight.css; sourceTree = "<group>"; };
 		3BAC2ED7471CDDAFF3F31B226D05E4A9 /* UIButton+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Styles.h"; sourceTree = "<group>"; };
-		40EA5E9F944CF3C551B4A661A6834D27 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Styles_Example.framework; path = "Pods-Styles_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EA5E9F944CF3C551B4A661A6834D27 /* Pods_Styles_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Styles_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428F7523FA453AE07F31AB622ED2714B /* Styles.unit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.unit.xcconfig; sourceTree = "<group>"; };
-		42B5207EB0A0179D1ED70433E14C4AB8 /* ParagraphStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ParagraphStyle.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/TextStyle/ParagraphStyle.html; sourceTree = "<group>"; };
-		455BABE6301F5D8CCECB9F6A7333F968 /* Range.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Range.html; path = docs/swift/Classes/Range.html; sourceTree = "<group>"; };
-		4AE84CAE6B40E7E973BDB8FC8961F72A /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		4B41A51E0E8829A04EE9BC047C3527B8 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		4C474BFA8BD7AFE850CCB42A6D67D61A /* First.html */ = {isa = PBXFileReference; includeInIndex = 1; name = First.html; path = docs/swift/Classes/First.html; sourceTree = "<group>"; };
-		4DEEE59948EDF6538DBCC0372455C805 /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		50703A3338FEBB028843D3BA87F6BF32 /* TextStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextStyle.html; path = docs/swift/Classes/TextStyle.html; sourceTree = "<group>"; };
-		51D30090C10FF47964FB246CF271E90B /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		529F0F8FF441F70A497B66589F205D90 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/swift/Enums.html; sourceTree = "<group>"; };
-		52FB92B4E01DFBF262516278A9F8D835 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		4DEEE59948EDF6538DBCC0372455C805 /* Styles.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Styles.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5391517F25CF9861534104FB182CBB14 /* UINavigationBar+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Styles.m"; sourceTree = "<group>"; };
 		54B20204F0F1750D0A8B0D89085FEF1A /* UITextView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Styles.h"; sourceTree = "<group>"; };
-		56A0955430F14607C77B177944E6E9D4 /* Regex.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Regex.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/Regex.html; sourceTree = "<group>"; };
-		581E789A8E3ACF6CD21DD3522A31108E /* Regex.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Regex.html; path = docs/swift/Classes/Regex.html; sourceTree = "<group>"; };
-		58A45305141DA7D83A6525C3E3919E13 /* Shadow.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Shadow.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Structs/Shadow.html; sourceTree = "<group>"; };
 		5949143569ACBDFA27E16A95F6D97B98 /* Styles-Unit-Tests-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-Unit-Tests-prefix.pch"; sourceTree = "<group>"; };
-		5AEEFEA750B2BBDBAACD75B97CCB33B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5E2B593698124FC3B010EB2148DDD422 /* Property.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Property.html; path = docs/swift/Classes/TextStyle/Property.html; sourceTree = "<group>"; };
-		600DF84690B4CE610BFF5079D6968373 /* WritingDirectionOverride.html */ = {isa = PBXFileReference; includeInIndex = 1; name = WritingDirectionOverride.html; path = docs/swift/Classes/TextStyle/WritingDirectionOverride.html; sourceTree = "<group>"; };
-		61557FFB5149AD09248CC76920D5B498 /* ViewStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ViewStyle.html; path = docs/swift/Classes/ViewStyle.html; sourceTree = "<group>"; };
+		5AEEFEA750B2BBDBAACD75B97CCB33B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		65590EA96EB65F6527E5E838516BF544 /* Styles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-prefix.pch"; sourceTree = "<group>"; };
-		666A0460CCB2754AC7E7B07E6425D93C /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Styles.framework; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		666A0460CCB2754AC7E7B07E6425D93C /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		669897FCA7A90C35D872B21E849CD8D4 /* UIView+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Styles.h"; sourceTree = "<group>"; };
 		66A6EBA02365A315E769B2D8EDBBDF1D /* Array+Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Styles.swift"; sourceTree = "<group>"; };
 		670B8D7F1FF02DB65C9FA257A73C2B14 /* TextEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextEffect.swift; path = Styles/Classes/TextEffect.swift; sourceTree = "<group>"; };
-		68DC5A3D0AB3CF9D259BFC4A8EFB5C7D /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		69B2080EE2A3B9BFC2027BF794984195 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
-		6AB845F5874F10D8D51672266C041716 /* ParagraphStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ParagraphStyle.html; path = docs/swift/Classes/TextStyle/ParagraphStyle.html; sourceTree = "<group>"; };
-		6B6E9C848DA5E18410BB73A260B429E2 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
 		6B7403C925728485DD269CC4631B9296 /* ViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewStyle.swift; path = Styles/Classes/ViewStyle.swift; sourceTree = "<group>"; };
-		6C755FC9619FF02C100E49F10D9EC17A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/swift/docsets/Styles.docset/Contents/Info.plist; sourceTree = "<group>"; };
 		6D7F369FE55606D0306EA9C5EE66718F /* Styles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Styles.xcconfig; sourceTree = "<group>"; };
-		6DACBA37AFB28866D8C2EF9762FF24E1 /* NSMutableParagraphStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NSMutableParagraphStyle.html; path = docs/swift/Extensions/NSMutableParagraphStyle.html; sourceTree = "<group>"; };
 		6FB87E3C989DEE79DBE64D58852DB8EC /* UINavigationBar+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Styles.h"; sourceTree = "<group>"; };
-		7095DC83764393AFEF012AE52C7B467A /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/objc/js/jazzy.js; sourceTree = "<group>"; };
-		719223DFCAA13DC38D432F7A9E8AFA95 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
-		72B6F74421EAEC831D29DE464EB26DD5 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/swift/search.json; sourceTree = "<group>"; };
-		73CB129A1352B0233BF44BA0736821F1 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/objc/search.json; sourceTree = "<group>"; };
-		73E22A86666CF997F8BB6A0C55ABC210 /* Range.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Range.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/Range.html; sourceTree = "<group>"; };
-		74B630C621C9648402642072C403F012 /* Style.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Style.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Structs/TextDecoration/Style.html; sourceTree = "<group>"; };
 		75D636B27A3909BF2C37B7A2FB36EA29 /* Block.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		772661D4E69DB9060E7ABEC7EBC2C5DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		776B8654D5867C723C42FF9C27084887 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		7919A1E1D4067668C5662FF632B757B6 /* Block.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Block.html; path = docs/swift/Classes/Block.html; sourceTree = "<group>"; };
-		79E93402904BD0F14C09C8050E4A2E6D /* Pattern.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Pattern.html; path = docs/swift/Structs/TextDecoration/Pattern.html; sourceTree = "<group>"; };
-		7A8D235AE9AC7BEC7E9415221D3BE529 /* Match.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Match.html; path = docs/swift/Protocols/Match.html; sourceTree = "<group>"; };
 		7B2A3137FABDCEFADC9FCE6A8A918008 /* Styles.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Styles.modulemap; sourceTree = "<group>"; };
 		7CD558B594129755460A3ADCE8FB3734 /* Pods-Styles_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Styles_Example.modulemap"; sourceTree = "<group>"; };
 		7CFE721723A7713A4096FB7ED6EAA680 /* Styles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Styles-dummy.m"; sourceTree = "<group>"; };
-		80481C57F75F6091F946D5914ED8B8E2 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/swift/Protocols.html; sourceTree = "<group>"; };
-		827260C9C022B2FC2AD8FC84D56E3B21 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/swift/badge.svg; sourceTree = "<group>"; };
 		82AE37FCD6C73910FD55E799211BF9B6 /* TextDecoration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDecoration.swift; path = Styles/Classes/TextDecoration.swift; sourceTree = "<group>"; };
-		8334421C23C105C7D1A564FBBF7CA013 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/objc/Enums.html; sourceTree = "<group>"; };
 		83529D903409B3657E2F25CE6E9380F3 /* UITextView+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Styles.m"; sourceTree = "<group>"; };
-		83A2A2102705DA62081A776B58130E3B /* Match.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Match.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Protocols/Match.html; sourceTree = "<group>"; };
 		860CA5048AC2FD5124A4D979A385475F /* Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Styles.h; path = Styles/Classes/Styles.h; sourceTree = "<group>"; };
-		8808153E48409EB694B097EBDF64DCA7 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
-		8A2BC32EC57B66B491AA01C07DDC213D /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/swift/undocumented.json; sourceTree = "<group>"; };
-		8AA5BFB3274F9DB8DD51C1821A6EF854 /* UITextView(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UITextView(Styles).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UITextView(Styles).html"; sourceTree = "<group>"; };
-		8AE411B9FFA98A6D15F4EA12CB774D32 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/objc/css/jazzy.css; sourceTree = "<group>"; };
 		8D632892FB66A6E77E31EFBEFB55BDF5 /* UIView+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Styles.m"; sourceTree = "<group>"; };
-		924944A0A0B86E421BBA0C9BB5D71036 /* Style.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Style.html; path = docs/swift/Structs/TextDecoration/Style.html; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		949EC4665641BA0D5A4096E5112FEDA8 /* Styles-Unit-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Styles-Unit-Tests-frameworks.sh"; sourceTree = "<group>"; };
 		94F82D0E8D1E131584D2DEE715376F3C /* ViewStyleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewStyleTests.swift; path = Styles/Tests/ViewStyleTests.swift; sourceTree = "<group>"; };
-		959A3DB9BA36EDE70311C5E85E8C6ABE /* UITextField(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UITextField(Styles).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UITextField(Styles).html"; sourceTree = "<group>"; };
 		96508FCF92ABBEBC5BC3EA98B7BA3297 /* UIButton+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Styles.m"; sourceTree = "<group>"; };
-		97A694815BC5F4BDA70A7E990CBF2F95 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/swift/css/jazzy.css; sourceTree = "<group>"; };
-		985133048B42650B41A0A17DA847DEC0 /* Styles.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = Styles.tgz; path = docs/objc/docsets/Styles.tgz; sourceTree = "<group>"; };
 		99260C75406F8526D6EBB5E17884A6D2 /* Swizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Swizzle.m; sourceTree = "<group>"; };
-		9B865514C0B50499864CAB6F8A560D11 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
 		9D2EB5B205725800069426D8D72C4686 /* UIImage+Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Attachment.swift"; sourceTree = "<group>"; };
-		9D369CE81B59CEC30E3C248579B7BD8D /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/swift/css/highlight.css; sourceTree = "<group>"; };
-		9E3FE622551BED488AAD00F030F37521 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
 		9EAC79940FEB7A9D2A00BDE4A6911FEB /* UILabel+Styles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Styles.m"; sourceTree = "<group>"; };
 		A17F26758B8C8F610E5D8004F089EF5D /* Styles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Styles-umbrella.h"; sourceTree = "<group>"; };
-		A462F653042CF89DA8D08EAD3968723E /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/swift/Extensions.html; sourceTree = "<group>"; };
-		A57E791072F15ABBB4757EC62A6A45B7 /* UIView(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIView(Styles).html"; path = "docs/objc/Categories/UIView(Styles).html"; sourceTree = "<group>"; };
 		A5F06609F447D5845B19F07A1D36D57C /* Styles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Styles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A71044418672BC3BEF11FC5E462B7576 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		A8FFD0E38A0323B5C9DF5386C2F7EF8F /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
 		AA1912D5C396B47F21D81149D96A167D /* UISwitch+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISwitch+Styles.h"; sourceTree = "<group>"; };
-		AB659E9270D9F299D7EA078D0E32A9A1 /* Shadow.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Shadow.html; path = docs/swift/Structs/Shadow.html; sourceTree = "<group>"; };
-		ABD9F159FC1D62F8B6FA9FEC6427EE1F /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/objc/img/gh.png; sourceTree = "<group>"; };
 		AD880FD1F52978F8BAA3A7EF87F39D2A /* Pods-Styles_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AFD55ECD26959FD788E0BF32405F7812 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/objc/index.html; sourceTree = "<group>"; };
-		B0BBC11BB6787DE02CD9F363D45F9DA2 /* Property.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Property.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/ViewStyle/Property.html; sourceTree = "<group>"; };
 		B18B2181FD803D7F150E173060DBCFC4 /* TextStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyle.swift; path = Styles/Classes/TextStyle.swift; sourceTree = "<group>"; };
-		B4C694428339C59B60C68A921965B308 /* Property.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Property.html; path = docs/swift/Classes/ViewStyle/Property.html; sourceTree = "<group>"; };
-		B61659790A5278E5F36AD485DFB4EE83 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
-		BCCDBFB8561D22506C083B9604BD1D28 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
-		BD0E7B05A48C359314DCC4338F21563E /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
 		BDBCDA510AC5D75B8E85FC507A32EDCF /* TextInputState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TextInputState.h; sourceTree = "<group>"; };
 		BFD3DB4BE740EC359FCAB1E28B738933 /* Pods-Styles_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Styles_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C034E95D53D2978A2CF5BE5A667508F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C034E95D53D2978A2CF5BE5A667508F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C18312511F28ED1E07F4CBA566A90D28 /* Styles-Unit-Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Styles-Unit-Tests-Info.plist"; sourceTree = "<group>"; };
-		C2D5D4DF8C7037DC6D996FB3DDBC09AD /* TextInputState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextInputState.html; path = docs/objc/Enums/TextInputState.html; sourceTree = "<group>"; };
-		C3823C1888427F9BB30D9A0503718438 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
-		C574041268845203C0A95D9A8621E910 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/objc/docsets/Styles.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
 		C7062D7FBECD968AEFA6482481EC0BBD /* Styles-Unit-Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Styles-Unit-Tests"; path = "Styles-Unit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E87D569DC8D811124881863946604D /* Pods-Styles_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Styles_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CC03155C81151A861DDF8E866264F5A6 /* WritingDirectionOverride.html */ = {isa = PBXFileReference; includeInIndex = 1; name = WritingDirectionOverride.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/TextStyle/WritingDirectionOverride.html; sourceTree = "<group>"; };
-		CD0FFCFC8AE9357CF9367951D4A6B33D /* TextInputState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextInputState.html; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Enums/TextInputState.html; sourceTree = "<group>"; };
 		CE4FE96C3E91C4FE92D088FE5DBD3192 /* Styles-Unit-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Styles-Unit-Tests-resources.sh"; sourceTree = "<group>"; };
-		CF50F080F523C1BC28F114E415D4EDD3 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/objc/img/carat.png; sourceTree = "<group>"; };
-		D0B053963DA42E7EE63E2BF4DB157312 /* UITextView(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UITextView(Styles).html"; path = "docs/objc/Categories/UITextView(Styles).html"; sourceTree = "<group>"; };
-		D1420DDCF69776A633597EB23BE59DE1 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/objc/img/dash.png; sourceTree = "<group>"; };
-		D5938F1CF05B21834AB490D3AC26BCE1 /* TextDecoration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextDecoration.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Structs/TextDecoration.html; sourceTree = "<group>"; };
-		D804484F12973D3326BD6016744B6CA2 /* TextDecoration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TextDecoration.html; path = docs/swift/Structs/TextDecoration.html; sourceTree = "<group>"; };
-		D9F2F5AC77EC16BF08D0FCA0F4A9DB12 /* UIButton(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIButton(Styles).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UIButton(Styles).html"; sourceTree = "<group>"; };
-		DB20A10AF58B2943998929B4ABFF67FB /* ViewStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ViewStyle.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/ViewStyle.html; sourceTree = "<group>"; };
-		DB4686CBA71D092C266D22C460A53315 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/swift/img/dash.png; sourceTree = "<group>"; };
-		DCF692C5D3B55B3F30FCFC6E50BA0834 /* UITextField(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UITextField(Styles).html"; path = "docs/objc/Categories/UITextField(Styles).html"; sourceTree = "<group>"; };
 		DE8BEDCA5DA425F7F7F50C5AF7E92E7F /* Pods-Styles_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Styles_Example-umbrella.h"; sourceTree = "<group>"; };
-		DF9E5C4F0415D60771D9A9225682C3D3 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/objc/undocumented.json; sourceTree = "<group>"; };
-		E1162A3F92005FD978C836A5CEF9ACA2 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
-		E25316B0C18130C5C324007D6717A766 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/swift/js/jazzy.js; sourceTree = "<group>"; };
 		E7FA7CD4547286885C1969E106408843 /* TextStyleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStyleTests.swift; path = Styles/Tests/TextStyleTests.swift; sourceTree = "<group>"; };
-		E9D32E9DA65BA5DD428B6AC57D08B750 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/swift/js/jquery.min.js; sourceTree = "<group>"; };
-		ECF5ADAADA8507A04FC3C1DADFB68B63 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/objc/docsets/Styles.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		EDBCD6FC38ACD2AF2ECDB36ECECBBC88 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Structs.html; sourceTree = "<group>"; };
-		EF7ECC194967D40BFDF2DDEA7F8F41DE /* NSMutableParagraphStyle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NSMutableParagraphStyle.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Extensions/NSMutableParagraphStyle.html; sourceTree = "<group>"; };
 		F184598C5E742E7B8FFFD085639C746D /* Pods-Styles_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Styles_Example-resources.sh"; sourceTree = "<group>"; };
-		F2BE394D1D5CB206D2691770818CFCC1 /* UIOffset.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIOffset.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Extensions/UIOffset.html; sourceTree = "<group>"; };
 		F2F23D31299C049FA203B076C2BB87B9 /* UIOffset+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIOffset+Size.swift"; sourceTree = "<group>"; };
-		F4C9363E39B51B95DDA90D1300D41B25 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/swift/index.html; sourceTree = "<group>"; };
-		FB905454D2CF3387EF5CFDA7F0108FC0 /* UILabel(Styles).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "UILabel(Styles).html"; path = "docs/objc/docsets/Styles.docset/Contents/Resources/Documents/Categories/UILabel(Styles).html"; sourceTree = "<group>"; };
-		FBBE0B7014F41BAD536A0DA2EEEA340D /* First.html */ = {isa = PBXFileReference; includeInIndex = 1; name = First.html; path = docs/swift/docsets/Styles.docset/Contents/Resources/Documents/Classes/First.html; sourceTree = "<group>"; };
 		FC328B08A1ED7683A21C7D776550E5F2 /* UITextField+Styles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Styles.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,119 +303,9 @@
 		A7D00BCE6D78B7AF5CB9CD7376E76E89 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				32A5F75BE79C1D8D7619C12A8D03335A /* badge.svg */,
-				827260C9C022B2FC2AD8FC84D56E3B21 /* badge.svg */,
-				7919A1E1D4067668C5662FF632B757B6 /* Block.html */,
-				289B5FA3DF9A2A2F1DF4B0E470BC5CEA /* Block.html */,
-				8808153E48409EB694B097EBDF64DCA7 /* carat.png */,
-				CF50F080F523C1BC28F114E415D4EDD3 /* carat.png */,
-				081ECEFDA585D1A42F9773276CB0EDEA /* carat.png */,
-				C3823C1888427F9BB30D9A0503718438 /* carat.png */,
-				0A88DF59FAA7CB6C001A10A82127A4F5 /* Categories.html */,
-				020886FDC6A78DB6A095781239A9DDD3 /* Categories.html */,
-				0AC44D225FF8A9C365D5BA13BED70030 /* Classes.html */,
-				719223DFCAA13DC38D432F7A9E8AFA95 /* Classes.html */,
-				DB4686CBA71D092C266D22C460A53315 /* dash.png */,
-				4B41A51E0E8829A04EE9BC047C3527B8 /* dash.png */,
-				D1420DDCF69776A633597EB23BE59DE1 /* dash.png */,
-				ECF5ADAADA8507A04FC3C1DADFB68B63 /* dash.png */,
-				C574041268845203C0A95D9A8621E910 /* docSet.dsidx */,
-				1F99B3E5C0D14B5F3CA69A019FE92FC2 /* docSet.dsidx */,
-				8334421C23C105C7D1A564FBBF7CA013 /* Enums.html */,
-				E1162A3F92005FD978C836A5CEF9ACA2 /* Enums.html */,
-				B61659790A5278E5F36AD485DFB4EE83 /* Enums.html */,
-				529F0F8FF441F70A497B66589F205D90 /* Enums.html */,
-				9B865514C0B50499864CAB6F8A560D11 /* Extensions.html */,
-				A462F653042CF89DA8D08EAD3968723E /* Extensions.html */,
-				FBBE0B7014F41BAD536A0DA2EEEA340D /* First.html */,
-				4C474BFA8BD7AFE850CCB42A6D67D61A /* First.html */,
-				BCCDBFB8561D22506C083B9604BD1D28 /* gh.png */,
-				1E6412444B96FFA91F9EEF4D97395007 /* gh.png */,
-				ABD9F159FC1D62F8B6FA9FEC6427EE1F /* gh.png */,
-				69B2080EE2A3B9BFC2027BF794984195 /* gh.png */,
-				6B6E9C848DA5E18410BB73A260B429E2 /* highlight.css */,
-				9D369CE81B59CEC30E3C248579B7BD8D /* highlight.css */,
-				2E48613EE18DF2A01F6E75B16C03FED8 /* highlight.css */,
-				3B8EBCE945E8589928C6A9F0B3652176 /* highlight.css */,
-				F4C9363E39B51B95DDA90D1300D41B25 /* index.html */,
-				BD0E7B05A48C359314DCC4338F21563E /* index.html */,
-				AFD55ECD26959FD788E0BF32405F7812 /* index.html */,
-				9E3FE622551BED488AAD00F030F37521 /* index.html */,
-				213AC29BD51836C9C9413F3914E27377 /* Info.plist */,
-				6C755FC9619FF02C100E49F10D9EC17A /* Info.plist */,
-				A8FFD0E38A0323B5C9DF5386C2F7EF8F /* jazzy.css */,
-				97A694815BC5F4BDA70A7E990CBF2F95 /* jazzy.css */,
-				2A97FA0F669020093168DA7ADD409EC0 /* jazzy.css */,
-				8AE411B9FFA98A6D15F4EA12CB774D32 /* jazzy.css */,
-				E25316B0C18130C5C324007D6717A766 /* jazzy.js */,
-				10077BE57CB0A1DFAF9E87D00344B159 /* jazzy.js */,
-				7095DC83764393AFEF012AE52C7B467A /* jazzy.js */,
-				4AE84CAE6B40E7E973BDB8FC8961F72A /* jazzy.js */,
-				52FB92B4E01DFBF262516278A9F8D835 /* jquery.min.js */,
-				E9D32E9DA65BA5DD428B6AC57D08B750 /* jquery.min.js */,
-				51D30090C10FF47964FB246CF271E90B /* jquery.min.js */,
-				15626F81780CBF0F1C432356E9E60601 /* jquery.min.js */,
 				5AEEFEA750B2BBDBAACD75B97CCB33B8 /* LICENSE */,
-				83A2A2102705DA62081A776B58130E3B /* Match.html */,
-				7A8D235AE9AC7BEC7E9415221D3BE529 /* Match.html */,
-				EF7ECC194967D40BFDF2DDEA7F8F41DE /* NSMutableParagraphStyle.html */,
-				6DACBA37AFB28866D8C2EF9762FF24E1 /* NSMutableParagraphStyle.html */,
-				6AB845F5874F10D8D51672266C041716 /* ParagraphStyle.html */,
-				42B5207EB0A0179D1ED70433E14C4AB8 /* ParagraphStyle.html */,
-				2F2E1167C6AC63BDFE4ECCE6DA586D55 /* Pattern.html */,
-				79E93402904BD0F14C09C8050E4A2E6D /* Pattern.html */,
-				B4C694428339C59B60C68A921965B308 /* Property.html */,
-				B0BBC11BB6787DE02CD9F363D45F9DA2 /* Property.html */,
-				046C6567B67695CCAEFDEEB878D237F8 /* Property.html */,
-				5E2B593698124FC3B010EB2148DDD422 /* Property.html */,
-				0D6FDC9D35059770F5709F82829AD340 /* Protocols.html */,
-				80481C57F75F6091F946D5914ED8B8E2 /* Protocols.html */,
-				73E22A86666CF997F8BB6A0C55ABC210 /* Range.html */,
-				455BABE6301F5D8CCECB9F6A7333F968 /* Range.html */,
 				C034E95D53D2978A2CF5BE5A667508F3 /* README.md */,
-				581E789A8E3ACF6CD21DD3522A31108E /* Regex.html */,
-				56A0955430F14607C77B177944E6E9D4 /* Regex.html */,
-				A71044418672BC3BEF11FC5E462B7576 /* search.json */,
-				72B6F74421EAEC831D29DE464EB26DD5 /* search.json */,
-				73CB129A1352B0233BF44BA0736821F1 /* search.json */,
-				68DC5A3D0AB3CF9D259BFC4A8EFB5C7D /* search.json */,
-				AB659E9270D9F299D7EA078D0E32A9A1 /* Shadow.html */,
-				58A45305141DA7D83A6525C3E3919E13 /* Shadow.html */,
-				EDBCD6FC38ACD2AF2ECDB36ECECBBC88 /* Structs.html */,
-				27E9C239527DAA8FD7D72481A487C046 /* Structs.html */,
-				74B630C621C9648402642072C403F012 /* Style.html */,
-				924944A0A0B86E421BBA0C9BB5D71036 /* Style.html */,
 				4DEEE59948EDF6538DBCC0372455C805 /* Styles.podspec */,
-				985133048B42650B41A0A17DA847DEC0 /* Styles.tgz */,
-				2A96F9524E79E91C49A0B6316711395F /* Styles.tgz */,
-				D5938F1CF05B21834AB490D3AC26BCE1 /* TextDecoration.html */,
-				D804484F12973D3326BD6016744B6CA2 /* TextDecoration.html */,
-				07D68CC26485DEEF3C755A012C1A5C49 /* TextEffect.html */,
-				1A7AA9A58D5D32D143B71CA0120C4154 /* TextEffect.html */,
-				C2D5D4DF8C7037DC6D996FB3DDBC09AD /* TextInputState.html */,
-				CD0FFCFC8AE9357CF9367951D4A6B33D /* TextInputState.html */,
-				31D8F7DDEEC07228919AC9045D2A392F /* TextStyle.html */,
-				50703A3338FEBB028843D3BA87F6BF32 /* TextStyle.html */,
-				3906353910E8E13592CA9EB85B817DBA /* UIButton(Styles).html */,
-				D9F2F5AC77EC16BF08D0FCA0F4A9DB12 /* UIButton(Styles).html */,
-				FB905454D2CF3387EF5CFDA7F0108FC0 /* UILabel(Styles).html */,
-				2D2BC44E40D83EB3338F9DDDCEEF0FD7 /* UILabel(Styles).html */,
-				35F98FE389B76793C09CB74F4A9FB795 /* UINavigationBar(TextStyle).html */,
-				0869B98A201D57C67B752C1A1DB4254B /* UINavigationBar(TextStyle).html */,
-				F2BE394D1D5CB206D2691770818CFCC1 /* UIOffset.html */,
-				21C0AEAC8A415238B8AF84EAF2A5613E /* UIOffset.html */,
-				DCF692C5D3B55B3F30FCFC6E50BA0834 /* UITextField(Styles).html */,
-				959A3DB9BA36EDE70311C5E85E8C6ABE /* UITextField(Styles).html */,
-				D0B053963DA42E7EE63E2BF4DB157312 /* UITextView(Styles).html */,
-				8AA5BFB3274F9DB8DD51C1821A6EF854 /* UITextView(Styles).html */,
-				A57E791072F15ABBB4757EC62A6A45B7 /* UIView(Styles).html */,
-				269B634B9285034CF0DF486EE78C66C9 /* UIView(Styles).html */,
-				DF9E5C4F0415D60771D9A9225682C3D3 /* undocumented.json */,
-				8A2BC32EC57B66B491AA01C07DDC213D /* undocumented.json */,
-				DB20A10AF58B2943998929B4ABFF67FB /* ViewStyle.html */,
-				61557FFB5149AD09248CC76920D5B498 /* ViewStyle.html */,
-				CC03155C81151A861DDF8E866264F5A6 /* WritingDirectionOverride.html */,
-				600DF84690B4CE610BFF5079D6968373 /* WritingDirectionOverride.html */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
