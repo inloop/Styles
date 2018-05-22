@@ -133,6 +133,12 @@
 }
 
 - (void)applyTextStyle:(TextStyle *)style {
+    NSDictionary *attributes = [style attributes];
+
+    if (!attributes) {
+        return;
+    }
+
     [self setDefaultTextAttributes:[style attributes]];
 }
 
