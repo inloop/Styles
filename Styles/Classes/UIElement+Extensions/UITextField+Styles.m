@@ -139,7 +139,7 @@
         return;
     }
 
-    [self setDefaultTextAttributes:[style attributes]];
+    [self setDefaultTextAttributes:attributes];
 }
 
 - (void)applyViewStyle:(ViewStyle *)style {
