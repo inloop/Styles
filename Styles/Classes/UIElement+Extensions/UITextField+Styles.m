@@ -133,7 +133,13 @@
 }
 
 - (void)applyTextStyle:(TextStyle *)style {
-    [self setDefaultTextAttributes:[style attributes]];
+    NSDictionary *attributes = [style attributes];
+
+    if (!attributes) {
+        return;
+    }
+
+    [self setDefaultTextAttributes:attributes];
 }
 
 - (void)applyViewStyle:(ViewStyle *)style {
