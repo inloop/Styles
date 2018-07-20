@@ -42,6 +42,8 @@ public struct TextDecoration {
      * .dashDotDot
     */
     public enum Pattern: Int {
+        /// Solid pattern
+        case solid
         /// Dotted pattern
         case dot
         /// Dashed pattern
@@ -57,6 +59,7 @@ public struct TextDecoration {
         */
         public var rawValue: Int {
             switch self {
+            case .solid: return NSUnderlineStyle.patternSolid.rawValue
             case .dot: return NSUnderlineStyle.patternDot.rawValue
             case .dash: return NSUnderlineStyle.patternDash.rawValue
             case .dashDot: return NSUnderlineStyle.patternDashDot.rawValue
