@@ -12,6 +12,7 @@ extension TextDecoration {
 extension TextDecoration.Pattern {
     var codeDescription: String {
         switch self {
+        case .solid: return ".solid"
         case .dot: return ".dot"
         case .dash: return ".dash"
         case .dashDot: return ".dashDot"
