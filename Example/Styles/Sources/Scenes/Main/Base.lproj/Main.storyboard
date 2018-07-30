@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qm-P7-Ezb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qm-P7-Ezb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,7 +55,7 @@
         <scene sceneID="FYA-fC-1m2">
             <objects>
                 <viewControllerPlaceholder storyboardName="TestBedViewController" id="OWe-S7-6Ev" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TestBed" id="r0v-Go-u2I"/>
+                    <tabBarItem key="tabBarItem" title="TestBed" badgeValue="Hello" selectedImage="carat.png" id="r0v-Go-u2I"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYC-Cm-yQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +91,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carat.png" width="16" height="28"/>
         <image name="doge" width="24" height="23"/>
     </resources>
 </document>

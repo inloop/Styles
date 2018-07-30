@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 
 @class TextStyle;
+@class ViewStyle;
 
 /**
  UIButton+Styles allows to set the text style for particular state
@@ -19,4 +20,5 @@
  @see TextStyle for more reference
  */
 - (void)setTextStyle:(TextStyle *)style forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
+- (void)setViewStyle:(ViewStyle *)style forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
 @end

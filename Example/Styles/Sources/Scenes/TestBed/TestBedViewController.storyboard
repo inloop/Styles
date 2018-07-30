@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hfr-Ft-eYD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hfr-Ft-eYD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Test Bed View Controller-->
+        <!--TestBed-->
         <scene sceneID="ueC-Wn-XIA">
             <objects>
-                <viewController id="Hfr-Ft-eYD" customClass="TestBedViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TestBed" id="Hfr-Ft-eYD" customClass="TestBedViewController" customModule="Styles_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZmF-Wa-zTq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa7-l2-3bu">
+                                <rect key="frame" x="164" y="264" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -34,6 +38,8 @@
                             <constraint firstItem="DUx-Ki-3CE" firstAttribute="leading" secondItem="Cr2-gK-pa5" secondAttribute="leading" constant="20" id="Yl6-k6-pxo"/>
                             <constraint firstItem="Cr2-gK-pa5" firstAttribute="trailing" secondItem="DUx-Ki-3CE" secondAttribute="trailing" constant="20" id="b91-9v-4a2"/>
                             <constraint firstItem="DUx-Ki-3CE" firstAttribute="top" secondItem="Cr2-gK-pa5" secondAttribute="top" constant="91" id="b95-10-5T3"/>
+                            <constraint firstItem="Fa7-l2-3bu" firstAttribute="centerX" secondItem="ZmF-Wa-zTq" secondAttribute="centerX" id="fq0-ej-RE6"/>
+                            <constraint firstItem="Fa7-l2-3bu" firstAttribute="top" secondItem="DUx-Ki-3CE" secondAttribute="bottom" constant="123" id="xec-al-gV0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cr2-gK-pa5"/>
                         <connections>
@@ -41,6 +47,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="button" destination="Fa7-l2-3bu" id="AMf-aq-tdK"/>
                         <outlet property="textField" destination="DUx-Ki-3CE" id="4tK-KL-oKm"/>
                     </connections>
                 </viewController>
