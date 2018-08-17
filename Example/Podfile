@@ -1,5 +1,26 @@
 use_frameworks!
 
 target 'Styles_Example' do
-  pod 'Styles', :path => '../', :testspecs => ['Tests'] 
+  pod 'Styles', :path => '../', :testspecs => ['Tests']
+end
+
+post_install do |installer|
+    bundle_id = 'com.inloopx.$(PRODUCT_NAME:rfc1034identifier)'
+
+    directory = installer.config.project_pods_root + 'Target Support Files/'
+    Dir.foreach(directory) do |path|
+        full_path = directory + path
+
+        if File.directory?(full_path)
+            info_plist_path = full_path + 'Info.plist'
+
+            if File.exist?(info_plist_path)
+                text = File.read(info_plist_path)
+                new_contents = text.gsub('${PRODUCT_BUNDLE_IDENTIFIER}', bundle_id)
+                File.open(info_plist_path, "w") { |file|
+                    file.puts new_contents
+                }
+            end
+        end
+    end
 end
