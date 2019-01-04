@@ -27,9 +27,9 @@ public struct TextDecoration {
         */
         public var rawValue: Int {
             switch self {
-            case .single: return NSUnderlineStyle.styleSingle.rawValue
-            case .thick: return NSUnderlineStyle.styleThick.rawValue
-            case .double: return NSUnderlineStyle.styleDouble.rawValue
+            case .single: return NSUnderlineStyle.single.rawValue
+            case .thick: return NSUnderlineStyle.thick.rawValue
+            case .double: return NSUnderlineStyle.double.rawValue
             }
         }
     }
@@ -59,7 +59,7 @@ public struct TextDecoration {
         */
         public var rawValue: Int {
             switch self {
-            case .solid: return NSUnderlineStyle.patternSolid.rawValue
+            case .solid: return 0x00
             case .dot: return NSUnderlineStyle.patternDot.rawValue
             case .dash: return NSUnderlineStyle.patternDash.rawValue
             case .dashDot: return NSUnderlineStyle.patternDashDot.rawValue
@@ -94,8 +94,8 @@ public struct TextDecoration {
         return style.rawValue | pattern.rawValue | byWordValue
     }
 
-    func attributes(styleKey: NSAttributedStringKey, colorKey: NSAttributedStringKey) -> [(NSAttributedStringKey, Any)] {
-        var attributes = [(NSAttributedStringKey, Any)]()
+    func attributes(styleKey: NSAttributedString.Key, colorKey: NSAttributedString.Key) -> [(NSAttributedString.Key, Any)] {
+        var attributes = [(NSAttributedString.Key, Any)]()
         attributes.append((styleKey, value))
         // bug in ios
         // https://goo.gl/214Xz7

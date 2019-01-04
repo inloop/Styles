@@ -3,7 +3,7 @@
 import Foundation
 
 extension Array where Element == TextStyle.Property {
-    var attributes: [NSAttributedStringKey: Any] {
+    var attributes: [NSAttributedString.Key: Any] {
         return Dictionary(uniqueKeysWithValues: flatMap { $0.attribute })
     }
 }

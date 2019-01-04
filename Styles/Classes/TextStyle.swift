@@ -83,7 +83,7 @@ public final class TextStyle: NSObject {
         /// Specifies baseline offset
         case baselineOffset(Double)
 
-        var attribute: [(NSAttributedStringKey, Any)] {
+        var attribute: [(NSAttributedString.Key, Any)] {
             switch self {
             case .font(let font):
                 return [(.font, font)]
@@ -121,7 +121,7 @@ public final class TextStyle: NSObject {
     }
 
     /// The array of NSAttributedStringKey which are created from `TextStyle.Property` array specified during init
-    @objc public let attributes: [NSAttributedStringKey: Any]
+    @objc public let attributes: [NSAttributedString.Key: Any]
     let effects: [TextEffect]
 
     /**
@@ -136,7 +136,7 @@ public final class TextStyle: NSObject {
         self.effects = effects
     }
 
-    private init(attributes: [NSAttributedStringKey: Any], effects: [TextEffect]) {
+    private init(attributes: [NSAttributedString.Key: Any], effects: [TextEffect]) {
         self.attributes = attributes
         self.effects = effects
     }
