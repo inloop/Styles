@@ -3,7 +3,7 @@
 import UIKit
 
 extension UIImage {
-    func attachmentString(with style: TextStyle, baseAttributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
+    func attachmentString(with style: TextStyle, baseAttributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         let attachment = NSTextAttachment()
         let attributes = style.attributes
         if let tintColor = attributes[.foregroundColor] as? UIColor, renderingMode != .alwaysOriginal {

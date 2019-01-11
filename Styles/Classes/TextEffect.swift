@@ -60,7 +60,7 @@ public enum TextEffect {
         }
     }
 
-    func apply(to base: NSMutableAttributedString, baseAttributes: [NSAttributedStringKey: Any]) {
+    func apply(to base: NSMutableAttributedString, baseAttributes: [NSAttributedString.Key: Any]) {
         let apply: (NSRange) -> ()
         switch self {
         case .style(let style, _):

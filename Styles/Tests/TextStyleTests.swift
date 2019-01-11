@@ -57,7 +57,7 @@ final class TextStyleTests: XCTestCase {
         _testDecoration(styleKey: .underlineStyle, colorKey: .underlineColor)
     }
 
-    func _testDecoration(styleKey: NSAttributedStringKey, colorKey: NSAttributedStringKey) {
+    func _testDecoration(styleKey: NSAttributedString.Key, colorKey: NSAttributedString.Key) {
         let expected = TextDecoration(style: .thick, pattern: .dashDotDot, byWord: true, color: .red)
         let property: TextStyle.Property
         if styleKey == .strikethroughStyle {
