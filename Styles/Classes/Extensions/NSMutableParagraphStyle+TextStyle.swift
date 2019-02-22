@@ -13,6 +13,8 @@ public extension NSMutableParagraphStyle {
             alignment = textAlignment
         case let .lineSpacing(spacing):
             lineSpacing = spacing
+        case let .paragraphSpacing(spacing):
+            paragraphSpacing = spacing
         }
     }
 }
