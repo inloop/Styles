@@ -29,10 +29,12 @@ public final class TextStyle: NSObject {
      Can define `NSTextAlignment` by `.alignment` and `.lineSpacing`
      */
     public enum ParagraphStyle {
-        /// Represents an NSAlignment in paragraph
+        /// The text alignment of the receiver.
         case alignment(NSTextAlignment)
-        /// Represents line spacing in paragraph
+        /// The distance in points between the bottom of one line fragment and the top of the next.
         case lineSpacing(CGFloat)
+        /// The space after the end of the paragraph.
+        case paragraphSpacing(CGFloat)
     }
 
     /**
