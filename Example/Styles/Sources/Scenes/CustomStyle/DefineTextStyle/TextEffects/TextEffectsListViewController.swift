@@ -44,7 +44,7 @@ final class TextEffectsListViewController: UITableViewController {
         let effect = textEffects[indexPath.row]
         let alert = UIAlertController(title: "Remove Effect?", message: "Do you want to remove this effect?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { [weak self] _ in
-            guard let index = self?.textEffects.index(where: { $0.effect == effect.effect }) else { return }
+            guard let index = self?.textEffects.firstIndex(where: { $0.effect == effect.effect }) else { return }
             self?.textEffects.remove(at: index)
             self?.tableView.reloadData()
         }))

@@ -15,6 +15,8 @@ extension NSTextAlignment {
             return ".justified"
         case .natural:
             return ".natural"
+        @unknown default:
+            return ".natural"
         }
     }
 }
