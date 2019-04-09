@@ -126,6 +126,12 @@ public final class TextStyle: NSObject {
     @objc public let attributes: [NSAttributedString.Key: Any]
     let effects: [TextEffect]
 
+    @objc public var linkAttributes: [NSAttributedString.Key: Any] {
+        return effects
+            .first(where: { $0.isLink })
+            .flatMap { $0.style.attributes } ?? attributes
+    }
+
     /**
      Designated initializer of `TextStyle`
      - Parameter properties: The array of properties defining the style

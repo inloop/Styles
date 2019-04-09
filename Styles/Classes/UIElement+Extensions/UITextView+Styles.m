@@ -130,6 +130,7 @@
     
     UITextRange *range = self.selectedTextRange;
     [self setAttributedText:[style applyTo:text]];
+    [self setLinkTextAttributes: style.linkAttributes];
     if (range) {
         self.selectedTextRange = range;
     }
