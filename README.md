@@ -38,7 +38,7 @@
   </a>
   <!-- Swift version -->
   <a href="https://developer.apple.com/swift">
-    <img src="https://img.shields.io/badge/swift-4-orange.svg"
+    <img src="https://img.shields.io/badge/swift-5-orange.svg"
       alt="Swift version" />
   </a>
 </div>

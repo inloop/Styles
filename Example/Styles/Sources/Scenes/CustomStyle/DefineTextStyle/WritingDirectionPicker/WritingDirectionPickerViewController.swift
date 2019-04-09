@@ -30,7 +30,7 @@ final class WritingDirectionPickerViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let override = allOverrides[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
-        if let index = selectedWritingDirectionOverrides.index(of: override) {
+        if let index = selectedWritingDirectionOverrides.firstIndex(of: override) {
             selectedWritingDirectionOverrides.remove(at: index)
             cell?.accessoryType = .none
         } else {

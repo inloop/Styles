@@ -12,7 +12,7 @@ extension Array where Element: Equatable {
     func updating(_ other: [Element]) -> [Element] {
         var new = self
         for element in other {
-            if let index = new.index(of: element) {
+            if let index = new.firstIndex(of: element) {
                 new[index] = element
             } else {
                 new.append(element)
