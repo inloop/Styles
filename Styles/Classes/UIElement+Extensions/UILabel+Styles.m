@@ -29,10 +29,10 @@ SYNTHESIZE_PROPERTY_OBJ(TextStyle, textStyle, TextStyle);
 }
 
 - (void)updateText {
-    if (!self.attributedText.string || !self.textStyle) {
+    if (!self.attributedText.string || ![self.textStyle isKindOfClass: [TextStyle class]]) {
         return;
     }
-    self.attributedText = [self.textStyle applyTo:self.attributedText.string];
+    self.attributedText = [self.textStyle applyTo: self.attributedText.string];
 }
 
 @end
